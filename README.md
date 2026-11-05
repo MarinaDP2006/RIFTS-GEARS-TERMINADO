@@ -2,6 +2,9 @@
 **Rifts & Gears** es un proyecto narrativo e interactivo inspirado en el universo de *Arcane* y *League of Legends*. Reúne un portal web informativo y un videojuego narrativo 2D ambientado en las ciudades de **Piltover** y **Zaun**.
 El proyecto busca trasladar la atmósfera, los conflictos y la identidad visual de ambas ciudades a una experiencia centrada en los personajes, la exploración y las decisiones del jugador.
 
+¿Cómo lo voy manejando? - Trello: https://trello.com/b/1Susz6ki/rifts-gears-desarrollo-del-videojuego-%F0%9F%8E%AE
+Página web: https://rifts-and-gears.onrender.com/
+
 ## Índice
 - [Concepto y objetivos](#concepto-y-objetivos)
 - [Componentes del proyecto](#componentes-del-proyecto)
@@ -78,6 +81,4 @@ El desarrollo se realiza por etapas, separando el diseño de las interfaces, la 
 El estado puede cambiar conforme avance el proyecto. Una pantalla diseñada no se considera necesariamente terminada hasta que sus funciones estén implementadas y probadas.
 
 ## Organización del proyecto
-Rifts & Gears se construye de forma gradual. Las interfaces se desarrollan y revisan antes de integrar los sistemas que dependen de ellas. Se priorizan la coherencia visual, la claridad de navegación, la estabilidad y la posibilidad de ampliar el juego sin rehacer lo que ya funciona.
-
-La web informativa y el videojuego se mantienen como partes diferenciadas del proyecto.
+Rifts & Gears se construye de forma gradual. Las interfaces se desarrollan y revisan antes de integrar los sistemas que dependen de ellas. Se priorizan la coherencia visual, la claridad de navegación, la estabilidad y la posibilidad de ampliar el juego sin rehacer lo que ya funciona. La web informativa y el videojuego se mantienen como partes diferenciadas del proyecto.
