@@ -1,4 +1,4 @@
-import { useMemo, useState, type FormEvent } from "react";
+import { useMemo, useRef, useState, type FormEvent } from "react";
 import { Search, ZoomIn, ZoomOut } from "lucide-react";
 import { Link } from "react-router";
 import { Dialog, Eyebrow, FeatureLink, Media, PageHero, portalLinks } from "./components";
@@ -125,7 +125,18 @@ export function UniversePage() {
     ["T1 · Años después", "Piltover vive su edad de oro con las Hexpuertas. En Zaun crece el brillo."],
     ["T1 · Juventud", "Caitlyn y Vi bajan a Zaun, las Luciérnagas sabotean a Silco y el Consejo se divide."],
     ["Final T1", "Un intento de paz… y un ataque al Consejo que lo cambia todo."],
-    ["T2", "Las dos ciudades al borde de la guerra, Noxus mueve ficha y Viktor busca su propio camino."],
+    ["T2 · Después del ataque", "Piltover busca culpables en Zaun, los ejecutores bajan armados y Jinx se convierte en un símbolo."],
+    ["T2", "Noxus entra en Piltover, Viktor busca su propio camino y las dos ciudades acaban luchando juntas."],
+  ];
+  const glossary = [
+    ["Runaterra", "El mundo donde pasa todo. Piltover y Zaun son solo una esquina; Noxus, Demacia o Ionia quedan lejos, pero existen."],
+    ["Químbarones", "Los jefes de Zaun que controlan fábricas, calles y negocios. Casi todos trabajan para Silco, como Finn."],
+    ["Ejecutores", "La policía de Piltover. Arriba protegen; abajo, en Zaun, se les teme. Su sheriff en la T1 es Marcus."],
+    ["Luciérnagas", "La banda de Ekko: chavales con máscaras y aerotablas que sabotean a Silco y viven en el Árbol."],
+    ["Hexcore", "La investigación de Viktor que mezcla hextech y algo vivo. Funciona demasiado bien."],
+    ["Día del Progreso", "La gran fiesta de Piltover: discursos, premios e inventos presentados en público."],
+    ["Yordle", "Una raza de seres pequeños y longevos. Heimerdinger es uno de ellos."],
+    ["Las familias", "Kiramman, Medarda, Talis… En Piltover el apellido abre o cierra puertas."],
   ];
   return (
     <>
@@ -162,6 +173,17 @@ export function UniversePage() {
             <p>{topic.text}</p>
           </article>
         ))}
+      </section>
+      <section className="section-pad glossary">
+        <h2>Palabras que vas a oír</h2>
+        <dl>
+          {glossary.map(([word, meaning]) => (
+            <div key={word}>
+              <dt>{word}</dt>
+              <dd>{meaning}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
       <section className="timeline section-pad">
         <h2>Cronología</h2>
@@ -312,12 +334,44 @@ function CitySection({
   );
 }
 
+const cityBlocks: Record<"Piltover" | "Zaun", { title: string; text: string }[]> = {
+  Piltover: [
+    { title: "Historia", text: "Nació como puerto sobre los acantilados, junto a un canal que corta el continente. Cobrar por cada barco que pasa la hizo rica, y la riqueza atrajo a inventores y familias de todo Runaterra. Lo que quedó debajo, los barrios de los trabajadores, acabó siendo Zaun." },
+    { title: "Quién manda", text: "El Consejo: las grandes familias y figuras como Heimerdinger, sentadas en una mesa redonda. Votan leyes, impuestos y quién puede patentar qué. Los ejecutores hacen cumplir sus decisiones." },
+    { title: "Su gente", text: "Creen que el ingenio lo arregla todo. Estudiar en la Academia es el mayor honor y el apellido pesa más que el dinero. Muchos miran a los de abajo como un problema que no quieren ver." },
+    { title: "Barrios", text: "El barrio académico, el Distrito del Consejo con su cúpula dorada, las terrazas de las grandes familias, el barrio de los artesanos y los muelles de las Hexpuertas. Todo acaba en el Puente." },
+    { title: "Tecnología", text: "La hextech: runas y cristales mágicos. Mueve las Hexpuertas, el martillo de Jayce y el rifle de Caitlyn. Heimerdinger avisa de que es peligrosa y nadie le hace caso." },
+    { title: "T1 y T2", text: "En la T1 es un atardecer dorado de torres, dirigibles y vidrieras. En la T2 la luz se enfría: ejecutores armados, estandartes rojos de Noxus y una ciudad que se prepara para la guerra." },
+  ],
+  Zaun: [
+    { title: "Historia", text: "Era la parte baja de la misma ciudad hasta que Piltover se separó y la dejó a la sombra. Años antes de la serie, Vander y Silco intentaron cruzar el Puente para reclamar lo suyo y perdieron. Desde entonces hay tregua." },
+    { title: "Quién manda", text: "Nadie y todos. Vander mantiene la paz en los Callejones; Silco y sus químbarones controlan las fábricas y la calle. Para Silco, una Zaun independiente es un sueño que se paga con brillo." },
+    { title: "Su gente", text: "Casi nadie tiene padres, pero todo el mundo tiene a alguien que lo recogió. Se pelea en los fosos de los bares, se pinta en las paredes y se desconfía de cualquiera que venga de arriba." },
+    { title: "Niveles", text: "La Promenade, la más cercana al Puente, con La Última Gota y el mercado. El Entresuelo, de fábricas y puentes colgantes. Y el Sumidero, donde la niebla química no deja ver el sol. Los une un ascensor." },
+    { title: "Tecnología", text: "Quimtec: química, vapor y chatarra. Filtros contra el humo, prótesis como el brazo de Sevika, las bombas de Jinx y las aerotablas de las Luciérnagas. Y el brillo, que da fuerza y destroza a quien lo toma." },
+    { title: "T1 y T2", text: "En la T1, humo verde, neón y tuberías. En la T2 las paredes se llenan de los graffiti de Jinx, el púrpura del brillo está por todas partes y la ciudad se levanta contra Piltover." },
+  ],
+};
+
+function CityBlocks({ city }: { city: "Piltover" | "Zaun" }) {
+  return (
+    <section className={`topic-grid section-pad city-blocks ${city.toLowerCase()}`}>
+      {cityBlocks[city].map((block) => (
+        <article className="topic-card" key={block.title}>
+          <h3>{block.title}</h3>
+          <p>{block.text}</p>
+        </article>
+      ))}
+    </section>
+  );
+}
+
 export function CitiesPage() {
   return (
     <>
       <PageHero
         title="Ciudades"
-        text="Piltover y Zaun en la T1 y en la T2."
+        text="Cómo son Piltover y Zaun, quién manda en cada una y cómo cambian de la T1 a la T2."
       />
       <nav className="local-nav" aria-label="Ciudades">
         <a href="#piltover">Piltover</a>
@@ -333,6 +387,7 @@ export function CitiesPage() {
           "Se hace rica con las Hexpuertas y el comercio",
         ]}
       />
+      <CityBlocks city="Piltover" />
       <CitySection
         city="Zaun"
         title="Zaun, la ciudad de abajo"
@@ -343,6 +398,7 @@ export function CitiesPage() {
           "Funciona con quimtec… y con brillo",
         ]}
       />
+      <CityBlocks city="Zaun" />
     </>
   );
 }
@@ -447,7 +503,7 @@ export function PlacesPage() {
     <>
       <PageHero
         title="Lugares"
-        text="Los sitios de Piltover y Zaun que salen en la serie y en el juego."
+        text="Los sitios de Piltover y Zaun que salen en la serie y en el juego, con su historia completa."
       />
       <section className="library section-pad">
         <div className="place-toolbar">
@@ -536,11 +592,14 @@ export function PlacesPage() {
                 <dt>Quién suele estar</dt>
                 <dd>{selected.who}</dd>
               </div>
+              <div>
+                <dt>En el juego</dt>
+                <dd>{selected.inGame}</dd>
+              </div>
             </dl>
             {selected.bio.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-            <CodiceNote />
           </div>
         )}
       </Dialog>
@@ -548,86 +607,105 @@ export function PlacesPage() {
   );
 }
 
-// Posición de cada lugar en el atlas, con el mismo orden que el mapa del juego:
-// Piltover en una línea arriba y Zaun en tres niveles debajo.
-const atlasPositions: Record<string, [number, number]> = {
-  "Las Hexpuertas": [10, 22],
-  "La Academia": [22, 22],
-  "La Sala del Consejo": [34, 22],
-  "La Plaza del Progreso": [46, 22],
-  "El Taller de Jayce": [58, 22],
-  "La Mansión Kiramman": [70, 22],
-  "El Puente del Progreso": [84, 34],
-  "La Última Gota": [30, 58],
-  "El Mercado": [48, 58],
-  "Los Callejones": [66, 58],
-  "El Árbol": [48, 72],
-  "El laboratorio de Singed": [30, 86],
-  "El Escondite de Jinx": [48, 86],
-  "El Sumidero": [66, 86],
-};
-
 export function AtlasPage() {
-  const [selected, setSelected] = useState<Place>(places[0]);
+  const stops = places.filter((place) => place.stop);
+  const [selected, setSelected] = useState<Place>(stops[0]);
   const [zoom, setZoom] = useState(1);
+  const scroller = useRef<HTMLDivElement>(null);
+  const drag = useRef<{ x: number; y: number; left: number; top: number } | null>(null);
+
+  // Cambia el zoom manteniendo centrado lo que se está mirando.
+  function changeZoom(next: number) {
+    const box = scroller.current;
+    const value = Math.min(3, Math.max(1, Math.round(next * 100) / 100));
+    if (!box) {
+      setZoom(value);
+      return;
+    }
+    const cx = (box.scrollLeft + box.clientWidth / 2) / box.scrollWidth;
+    const cy = (box.scrollTop + box.clientHeight / 2) / box.scrollHeight;
+    setZoom(value);
+    requestAnimationFrame(() => {
+      box.scrollLeft = cx * box.scrollWidth - box.clientWidth / 2;
+      box.scrollTop = cy * box.scrollHeight - box.clientHeight / 2;
+    });
+  }
+
   return (
     <>
       <PageHero
         title="Atlas"
-        text="Los lugares colocados como en el mapa del juego. Pulsa un número para ver qué hay allí."
+        text="El mapa 3D del juego tal como se ve en Godot. Amplía, arrastra y pulsa un punto para ver qué hay allí."
       />
       <section className="atlas section-pad">
         <div className="atlas-notice">
           <p>
             <strong>Cómo se lee:</strong> Piltover va en una línea arriba, de las Hexpuertas al
-            Puente. Desde el Puente se baja a Zaun, que tiene tres niveles: Promenade, Entresuelo y
-            Sumidero.
+            Puente. Desde el Puente se baja a Zaun, que tiene tres niveles unidos por un ascensor:
+            Promenade, Entresuelo y Sumidero.
           </p>
         </div>
         <div className="atlas-layout">
           <div className="map-stage">
-            <div className="map-placeholder" style={{ transform: `scale(${zoom})` }}>
-              <img className="map-backdrop" src="/assets/img/capturas/mapa-3d.webp" alt="" />
-              <div className="map-half piltover-map">
-                <span>Piltover</span>
-              </div>
-              <div className="map-half zaun-map">
-                <span>Zaun</span>
-              </div>
-              {places.map((place, index) => {
-                const [left, top] = atlasPositions[place.name] ?? [50, 50];
-                return (
+            <div
+              className={`map-scroll ${zoom > 1 ? "can-drag" : ""}`}
+              ref={scroller}
+              onPointerDown={(event) => {
+                const box = scroller.current;
+                if (!box || zoom === 1 || (event.target as HTMLElement).closest("button")) return;
+                drag.current = {
+                  x: event.clientX,
+                  y: event.clientY,
+                  left: box.scrollLeft,
+                  top: box.scrollTop,
+                };
+                box.setPointerCapture(event.pointerId);
+              }}
+              onPointerMove={(event) => {
+                const box = scroller.current;
+                if (!box || !drag.current) return;
+                box.scrollLeft = drag.current.left - (event.clientX - drag.current.x);
+                box.scrollTop = drag.current.top - (event.clientY - drag.current.y);
+              }}
+              onPointerUp={() => {
+                drag.current = null;
+              }}
+              onPointerCancel={() => {
+                drag.current = null;
+              }}
+            >
+              <div className="map-canvas" style={{ width: `${zoom * 100}%` }}>
+                <img
+                  className="map-render"
+                  src="/assets/img/atlas/mapa-3d.webp"
+                  alt="Mapa 3D del juego: Piltover arriba en línea y Zaun abajo en tres niveles"
+                  draggable={false}
+                />
+                {stops.map((place, index) => (
                   <button
                     key={place.name}
-                    className={`map-marker ${selected.name === place.name ? "active" : ""}`}
-                    style={{ left: `${left}%`, top: `${top}%` }}
+                    className={`map-marker ${place.city.toLowerCase()} ${selected.name === place.name ? "active" : ""}`}
+                    style={{ left: `${place.stop!.x}%`, top: `${place.stop!.y}%` }}
                     onClick={() => setSelected(place)}
-                    aria-label={`Seleccionar ${place.name}`}
+                    aria-label={`Ver ${place.name}`}
                   >
                     <span>{index + 1}</span>
                   </button>
-                );
-              })}
+                ))}
+              </div>
             </div>
             <div className="zoom-controls">
-              <button
-                onClick={() => setZoom((value) => Math.min(1.25, value + 0.1))}
-                aria-label="Ampliar mapa"
-              >
+              <button onClick={() => changeZoom(zoom + 0.5)} aria-label="Ampliar mapa" disabled={zoom >= 3}>
                 <ZoomIn />
               </button>
-              <button
-                onClick={() => setZoom((value) => Math.max(0.9, value - 0.1))}
-                aria-label="Reducir mapa"
-              >
+              <button onClick={() => changeZoom(zoom - 0.5)} aria-label="Reducir mapa" disabled={zoom <= 1}>
                 <ZoomOut />
               </button>
+              <span className="zoom-value">{Math.round(zoom * 100)}%</span>
             </div>
           </div>
           <aside className={`atlas-panel ${selected.city.toLowerCase()}`}>
-            <span className="map-index">
-              {String(places.indexOf(selected) + 1).padStart(2, "0")}
-            </span>
+            <span className="map-index">{String(stops.indexOf(selected) + 1).padStart(2, "0")}</span>
             <h2>{selected.name}</h2>
             <small>
               {selected.city} · {selected.zone}
@@ -635,6 +713,9 @@ export function AtlasPage() {
             <p>{selected.bio[0]}</p>
             <p>
               <strong>Quién suele estar:</strong> {selected.who}
+            </p>
+            <p>
+              <strong>En el juego:</strong> {selected.inGame}
             </p>
             <Link to="/lugares" className="text-link">
               Ver todos los lugares

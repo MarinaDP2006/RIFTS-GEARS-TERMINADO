@@ -2331,3 +2331,150 @@ textarea:focus-visible {
     gap: 0.25rem;
   }
 }
+
+/* Atlas: render del mapa 3D de Godot con zoom y arrastre */
+.atlas-layout {
+  grid-template-columns: 1fr;
+  min-height: 0;
+}
+
+.map-stage {
+  min-height: 0;
+}
+
+.map-scroll {
+  position: relative;
+  overflow: auto;
+  aspect-ratio: 1920 / 860;
+  max-height: 78vh;
+  touch-action: pan-x pan-y;
+  scrollbar-color: var(--gold) transparent;
+}
+
+.map-scroll.can-drag {
+  cursor: grab;
+}
+
+.map-scroll.can-drag:active {
+  cursor: grabbing;
+}
+
+.map-canvas {
+  position: relative;
+  aspect-ratio: 1920 / 860;
+}
+
+.map-render {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.map-canvas .map-marker {
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px;
+  border-radius: 50%;
+  transform: none;
+}
+
+.map-canvas .map-marker span {
+  transform: none;
+}
+
+.map-canvas .map-marker.zaun {
+  background: #c24de0;
+  box-shadow: 0 0 0 5px rgba(194, 77, 224, 0.2);
+}
+
+.map-canvas .map-marker.active {
+  background: var(--cream);
+  box-shadow: 0 0 0 8px rgba(238, 227, 204, 0.25);
+}
+
+.zoom-controls {
+  align-items: center;
+}
+
+.zoom-controls button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.zoom-value {
+  padding: 0 0.8rem;
+  color: var(--cream);
+  background: rgba(7, 11, 14, 0.86);
+  font-size: 0.75rem;
+  line-height: 44px;
+}
+
+.atlas-panel {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  border-left: 0;
+  border-top: 1px solid var(--line);
+}
+
+.atlas-panel .map-index {
+  grid-row: span 6;
+  margin: 0;
+}
+
+.atlas-panel > * {
+  grid-column: 2;
+}
+
+.atlas-panel .map-index {
+  grid-column: 1;
+}
+
+/* Universo: glosario */
+.glossary dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem 3rem;
+  margin: 0;
+}
+
+.glossary dt {
+  color: var(--gold);
+  font: 600 1.1rem var(--heading);
+}
+
+.glossary dd {
+  margin: 0.3rem 0 0;
+  color: var(--paper);
+}
+
+/* Ciudades: bloques de información */
+.city-blocks.zaun h3 {
+  color: #d9a3f7;
+}
+
+@media (max-width: 760px) {
+  .glossary dl {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-panel > *,
+  .atlas-panel .map-index {
+    grid-column: 1;
+  }
+
+  .map-canvas .map-marker {
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+  }
+
+  .map-canvas .map-marker span {
+    font-size: 0.6rem;
+  }
+}
