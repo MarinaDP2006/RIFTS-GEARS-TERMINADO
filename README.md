@@ -1,6 +1,6 @@
 # Rifts & Gears
 
-**Rifts & Gears** es un proyecto fan de carácter narrativo e interactivo inspirado en el universo de *Arcane* y *League of Legends*. Su objetivo es reunir un portal web informativo y un videojuego narrativo 2D ambientado en las ciudades de **Piltover** y **Zaun**.
+**Rifts & Gears** es un proyecto fan de carácter narrativo e interactivo inspirado en el universo de *Arcane* y *League of Legends*. Reúne un portal web informativo y un videojuego narrativo 2D ambientado en las ciudades de **Piltover** y **Zaun**.
 
 El proyecto busca trasladar la atmósfera, los conflictos y la identidad visual de ambas ciudades a una experiencia centrada en los personajes, la exploración y las decisiones del jugador.
 
@@ -8,85 +8,96 @@ El proyecto busca trasladar la atmósfera, los conflictos y la identidad visual 
 
 ---
 
-## Contenido del proyecto
+## Índice
 
-Rifts & Gears se plantea en dos partes diferenciadas:
+- [Concepto y objetivos](#concepto-y-objetivos)
+- [Componentes del proyecto](#componentes-del-proyecto)
+- [El videojuego](#el-videojuego)
+- [Las ciudades](#las-ciudades)
+- [Tecnologías](#tecnologías)
+- [Estado del desarrollo](#estado-del-desarrollo)
+- [Organización del proyecto](#organización-del-proyecto)
+- [Aviso sobre propiedad intelectual](#aviso-sobre-propiedad-intelectual)
 
-### 1. Portal web informativo
+## Concepto y objetivos
 
-Un espacio web para presentar el universo y ofrecer información de referencia sobre el proyecto, sus ciudades y sus contenidos.
+Rifts & Gears quiere ofrecer una experiencia narrativa para un jugador en la que el mundo, sus personajes y las decisiones tengan un papel central. La ambientación toma como referencia principalmente la serie *Arcane*, prestando especial atención a la personalidad y los contrastes entre Piltover y Zaun.
 
-### 2. Videojuego narrativo 2D
+Los objetivos del proyecto son:
+- Crear una experiencia narrativa interactiva con identidad visual propia.
+- Permitir que el jugador comience su historia desde Piltover o Zaun.
+- Desarrollar personajes, relaciones, misiones y contenidos que amplíen el mundo.
+- Mantener una presentación visual e interfaces coherentes con la ambientación.
+- Construir y probar los sistemas de forma progresiva.
 
-Una experiencia para un jugador desarrollada con **Godot Engine 4**, con una historia interactiva en la que el jugador crea su propio personaje y vive la aventura desde la perspectiva de Piltover o Zaun.
+## Componentes del proyecto
 
-Entre los elementos previstos se encuentran:
+### Portal web informativo
 
-- **Creación de personaje:** elección de ciudad, procedencia, familia y datos del personaje.
+Un espacio web para presentar el universo y ofrecer información de referencia sobre el proyecto, sus ciudades y sus contenidos. La web y el videojuego son partes diferenciadas y se mantienen separadas durante el desarrollo.
+
+### Videojuego narrativo 2D
+
+Una experiencia para un jugador desarrollada con **Godot Engine 4**. El jugador crea su propio personaje y vive una aventura interactiva desde la perspectiva de Piltover o Zaun.
+
+## El videojuego
+
+Entre los sistemas y contenidos previstos se encuentran:
+
+- **Nueva partida:** elección de Piltover o Zaun como punto de partida.
+- **Creación de personaje:** elección de procedencia, familia y datos del protagonista.
 - **Historia interactiva:** diálogos, respuestas y decisiones que dan forma al recorrido narrativo.
-- **Personajes y relaciones:** encuentros y vínculos con personajes del mundo.
+- **Personajes y relaciones:** encuentros y vínculos con los habitantes del mundo.
 - **Misiones:** historia principal, misiones secundarias e historias jugables.
-- **Códice:** información sobre personajes, lugares, criaturas, tecnologías y facciones.
+- **Códice:** información sobre personajes, lugares, criaturas y razas, tecnologías, mundo y facciones.
 - **Atlas:** consulta y exploración del mapa del mundo.
-- **Ficha de personaje:** información y progreso del protagonista.
-- **Sistema de guardado:** espacios independientes para las partidas de Piltover y Zaun, con opciones previstas para cargar, borrar y exportar partidas.
+- **Ficha de personaje y comunicador:** información del protagonista y herramientas relacionadas con la aventura.
+- **Sistema de guardado:** dos espacios independientes, uno para Piltover y otro para Zaun, con opciones previstas para cargar, borrar y exportar partidas.
 
-Estas características forman parte de la dirección de diseño del juego; su disponibilidad dependerá del avance de desarrollo.
-
----
+Estas características forman parte de la dirección de diseño del juego; su disponibilidad dependerá del avance del desarrollo.
 
 ## Las ciudades
 
 ### Piltover
 
-La Ciudad del Progreso. Una metrópolis de arquitectura elegante, innovación, comercio y tecnología Hextech. Su identidad visual se inspira en los tonos dorados y azules, sus edificios refinados y sus contrastes sociales.
+La Ciudad del Progreso. Una metrópolis de arquitectura elegante, innovación, comercio y tecnología Hextech. Su identidad visual se inspira en tonos dorados y azules, edificios refinados y contrastes sociales.
 
 ### Zaun
 
 La ciudad subterránea. Un entorno industrial y desigual, marcado por la supervivencia, la inventiva y el poder del shimmer. Su identidad visual se inspira en tonos verdes y azules oscuros, estructuras industriales y una atmósfera más cruda.
 
-La ambientación toma como referencia principalmente la serie *Arcane*, buscando respetar la personalidad y los contrastes de ambas ciudades.
-
----
-
 ## Tecnologías
 
-- **Motor del videojuego:** Godot Engine 4.
-- **Lenguaje de programación:** GDScript.
+- **Motor del videojuego:** Godot Engine 4 (desarrollo realizado con Godot 4.7.2).
+- **Lenguaje del videojuego:** GDScript.
+- **Portal web:** tecnologías web como HTML, CSS y JavaScript.
+- **Formato previsto para intercambio de partidas:** JSON.
 - **Tipo de juego:** aventura narrativa 2D para un jugador.
 - **Idioma inicial:** español.
 
-El proyecto se desarrolla por etapas. Las pantallas, sistemas y contenidos se integrarán progresivamente a medida que estén diseñados, programados y probados.
-
----
-
 ## Estado del desarrollo
 
-El desarrollo se realiza de forma gradual, separando el diseño de las interfaces, la programación de sus funciones y la integración de los sistemas.
+El desarrollo se realiza por etapas, separando el diseño de las interfaces, la programación de sus funciones, las pruebas y la integración.
 
 | Área | Estado |
 |---|---|
-| Pantalla de inicio | Diseñada y desarrollada |
-| Selección de ciudad para nueva partida | Funcional |
-| Creación de personaje | Funcional |
-| Ajustes | Desarrollados |
+| Pantalla de inicio | Completada |
+| Nueva partida y selección de ciudad | Completada y funcional |
+| Creación de personaje | Completada y funcional |
+| Ajustes | Completados y funcionales |
 | Cargar partida y gestión de guardados | En desarrollo |
-| Códice y sus entradas | Pendiente |
-| Historia, diálogos y decisiones | En desarrollo futuro |
-| Misiones, personajes y comunicador | Planificado |
-| Atlas y mapa | En desarrollo |
+| Códice y sus entradas | Estructura inicial creada; programación y contenido pendientes |
+| Atlas / mapa 3D | Escena creada; integración pendiente |
+| Historia, diálogos y decisiones | Desarrollo futuro |
+| Misiones, personajes y comunicador | Planificados |
 
-El estado puede cambiar conforme avance el proyecto.
+El estado puede cambiar conforme avance el proyecto. Una pantalla diseñada no se considera necesariamente terminada hasta que sus funciones estén implementadas y probadas.
 
----
+## Organización del proyecto
 
-## Organización y desarrollo
+Rifts & Gears se construye de forma gradual. Las interfaces se desarrollan y revisan antes de integrar los sistemas que dependen de ellas. Se priorizan la coherencia visual, la claridad de navegación, la estabilidad y la posibilidad de ampliar el juego sin rehacer lo que ya funciona.
 
-El proyecto se construye priorizando una experiencia visual coherente con el mundo de *Arcane*, interfaces cuidadas y sistemas narrativos que puedan ampliarse sin perder consistencia.
-
-Las funciones se incorporan progresivamente y se revisan antes de considerarlas terminadas. La web informativa y el videojuego se mantienen como partes diferenciadas del proyecto.
-
----
+La web informativa y el videojuego se mantienen como partes diferenciadas del proyecto.
 
 ## Aviso sobre propiedad intelectual
 
@@ -98,7 +109,7 @@ Este proyecto se realiza con fines creativos y de aprendizaje. Los derechos de l
 
 ## Enlaces
 
-- **Repositorio:** https://github.com/MarinaDP2006/RIFTS-GEARS
+- [Repositorio de GitHub](https://github.com/MarinaDP2006/RIFTS-GEARS)
 
 ---
 
