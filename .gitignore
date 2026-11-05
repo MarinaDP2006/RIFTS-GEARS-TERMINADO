@@ -1,0 +1,18 @@
+# Rifts & Gears: por ahora solo se sube la web.
+# El juego de Godot se añadirá más adelante (quitando su línea de abajo).
+
+# Carpetas locales que no van al repositorio
+DescargasFinales/
+ProyectoRespaldo/
+capturas del juego/
+Juego_Godot/
+.claude/
+
+# Godot (para cuando se suba el juego)
+.godot/
+*.tmp
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
