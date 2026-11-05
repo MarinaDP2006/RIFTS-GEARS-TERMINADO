@@ -1,7 +1,7 @@
 # Rifts & Gears · Portal web
 
-Portal informativo del proyecto, basado en el diseño de Figma Make «Crear portal Rifts & Gears».
-Hecho con **React + Vite** (TypeScript) y Tailwind 4.
+Portal informativo del proyecto, basado en el diseño de Figma Make.
+Hecho con **React + Vite** (TypeScript) + para animaciones o detalles minimos ClaudeCodex.
 
 ## Páginas
 Inicio · Universo · Ciudades · Personajes · Lugares · Atlas · Videojuego · Contacto
