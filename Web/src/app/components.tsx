@@ -32,7 +32,7 @@ export function Layout() {
   useEffect(() => {
     setOpen(false);
     const titles: Record<string, string> = {
-      "/": "Rifts & Gears — Portal narrativo",
+      "/": "Rifts & Gears — Arcane",
       "/universo": "Universo — Rifts & Gears",
       "/ciudades": "Ciudades — Rifts & Gears",
       "/personajes": "Personajes — Rifts & Gears",
@@ -86,15 +86,14 @@ export function Layout() {
         <div>
           <Brand />
           <p>
-            Portal narrativo y visual. Proyecto independiente inspirado en el universo de Arcane y
-            League of Legends.
+            Una web de fan sobre Piltover y Zaun, y el juego que estoy haciendo en Godot.
           </p>
         </div>
         <div className="footer-links">
-          <Link to="/universo">Archivo del universo</Link>
-          <Link to="/videojuego">Proyecto de videojuego</Link>
-          <Link to="/contacto">Contacto y sugerencias</Link>
-          <a href={GITHUB}>Repositorio en GitHub</a>
+          <Link to="/universo">Universo</Link>
+          <Link to="/videojuego">Videojuego</Link>
+          <Link to="/contacto">Contacto</Link>
+          <a href={GITHUB}>GitHub</a>
         </div>
         <p className="legal">
           Rifts & Gears es un proyecto de fans no oficial. Arcane y League of Legends pertenecen a
@@ -115,7 +114,7 @@ export function PageHero({
   text,
   tone = "neutral",
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   text: string;
   tone?: "neutral" | "piltover" | "zaun";
@@ -124,7 +123,7 @@ export function PageHero({
     <section className={`page-hero tone-${tone}`}>
       <div className="orb" />
       <div className="page-hero-inner">
-        <Eyebrow>{eyebrow}</Eyebrow>
+        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
         <h1>{title}</h1>
         <p>{text}</p>
       </div>
@@ -208,7 +207,7 @@ export function Dialog({
         <div className="dialog-ornament ornament-left" aria-hidden="true" />
         <div className="dialog-ornament ornament-right" aria-hidden="true" />
         <header className="dialog-header">
-          <span>Archivo abierto</span>
+          <span>Ficha</span>
           <strong>{title}</strong>
           <button className="dialog-close" onClick={onClose} aria-label="Cerrar ficha">
             <span>Cerrar</span>
@@ -224,36 +223,35 @@ export function Dialog({
 export const portalLinks = [
   {
     to: "/universo",
-    kicker: "Archivo",
-    title: "Comprender el universo",
-    text: "Tecnología, sociedad y una frontera que divide dos formas de imaginar el progreso.",
+    kicker: "Universo",
+    title: "Hextech, brillo y un puente",
+    text: "Lo básico para entender por qué Piltover y Zaun no se soportan.",
   },
   {
     to: "/atlas",
-    kicker: "Cartografía",
-    title: "Explorar el atlas",
-    text: "Los lugares de Piltover y Zaun, de la Academia al Sumidero.",
+    kicker: "Atlas",
+    title: "Dónde está cada sitio",
+    text: "De las Hexpuertas al Sumidero, sobre el mapa del juego.",
   },
   {
     to: "/videojuego",
-    kicker: "Proyecto paralelo",
-    title: "Descubrir el videojuego",
-    text: "Una experiencia narrativa independiente hecha en Godot, actualmente en desarrollo.",
+    kicker: "Videojuego",
+    title: "El juego que estoy haciendo",
+    text: "Un fangame narrativo en Godot: creas a tu personaje y vives las dos temporadas desde dentro.",
   },
   {
     to: "/contacto",
-    kicker: "Comunidad",
-    title: "Enviar una sugerencia",
-    text: "Ayuda a revisar, ampliar y mejorar el archivo del proyecto.",
+    kicker: "Contacto",
+    title: "¿Has visto un error?",
+    text: "Si algo no cuadra con la serie, cuéntamelo.",
   },
 ];
 
 export function NotFound() {
   return (
     <section className="not-found">
-      <Eyebrow>Ruta no cartografiada</Eyebrow>
-      <h1>Este lugar no figura en el atlas.</h1>
-      <p>La dirección puede haber cambiado o todavía no existe.</p>
+      <h1>Aquí no hay nada.</h1>
+      <p>Esta página no existe, o se ha perdido en algún callejón de Zaun.</p>
       <Link to="/" className="button primary">
         Volver al inicio
       </Link>

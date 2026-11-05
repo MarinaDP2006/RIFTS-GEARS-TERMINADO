@@ -12,64 +12,55 @@ import {
   type Place,
 } from "./data";
 
+/** Aviso que cierra cada ficha: aquí solo va un resumen. */
+function CodiceNote() {
+  return (
+    <p className="provisional">
+      Esto es un resumen. La ficha completa, con su relación contigo, está en el Códice del juego.
+    </p>
+  );
+}
+
 export function HomePage() {
   return (
     <>
       <section className="home-hero">
         <img
           src="/assets/rifts-gears-hero.webp"
-          alt="Vista panorámica de una ciudad elevada entre nubes al atardecer"
+          alt="Piltover al atardecer, con sus torres y dirigibles"
         />
         <div className="home-hero-overlay" />
         <div className="hero-content">
-          <Eyebrow>Un archivo entre dos ciudades</Eyebrow>
           <h1>
             Rifts <span>&</span> Gears
           </h1>
-          <p>
-            Explora una frontera hecha de progreso, humo y decisiones. Un portal narrativo dedicado
-            a Piltover, Zaun y a las historias que surgen entre ambas.
-          </p>
           <div className="hero-actions">
             <Link to="/universo" className="button primary">
-              Explorar el universo
+              Entrar
             </Link>
             <Link to="/videojuego" className="button ghost">
               El videojuego
             </Link>
           </div>
         </div>
-        <a href="#portales" className="scroll-cue" aria-label="Descubrir contenido">
-          <span>Descubrir</span>
-        </a>
       </section>
 
       <section className="intro-section" id="portales">
-        <div className="section-heading split-heading">
-          <div>
-            <Eyebrow>Dos ciudades · una fractura</Eyebrow>
-            <h2>Todo progreso proyecta una sombra.</h2>
-          </div>
-          <p>
-            Este portal separa el archivo informativo del proyecto de videojuego y organiza cada
-            contenido para crecer sin perder claridad.
-          </p>
-        </div>
         <div className="city-duo">
           <Link to="/ciudades#piltover" className="city-panel piltover-panel">
             <div>
-              <small>Ciudad del progreso</small>
+              <small>Arriba</small>
               <h3>Piltover</h3>
-              <p>Torres de bronce, instituciones y una promesa de avance.</p>
-              <span>Entrar en la ciudad</span>
+              <p>La Ciudad del Progreso: la Academia, el Consejo y las Hexpuertas.</p>
+              <span>Ver Piltover</span>
             </div>
           </Link>
           <Link to="/ciudades#zaun" className="city-panel zaun-panel">
             <div>
-              <small>La ciudad subterránea</small>
+              <small>Abajo</small>
               <h3>Zaun</h3>
-              <p>Industria, resistencia y vida bajo el resplandor químico.</p>
-              <span>Descender a Zaun</span>
+              <p>Humo, neón, químbarones y el bar de Vander.</p>
+              <span>Bajar a Zaun</span>
             </div>
           </Link>
         </div>
@@ -83,15 +74,14 @@ export function HomePage() {
 
       <section className="game-teaser">
         <div className="game-teaser-copy">
-          <Eyebrow>En desarrollo · Godot Engine</Eyebrow>
-          <h2>Una historia para jugar. Otro proyecto, el mismo universo.</h2>
+          <h2>El videojuego</h2>
           <p>
-            Rifts & Gears también da nombre a una aventura narrativa para un jugador. Eliges
-            Piltover o Zaun, creas tu personaje y empiezas tu historia en el Puente. El videojuego se
-            desarrolla de forma independiente y no forma parte del funcionamiento de este portal.
+            Rifts & Gears es también el juego que estoy haciendo en Godot para mi TFG. Eliges
+            Piltover o Zaun, creas a tu personaje con su familia y su barrio, y vives las dos
+            temporadas desde dentro, hablando con Vi, Jinx, Jayce o Silco.
           </p>
           <Link to="/videojuego" className="text-link">
-            Conocer el proyecto
+            Ver cómo va
           </Link>
         </div>
         <Media src="/assets/img/capturas/inicio.webp" alt="Menú de inicio del videojuego Rifts & Gears" />
@@ -103,45 +93,65 @@ export function HomePage() {
 export function UniversePage() {
   const topics = [
     {
-      title: "Una frontera vertical",
-      text: "Piltover se alza sobre Zaun. Su proximidad física contrasta con una profunda separación social, política y económica.",
-    },
-    {
       title: "Hextech",
-      text: "Una tecnología que combina magia y ciencia, ligada al desarrollo y al poder de Piltover.",
+      text: "Runas grabadas en cristales mágicos que canalizan su energía. Jayce la inventa, Viktor la hace funcionar y Heimerdinger avisa de que es peligrosa. Mueve las Hexpuertas, el martillo de Jayce y el rifle de Caitlyn.",
     },
     {
-      title: "Shimmer",
-      text: "Una sustancia asociada a Zaun con efectos transformadores y consecuencias peligrosas.",
+      title: "Quimtec",
+      text: "La tecnología de Zaun: química, vapor y chatarra en vez de magia. Más barata y mucho más peligrosa. De aquí salen las prótesis como el brazo de Sevika, las bombas de Jinx y las aerotablas de las Luciérnagas.",
     },
     {
-      title: "Poder y resistencia",
-      text: "Instituciones, inventores, comerciantes y comunidades disputan quién decide el futuro de ambas ciudades.",
+      title: "El brillo",
+      text: "Una droga púrpura que fabrica Singed y vende Silco. Da una fuerza enorme a quien la toma y lo va destruyendo por dentro. Con ella Silco paga su sueño de una Zaun libre.",
     },
+    {
+      title: "El Puente del Progreso",
+      text: "El único paso entre las dos ciudades. Años antes de la serie, Vander y Silco encabezaron allí una revuelta que acabó mal. De aquella derrota sale la tregua entre Vander y los ejecutores.",
+    },
+    {
+      title: "El Consejo",
+      text: "Gobierna Piltover: las grandes familias, como los Kiramman o los Medarda, y el decano Heimerdinger. Los ejecutores hacen cumplir sus leyes, sobre todo en la frontera con Zaun.",
+    },
+    {
+      title: "Noxus",
+      text: "Un imperio que vive de la guerra. Mel viene de allí y su madre, Ambessa, llega a Piltover buscando hextech para sus ejércitos. En la T2 Noxus ya está dentro de la ciudad.",
+    },
+  ];
+  const timeline = [
+    ["Antes", "La revuelta del Puente. Vander pacta una tregua con los ejecutores y Silco y él se separan."],
+    ["T1 · Infancia", "Vi, Powder, Mylo y Claggor viven con Vander. Un robo en Piltover lo desencadena todo."],
+    ["T1 · Infancia", "Jayce investiga la magia y, con Viktor, consigue que la hextech funcione."],
+    ["T1 · Infancia", "Silco se hace con el subsuelo. Vi y Powder quedan separadas."],
+    ["T1 · Años después", "Piltover vive su edad de oro con las Hexpuertas. En Zaun crece el brillo."],
+    ["T1 · Juventud", "Caitlyn y Vi bajan a Zaun, las Luciérnagas sabotean a Silco y el Consejo se divide."],
+    ["Final T1", "Un intento de paz… y un ataque al Consejo que lo cambia todo."],
+    ["T2", "Las dos ciudades al borde de la guerra, Noxus mueve ficha y Viktor busca su propio camino."],
   ];
   return (
     <>
       <PageHero
-        eyebrow="Archivo I · Universo"
-        title="Dos visiones del progreso."
-        text="Una introducción al escenario de Rifts & Gears: Piltover arriba, Zaun debajo y el Puente del Progreso entre las dos."
+        title="El universo de Arcane"
+        text="Piltover arriba, Zaun abajo y un puente en medio. Esto es lo básico para entender la historia del juego."
       />
       <section className="editorial-lead section-pad">
         <div>
-          <Eyebrow>Contexto</Eyebrow>
-          <h2>Piltover y Zaun comparten cimientos, pero no el mismo horizonte.</h2>
+          <h2>Dos ciudades que se necesitan y no se soportan.</h2>
         </div>
         <div className="prose">
           <p>
-            Piltover representa la prosperidad, la investigación y el reconocimiento público. Bajo
-            sus puentes y torres, Zaun convive con la industria, la contaminación y una identidad
-            construida desde la resistencia.
+            Piltover está sobre los acantilados, junto a un canal por el que pasan los barcos de
+            medio continente. Cobra por cada uno que cruza, y eso la ha hecho rica. Su gente cree
+            que el ingenio lo arregla todo.
           </p>
           <p>
-            El Códice del juego reúne 53 entradas en cinco categorías: personajes, lugares,
-            criaturas y razas, tecnologías, y mundos y facciones.
+            Debajo está Zaun, la ciudad subterránea. Cuanto más bajas, menos luz y más humo. Arriba
+            la miran por encima del hombro, pero sus fábricas, su gente y su química hacen falta
+            para que Piltover funcione.
           </p>
-          <span className="status-note">Archivo en ampliación</span>
+          <p>
+            Todo lo que pasa en Arcane sale de esa tensión. Aquí tienes lo esencial; el resto está
+            en el Códice del juego.
+          </p>
         </div>
       </section>
       <section className="topic-grid section-pad">
@@ -153,28 +163,39 @@ export function UniversePage() {
           </article>
         ))}
       </section>
+      <section className="timeline section-pad">
+        <h2>Cronología</h2>
+        <ol>
+          {timeline.map(([when, what]) => (
+            <li key={what}>
+              <span>{when}</span>
+              <p>{what}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
       <section className="comparison section-pad">
         <div className="comparison-column piltover-copy">
-          <Eyebrow>Piltover</Eyebrow>
-          <h2>La promesa visible.</h2>
+          <h2>Piltover</h2>
           <p>
-            El progreso se expresa a través de academias, comercio, arquitectura monumental y
-            tecnología. Su brillo también plantea preguntas sobre quién puede acceder a ese futuro.
+            Torres art déco, cúpulas doradas y dirigibles. Mandan el Consejo y los apellidos:
+            Kiramman, Medarda, Talis. Estudiar en la Academia es el mayor orgullo y los ejecutores
+            vigilan que nadie de abajo suba sin permiso.
           </p>
           <Link to="/ciudades#piltover" className="text-link">
-            Explorar Piltover
+            Ver Piltover
           </Link>
         </div>
         <div className="comparison-line" />
         <div className="comparison-column zaun-copy">
-          <Eyebrow>Zaun</Eyebrow>
-          <h2>La vida bajo la superficie.</h2>
+          <h2>Zaun</h2>
           <p>
-            Talleres, mercados, comunidades e inventos sobreviven entre niveles industriales. Zaun
-            no es solo decadencia: es adaptación, identidad y resistencia.
+            Tuberías, neón y humo. Casi nadie tiene padres, pero todo el mundo tiene a alguien que
+            lo recogió. Mandan los químbarones de Silco, se pelea en los fosos de los bares y se
+            pinta en las paredes para decir «aquí estoy».
           </p>
           <Link to="/ciudades#zaun" className="text-link">
-            Explorar Zaun
+            Ver Zaun
           </Link>
         </div>
       </section>
@@ -182,40 +203,59 @@ export function UniversePage() {
   );
 }
 
-const cityImages: Record<"Piltover" | "Zaun", { hero: string; gallery: string[] }> = {
+const cityImages: Record<
+  "Piltover" | "Zaun",
+  { hero: string; gallery: { src: string; title: string; text: string }[] }
+> = {
   Piltover: {
     hero: "/assets/img/ciudades/piltover/panorama-t1.webp",
     gallery: [
-      "/assets/img/ciudades/piltover/panorama-t2.webp",
-      "/assets/img/ciudades/piltover/artesanos-t1.webp",
-      "/assets/img/ciudades/piltover/hexpuertas-t2.webp",
+      {
+        src: "/assets/img/ciudades/piltover/panorama-t2.webp",
+        title: "Piltover en la T2",
+        text: "La misma ciudad, con luz fría, estandartes noxianos y ejecutores armados.",
+      },
+      {
+        src: "/assets/img/ciudades/piltover/artesanos-t1.webp",
+        title: "El barrio de los artesanos",
+        text: "Relojeros, talleres y fundiciones: el Piltover que trabaja con las manos.",
+      },
+      {
+        src: "/assets/img/ciudades/piltover/hexpuertas-t2.webp",
+        title: "Las Hexpuertas",
+        text: "Los barcos cruzan el canal de golpe. De aquí sale la riqueza de la ciudad.",
+      },
     ],
   },
   Zaun: {
     hero: "/assets/img/ciudades/zaun/ciudad-subterranea.jpg",
     gallery: [
-      "/assets/img/ciudades/zaun/centro.jpg",
-      "/assets/img/ciudades/zaun/muelles.jpg",
-      "/assets/img/ciudades/zaun/comuna-viktor.jpg",
+      {
+        src: "/assets/img/ciudades/zaun/centro.jpg",
+        title: "El centro de Zaun",
+        text: "Pasarelas, carteles de neón y vecinos que se conocen de toda la vida.",
+      },
+      {
+        src: "/assets/img/ciudades/zaun/muelles.jpg",
+        title: "Los muelles",
+        text: "Contrabando, barcas y mercancía que nunca pasa por la aduana de arriba.",
+      },
+      {
+        src: "/assets/img/ciudades/zaun/comuna-viktor.jpg",
+        title: "La comuna de Viktor",
+        text: "En la T2, el sitio al que va la gente de Zaun a que la curen.",
+      },
     ],
   },
 };
 
-const galleryText = [
-  ["Arquitectura y escala", "Cómo se construye la ciudad y a quién está pensada para impresionar."],
-  ["Vida entre distritos", "Mercados, calles y vecinos que hacen que la ciudad funcione."],
-  ["Tecnología y atmósfera", "La luz, el humo y los inventos que dan a cada nivel su carácter."],
-];
-
 function CitySection({
   city,
-  kicker,
   title,
   description,
   points,
 }: {
   city: "Piltover" | "Zaun";
-  kicker: string;
   title: string;
   description: string;
   points: string[];
@@ -228,7 +268,6 @@ function CitySection({
         <Media src={images.hero} alt={`Panorámica de ${city}`} />
       </div>
       <div className="city-copy">
-        <Eyebrow>{kicker}</Eyebrow>
         <h2>{title}</h2>
         <p>{description}</p>
         <ul className="city-points">
@@ -237,25 +276,25 @@ function CitySection({
           ))}
         </ul>
         <Link to={`/atlas?ciudad=${city.toLowerCase()}`} className="button secondary">
-          Abrir en el atlas
+          Ver en el atlas
         </Link>
       </div>
       <div className="mini-gallery">
-        {images.gallery.map((src, index) => (
-          <figure key={src} className="gallery-entry">
-            <Media src={src} alt={`${city}: ${galleryText[index][0]}`} />
+        {images.gallery.map((item, index) => (
+          <figure key={item.src} className="gallery-entry">
+            <Media src={item.src} alt={item.title} />
             <figcaption>
               <span>0{index + 1}</span>
               <div>
-                <strong>{galleryText[index][0]}</strong>
-                <p>{galleryText[index][1]}</p>
+                <strong>{item.title}</strong>
+                <p>{item.text}</p>
               </div>
             </figcaption>
           </figure>
         ))}
       </div>
       <div className="city-places">
-        <Eyebrow>Lugares destacados</Eyebrow>
+        <Eyebrow>Lugares</Eyebrow>
         <div>
           {places
             .filter((place) => place.city === city)
@@ -277,9 +316,8 @@ export function CitiesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Archivo II · Ciudades"
-        title="Arriba, el oro. Debajo, el neón."
-        text="Dos identidades visuales dentro de un mismo mundo. Recorre su arquitectura, su sociedad y los lugares que definen cada nivel."
+        title="Ciudades"
+        text="Piltover y Zaun en la T1 y en la T2."
       />
       <nav className="local-nav" aria-label="Ciudades">
         <a href="#piltover">Piltover</a>
@@ -287,17 +325,23 @@ export function CitiesPage() {
       </nav>
       <CitySection
         city="Piltover"
-        kicker="Ciudad del progreso"
-        title="Una ciudad construida para mirar al futuro."
-        description="Piltover expresa su poder mediante grandes avenidas, torres, puentes e instituciones dedicadas al conocimiento. La luz cálida y los metales pulidos definen su presencia visual."
-        points={["Arquitectura monumental", "Investigación y comercio", "Desarrollo de Hextech"]}
+        title="Piltover, la Ciudad del Progreso"
+        description="En la T1 es un atardecer dorado: torres escalonadas, cúpulas de oro, vidrieras y engranajes de latón. En la T2 la luz se enfría, la hextech se convierte en arma y los soldados de Noxus pasean por sus calles."
+        points={[
+          "Gobierna el Consejo de las grandes familias",
+          "Los ejecutores guardan la ley y la frontera",
+          "Se hace rica con las Hexpuertas y el comercio",
+        ]}
       />
       <CitySection
         city="Zaun"
-        kicker="La ciudad subterránea"
-        title="Ingenio, peligro y vida entre niveles."
-        description="Zaun crece de forma vertical entre tuberías, talleres, pasarelas y gases industriales. Su identidad nace de la adaptación y de las comunidades que resisten bajo Piltover."
-        points={["Estructura industrial", "Comunidades autónomas", "Química y tecnología propia"]}
+        title="Zaun, la ciudad de abajo"
+        description="Hecha de capas: la Promenade, la más cercana a Piltover; el Entresuelo, de fábricas y puentes colgantes; y el Sumidero, donde no llega el sol. En la T2 las paredes se llenan de los graffiti de Jinx y el púrpura del brillo."
+        points={[
+          "Tres niveles unidos por ascensores",
+          "Mandan los químbarones de Silco",
+          "Funciona con quimtec… y con brillo",
+        ]}
       />
     </>
   );
@@ -310,9 +354,8 @@ export function CharactersPage() {
   return (
     <>
       <PageHero
-        eyebrow="Archivo III · Personajes"
-        title="Vidas a ambos lados de la grieta."
-        text="Las 16 figuras de Piltover, Zaun y Noxus que encontrarás en el juego. Sus historias ya están en marcha; tus decisiones pueden cruzarse con las suyas."
+        title="Personajes"
+        text="Los 16 personajes que te encontrarás en el juego. Pulsa en uno para ver su ficha."
       />
       <section className="library section-pad">
         <div className="library-tools">
@@ -327,7 +370,7 @@ export function CharactersPage() {
               </button>
             ))}
           </div>
-          <p>{visible.length} registros</p>
+          <p>{visible.length} personajes</p>
         </div>
         <div className="character-grid">
           {visible.map((character) => (
@@ -352,13 +395,30 @@ export function CharactersPage() {
           <div className="record-detail">
             <Media src={selected.image} alt={`Retrato de ${selected.name}`} ratio="portrait" />
             <div>
-              <Eyebrow>{selected.city}</Eyebrow>
               <h2>{selected.name}</h2>
               <span className="record-role">{selected.role}</span>
-              <p>{selected.summary}</p>
-              <p className="provisional">
-                Su ficha completa, con relaciones y cronología, está en el Códice del juego.
-              </p>
+              <dl className="record-facts">
+                <div>
+                  <dt>Ciudad</dt>
+                  <dd>{selected.city}</dd>
+                </div>
+                <div>
+                  <dt>Temporadas</dt>
+                  <dd>{selected.seasons}</dd>
+                </div>
+                <div>
+                  <dt>En el juego</dt>
+                  <dd>{selected.where}</dd>
+                </div>
+                <div>
+                  <dt>Vínculos</dt>
+                  <dd>{selected.ties}</dd>
+                </div>
+              </dl>
+              {selected.bio.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              <CodiceNote />
             </div>
           </div>
         )}
@@ -386,9 +446,8 @@ export function PlacesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Archivo IV · Lugares"
-        title="Cada esquina guarda una historia."
-        text="Los 14 lugares de Piltover y Zaun: instituciones, distritos, comercios, infraestructuras y refugios."
+        title="Lugares"
+        text="Los sitios de Piltover y Zaun que salen en la serie y en el juego."
       />
       <section className="library section-pad">
         <div className="place-toolbar">
@@ -413,7 +472,7 @@ export function PlacesPage() {
             </select>
           </label>
           <label>
-            <span>Categoría</span>
+            <span>Tipo</span>
             <select value={category} onChange={(event) => setCategory(event.target.value)}>
               {categories.map((item) => (
                 <option key={item}>{item}</option>
@@ -421,18 +480,18 @@ export function PlacesPage() {
             </select>
           </label>
         </div>
-        <p className="result-count">{visible.length} lugares encontrados</p>
+        <p className="result-count">{visible.length} lugares</p>
         <div className="place-grid">
           {visible.map((place) => (
             <article className="place-card" key={place.name}>
               <Media src={place.image} alt={place.name} />
               <div>
                 <span className={`city-tag ${place.city.toLowerCase()}`}>{place.city}</span>
-                <small>{place.category}</small>
+                <small>{place.zone}</small>
                 <h2>{place.name}</h2>
-                <p>{place.summary}</p>
+                <p>{place.bio[0]}</p>
                 <button className="text-link" onClick={() => setSelected(place)}>
-                  Abrir ficha
+                  Ver ficha
                 </button>
               </div>
             </article>
@@ -440,7 +499,7 @@ export function PlacesPage() {
         </div>
         {visible.length === 0 && (
           <div className="empty-state">
-            <h2>No hay lugares con estos filtros.</h2>
+            <h2>No hay ningún lugar con esos filtros.</h2>
             <button
               onClick={() => {
                 setCity("Todas");
@@ -448,7 +507,7 @@ export function PlacesPage() {
                 setQuery("");
               }}
             >
-              Limpiar filtros
+              Quitar filtros
             </button>
           </div>
         )}
@@ -457,12 +516,31 @@ export function PlacesPage() {
         {selected && (
           <div className="place-detail">
             <Media src={selected.image} alt={selected.name} />
-            <Eyebrow>
-              {selected.city} · {selected.zone}
-            </Eyebrow>
             <h2>{selected.name}</h2>
-            <p>{selected.summary}</p>
-            <p className="provisional">Categoría: {selected.category}.</p>
+            <dl className="record-facts">
+              <div>
+                <dt>Ciudad</dt>
+                <dd>
+                  {selected.city} · {selected.zone}
+                </dd>
+              </div>
+              <div>
+                <dt>Tipo</dt>
+                <dd>{selected.category}</dd>
+              </div>
+              <div>
+                <dt>Temporadas</dt>
+                <dd>{selected.seasons}</dd>
+              </div>
+              <div>
+                <dt>Quién suele estar</dt>
+                <dd>{selected.who}</dd>
+              </div>
+            </dl>
+            {selected.bio.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            <CodiceNote />
           </div>
         )}
       </Dialog>
@@ -470,21 +548,40 @@ export function PlacesPage() {
   );
 }
 
+// Posición de cada lugar en el atlas, con el mismo orden que el mapa del juego:
+// Piltover en una línea arriba y Zaun en tres niveles debajo.
+const atlasPositions: Record<string, [number, number]> = {
+  "Las Hexpuertas": [10, 22],
+  "La Academia": [22, 22],
+  "La Sala del Consejo": [34, 22],
+  "La Plaza del Progreso": [46, 22],
+  "El Taller de Jayce": [58, 22],
+  "La Mansión Kiramman": [70, 22],
+  "El Puente del Progreso": [84, 34],
+  "La Última Gota": [30, 58],
+  "El Mercado": [48, 58],
+  "Los Callejones": [66, 58],
+  "El Árbol": [48, 72],
+  "El laboratorio de Singed": [30, 86],
+  "El Escondite de Jinx": [48, 86],
+  "El Sumidero": [66, 86],
+};
+
 export function AtlasPage() {
   const [selected, setSelected] = useState<Place>(places[0]);
   const [zoom, setZoom] = useState(1);
   return (
     <>
       <PageHero
-        eyebrow="Archivo V · Atlas"
-        title="Un mapa preparado para crecer."
-        text="Piltover arriba, Zaun debajo. Selecciona un marcador para ver la ficha de cada lugar."
+        title="Atlas"
+        text="Los lugares colocados como en el mapa del juego. Pulsa un número para ver qué hay allí."
       />
       <section className="atlas section-pad">
         <div className="atlas-notice">
           <p>
-            <strong>Mapa en desarrollo.</strong> Las posiciones de los marcadores son orientativas;
-            el mapa definitivo llegará con el juego.
+            <strong>Cómo se lee:</strong> Piltover va en una línea arriba, de las Hexpuertas al
+            Puente. Desde el Puente se baja a Zaun, que tiene tres niveles: Promenade, Entresuelo y
+            Sumidero.
           </p>
         </div>
         <div className="atlas-layout">
@@ -497,20 +594,20 @@ export function AtlasPage() {
               <div className="map-half zaun-map">
                 <span>Zaun</span>
               </div>
-              {places.map((place, index) => (
-                <button
-                  key={place.name}
-                  className={`map-marker ${selected.name === place.name ? "active" : ""}`}
-                  style={{
-                    left: `${18 + ((index * 17) % 65)}%`,
-                    top: `${place.city === "Piltover" ? 22 + (index % 3) * 9 : 58 + (index % 3) * 8}%`,
-                  }}
-                  onClick={() => setSelected(place)}
-                  aria-label={`Seleccionar ${place.name}`}
-                >
-                  <span>{index + 1}</span>
-                </button>
-              ))}
+              {places.map((place, index) => {
+                const [left, top] = atlasPositions[place.name] ?? [50, 50];
+                return (
+                  <button
+                    key={place.name}
+                    className={`map-marker ${selected.name === place.name ? "active" : ""}`}
+                    style={{ left: `${left}%`, top: `${top}%` }}
+                    onClick={() => setSelected(place)}
+                    aria-label={`Seleccionar ${place.name}`}
+                  >
+                    <span>{index + 1}</span>
+                  </button>
+                );
+              })}
             </div>
             <div className="zoom-controls">
               <button
@@ -531,12 +628,16 @@ export function AtlasPage() {
             <span className="map-index">
               {String(places.indexOf(selected) + 1).padStart(2, "0")}
             </span>
-            <Eyebrow>{selected.city}</Eyebrow>
             <h2>{selected.name}</h2>
-            <small>{selected.zone}</small>
-            <p>{selected.summary}</p>
+            <small>
+              {selected.city} · {selected.zone}
+            </small>
+            <p>{selected.bio[0]}</p>
+            <p>
+              <strong>Quién suele estar:</strong> {selected.who}
+            </p>
             <Link to="/lugares" className="text-link">
-              Ver biblioteca de lugares
+              Ver todos los lugares
             </Link>
           </aside>
         </div>
@@ -547,41 +648,69 @@ export function AtlasPage() {
 
 export function GamePage() {
   const features = [
-    ["Creación de personaje", "Eliges ciudad, procedencia, familia y aspecto de tu protagonista en siete apartados."],
-    ["Historia y decisiones", "30 capítulos en dos partes y 8 finales que dependen de lo que decides."],
-    ["Mapa 3D lineal", "Avanzas de parada en parada, cruzas el Puente y bajas a Zaun por el ascensor de carga."],
-    ["Códice y atlas", "53 entradas del Códice, siempre completas, y un Atlas 2D para orientarte."],
-    ["Relaciones y misiones", "Historia principal, misiones secundarias e historias jugables con 16 personajes."],
-    ["Dos partidas", "Un espacio de guardado para Piltover y otro para Zaun, con cargar, borrar y exportar."],
+    [
+      "Creas a tu personaje",
+      "Siete apartados: ciudad, familia, barrio, oficio, rasgos, aficiones y cuatro estadísticas (Ingenio, Carisma, Valor y Sigilo). Puedes ser prima de Vi, hermano de Jayce o hija de Silco.",
+    ],
+    [
+      "Te mueves por un mapa 3D",
+      "Piltover va en línea, de parada en parada. Desde el Puente bajas a Zaun y cambias de nivel en ascensor. Al empezar y al cargar partida apareces siempre en el Puente.",
+    ],
+    [
+      "Hablas por chat",
+      "Cada personaje escribe con su propia voz: Jinx a ráfagas, Silco con pausas largas, Heimerdinger con mensajes eternos. En cada mensaje tienes entre 5 y 9 respuestas.",
+    ],
+    [
+      "Las relaciones cambian",
+      "Confianza, amistad, afecto y rivalidad. Puedes pasar de desconocido a confidente, a pareja… o a rival y a guerra. Tu ciudad y tu familia deciden cómo te tratan al principio.",
+    ],
+    [
+      "Una historia larga",
+      "30 capítulos en dos partes, una por temporada, y 8 finales distintos según lo que hagas y con quién te lleves bien.",
+    ],
+    [
+      "Un Códice siempre abierto",
+      "Un libro con tu propia historia, los personajes, Piltover, Zaun, la tecnología, la cultura y la cronología. Está completo desde el principio: no hay que desbloquear nada.",
+    ],
+  ];
+  const minigames = {
+    Piltover: ["Calibrar el cristal", "Tiro de precisión", "Debate del Consejo", "El archivo", "Baile de gala"],
+    Zaun: ["El foso", "Carrera de aerotabla", "Graffiti", "Mezclas de quimtec", "Cartas en La Última Gota"],
+  };
+  const done = [
+    "Menú de inicio",
+    "Nueva partida y elegir ciudad",
+    "Creación de personaje",
+    "Ajustes",
+    "Cargar partida (diseño)",
+    "Códice",
+    "Mapa 3D de las dos ciudades",
+  ];
+  const pending = [
+    "Prólogo en vídeo",
+    "Pantalla de cada lugar",
+    "Chats y relaciones",
+    "Misiones y capítulos",
+    "Menú de pausa y guardado",
+    "Los 10 minijuegos",
   ];
   return (
     <>
       <section className="game-hero">
         <div className="game-hero-copy">
-          <Eyebrow>Videojuego narrativo · Godot Engine</Eyebrow>
-          <h1>Tu historia comienza entre dos mundos.</h1>
+          <h1>Rifts & Gears, el videojuego</h1>
           <p>
-            Una experiencia para un jugador desarrollada de forma independiente en Godot 4. Al
-            empezar y al cargar partida apareces siempre en el Puente, entre Piltover y Zaun. Esta
-            página presenta el proyecto; el juego todavía no está disponible para descargar.
+            Un fangame narrativo para un jugador que estoy haciendo en Godot 4 como TFG. Creas a tu
+            personaje, eliges Piltover o Zaun y vives la historia de las dos temporadas de Arcane
+            desde dentro. Lo que eliges al crearlo decide cómo te habla y cómo te trata cada
+            personaje.
           </p>
-          <span className="development-badge">Actualmente en desarrollo</span>
+          <span className="development-badge">En desarrollo</span>
         </div>
         <Media
           src="/assets/img/capturas/creacion-personaje.webp"
           alt="Pantalla de creación de personaje del videojuego"
         />
-      </section>
-      <section className="game-intro section-pad">
-        <div>
-          <Eyebrow>Concepto</Eyebrow>
-          <h2>Una experiencia propia dentro de un universo conocido.</h2>
-        </div>
-        <p>
-          Una historia interactiva ambientada entre Piltover y Zaun: creas tu personaje, eliges
-          ciudad y vives una aventura de diálogos, misiones y relaciones. Las mecánicas se
-          construyen por etapas y pueden cambiar mientras el juego avanza.
-        </p>
       </section>
       <section className="game-features section-pad">
         {features.map(([title, text], index) => (
@@ -592,10 +721,52 @@ export function GamePage() {
           </article>
         ))}
       </section>
+      <section className="game-lists section-pad">
+        <div>
+          <h2>Minijuegos</h2>
+          <p>
+            Cinco por ciudad. Se juegan desde la pausa y solo entran en la historia cuando una
+            misión los pide.
+          </p>
+          <div className="list-columns">
+            {(Object.keys(minigames) as (keyof typeof minigames)[]).map((cityName) => (
+              <div key={cityName} className={cityName.toLowerCase()}>
+                <h3>{cityName}</h3>
+                <ul>
+                  {minigames[cityName].map((game) => (
+                    <li key={game}>{game}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2>Cómo va</h2>
+          <p>Lo que ya funciona en Godot y lo que me queda por hacer.</p>
+          <div className="list-columns">
+            <div>
+              <h3>Hecho</h3>
+              <ul>
+                {done.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3>Falta</h3>
+              <ul>
+                {pending.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="game-shots section-pad">
         <div className="section-heading">
-          <Eyebrow>Capturas del juego</Eyebrow>
-          <h2>El juego, pantalla a pantalla.</h2>
+          <h2>Capturas</h2>
         </div>
         <div className="shots-grid">
           {screenshots.map((shot) => (
@@ -608,15 +779,14 @@ export function GamePage() {
       </section>
       <section className="game-status section-pad">
         <div>
-          <Eyebrow>Disponibilidad</Eyebrow>
-          <h2>Sin descarga pública por ahora.</h2>
+          <h2>Todavía no se puede descargar.</h2>
           <p>
-            Puedes seguir el desarrollo en el repositorio del proyecto. Cuando haya una versión
-            jugable, aparecerá aquí con su enlace de descarga.
+            Cuando haya una versión jugable la pondré aquí. Mientras tanto, el código está en
+            GitHub.
           </p>
         </div>
         <a href={GITHUB} className="button secondary">
-          Ver el repositorio
+          Ver en GitHub
         </a>
       </section>
     </>
@@ -658,17 +828,15 @@ export function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contacto · Comunidad"
-        title="Ayuda a construir el archivo."
-        text="Comparte correcciones, ideas o recursos. Las propuestas se gestionan en el repositorio del proyecto en GitHub."
+        title="Contacto"
+        text="¿Has visto un dato mal, una imagen que no carga o tienes una idea para el juego? Cuéntamelo."
       />
       <section className="contact-layout section-pad">
         <aside>
-          <Eyebrow>Antes de enviar</Eyebrow>
-          <h2>Tu mensaje importa.</h2>
+          <h2>Cómo me llega</h2>
           <p>
-            El portal está preparado para crecer con contenido revisado. Puedes señalar errores de
-            accesibilidad, lore, navegación o proponer nuevos registros.
+            Todo lo de la web y del juego lo llevo en GitHub, así que es ahí donde leo los
+            mensajes. Si algo no cuadra con Arcane, dime en qué capítulo sale y lo corrijo.
           </p>
           <div className="integration-note">
             <div>
