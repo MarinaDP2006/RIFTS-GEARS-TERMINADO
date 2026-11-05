@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink, Outlet, useLocation } from "react-router";
 import { GITHUB } from "./data";
+import { MusicPlayer } from "./fx";
 
 const nav = [
   ["Inicio", "/"],
@@ -82,6 +83,7 @@ export function Layout() {
       <main id="contenido">
         <Outlet />
       </main>
+      <MusicPlayer />
       <footer className="site-footer">
         <div>
           <Brand />
@@ -237,7 +239,7 @@ export const portalLinks = [
     to: "/videojuego",
     kicker: "Videojuego",
     title: "El juego que estoy haciendo",
-    text: "Un fangame narrativo en Godot: creas a tu personaje y vives las dos temporadas desde dentro.",
+    text: "Un fangame narrativo en Godot: creas a tu personaje y vives la historia desde dentro, en dos partes.",
   },
   {
     to: "/contacto",

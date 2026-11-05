@@ -11,6 +11,7 @@ import {
   type City,
   type Place,
 } from "./data";
+import { GraffitiDoodle, Gear, HextechDoodle, ShimmerField, TrackCard, playTrack } from "./fx";
 
 /** Aviso que cierra cada ficha: aquí solo va un resumen. */
 function CodiceNote() {
@@ -22,6 +23,15 @@ function CodiceNote() {
 }
 
 export function HomePage() {
+  const stats = [
+    ["2", "ciudades", "Piltover arriba, Zaun abajo"],
+    ["16", "protagonistas", "De Vi y Jinx a Singed y Ambessa"],
+    ["17", "lugares", "14 paradas en el mapa 3D"],
+    ["30", "capítulos", "En la Parte 1 y la Parte 2"],
+    ["10", "minijuegos", "Cinco por ciudad"],
+    ["8", "finales", "Según con quién te quedes"],
+  ];
+  const faces = characters.filter((character) => character.image);
   return (
     <>
       <section className="home-hero">
@@ -30,10 +40,19 @@ export function HomePage() {
           alt="Piltover al atardecer, con sus torres y dirigibles"
         />
         <div className="home-hero-overlay" />
+        <ShimmerField count={34} />
+        <HextechDoodle className="hero-doodle" />
+        <Gear size={180} className="hero-gear gear-a" />
+        <Gear size={96} teeth={9} className="hero-gear gear-b" />
         <div className="hero-content">
+          <p className="hero-kicker">Un fangame de Arcane</p>
           <h1>
             Rifts <span>&</span> Gears
           </h1>
+          <p className="hero-lead">
+            Elige una ciudad, crea a quien vas a ser y entra en la historia de Vi, Jinx, Jayce y
+            Silco como alguien más del barrio.
+          </p>
           <div className="hero-actions">
             <Link to="/universo" className="button primary">
               Entrar
@@ -41,28 +60,88 @@ export function HomePage() {
             <Link to="/videojuego" className="button ghost">
               El videojuego
             </Link>
+            <button className="button ghost hero-music" onClick={() => playTrack("inicio")}>
+              ♪ Escuchar el tema
+            </button>
           </div>
         </div>
+        <span className="scroll-hint" aria-hidden="true" />
+      </section>
+
+      <section className="stats-strip" aria-label="El juego en cifras">
+        {stats.map(([number, label, text]) => (
+          <div key={label}>
+            <strong>{number}</strong>
+            <span>{label}</span>
+            <small>{text}</small>
+          </div>
+        ))}
       </section>
 
       <section className="intro-section" id="portales">
         <div className="city-duo">
           <Link to="/ciudades#piltover" className="city-panel piltover-panel">
+            <img className="city-emblem" src="/assets/img/simbolos/piltover.png" alt="" />
+            <HextechDoodle className="panel-doodle" />
+            <ShimmerField count={14} tone="gold" />
             <div>
               <small>Arriba</small>
               <h3>Piltover</h3>
-              <p>La Ciudad del Progreso: la Academia, el Consejo y las Hexpuertas.</p>
+              <p>La Ciudad del Progreso: la Academia, el Consejo y las Hexpuertas. Aquí todo brilla, hasta las mentiras.</p>
               <span>Ver Piltover</span>
             </div>
           </Link>
           <Link to="/ciudades#zaun" className="city-panel zaun-panel">
+            <img className="city-emblem" src="/assets/img/simbolos/zaun.png" alt="" />
+            <GraffitiDoodle className="panel-doodle" />
+            <ShimmerField count={18} />
             <div>
               <small>Abajo</small>
               <h3>Zaun</h3>
-              <p>Humo, neón, químbarones y el bar de Vander.</p>
+              <p>Humo, neón, químbarones y el bar de Vander. Aquí nadie te regala nada, pero nadie te deja solo.</p>
               <span>Bajar a Zaun</span>
             </div>
           </Link>
+        </div>
+      </section>
+
+      <section className="faces-band" aria-label="Protagonistas">
+        <div className="faces-head">
+          <h2>Los que vas a conocer</h2>
+          <Link to="/personajes" className="text-link">
+            Ver personajes
+          </Link>
+        </div>
+        <div className="faces-track">
+          <div className="faces-row">
+            {[...faces, ...faces].map((character, index) => (
+              <Link
+                to="/personajes"
+                key={character.name + index}
+                className={`face ${character.city.toLowerCase()}`}
+                aria-hidden={index >= faces.length}
+                tabIndex={index >= faces.length ? -1 : undefined}
+              >
+                <img src={character.image} alt={index >= faces.length ? "" : character.name} loading="lazy" />
+                <span>{character.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="soundtrack section-pad">
+        <div>
+          <h2>Música del juego</h2>
+          <p>
+            Al abrir el juego suena el tema de inicio. Cuando eliges ciudad, la música cambia: más
+            ceremoniosa arriba en Piltover, más sucia y con más ritmo abajo en Zaun.
+          </p>
+        </div>
+        <div className="track-list">
+          <TrackCard id="inicio" />
+          <TrackCard id="piltover" />
+          <TrackCard id="zaun" />
         </div>
       </section>
 
@@ -77,8 +156,8 @@ export function HomePage() {
           <h2>El videojuego</h2>
           <p>
             Rifts & Gears es también el juego que estoy haciendo en Godot para mi TFG. Eliges
-            Piltover o Zaun, creas a tu personaje con su familia y su barrio, y vives las dos
-            temporadas desde dentro, hablando con Vi, Jinx, Jayce o Silco.
+            Piltover o Zaun, creas a tu personaje con su familia y su barrio, y vives toda
+            la historia desde dentro, en dos partes, hablando con Vi, Jinx, Jayce o Silco.
           </p>
           <Link to="/videojuego" className="text-link">
             Ver cómo va
@@ -94,44 +173,50 @@ export function UniversePage() {
   const topics = [
     {
       title: "Hextech",
+      image: "/assets/img/ciudades/piltover/hexpuertas-t1.webp",
       text: "Runas grabadas en cristales mágicos que canalizan su energía. Jayce la inventa, Viktor la hace funcionar y Heimerdinger avisa de que es peligrosa. Mueve las Hexpuertas, el martillo de Jayce y el rifle de Caitlyn.",
     },
     {
       title: "Quimtec",
+      image: "/assets/img/ciudades/zaun/fabricas.webp",
       text: "La tecnología de Zaun: química, vapor y chatarra en vez de magia. Más barata y mucho más peligrosa. De aquí salen las prótesis como el brazo de Sevika, las bombas de Jinx y las aerotablas de las Luciérnagas.",
     },
     {
       title: "El brillo",
+      image: "/assets/img/ciudades/zaun/singed-laboratorio.png",
       text: "Una droga púrpura que fabrica Singed y vende Silco. Da una fuerza enorme a quien la toma y lo va destruyendo por dentro. Con ella Silco paga su sueño de una Zaun libre.",
     },
     {
       title: "El Puente del Progreso",
+      image: "/assets/img/ciudades/piltover/puente-progreso-t1.webp",
       text: "El único paso entre las dos ciudades. Años antes de la serie, Vander y Silco encabezaron allí una revuelta que acabó mal. De aquella derrota sale la tregua entre Vander y los ejecutores.",
     },
     {
       title: "El Consejo",
+      image: "/assets/img/ciudades/piltover/consejo-general.webp",
       text: "Gobierna Piltover: las grandes familias, como los Kiramman o los Medarda, y el decano Heimerdinger. Los ejecutores hacen cumplir sus leyes, sobre todo en la frontera con Zaun.",
     },
     {
       title: "Noxus",
-      text: "Un imperio que vive de la guerra. Mel viene de allí y su madre, Ambessa, llega a Piltover buscando hextech para sus ejércitos. En la T2 Noxus ya está dentro de la ciudad.",
+      image: "/assets/img/simbolos/noxus.webp",
+      text: "Un imperio que vive de la guerra. Mel viene de allí y su madre, Ambessa, llega a Piltover buscando hextech para sus ejércitos. En la Parte 2 Noxus ya está dentro de la ciudad.",
     },
   ];
   const timeline = [
     ["Antes", "La revuelta del Puente. Vander pacta una tregua con los ejecutores y Silco y él se separan."],
-    ["T1 · Infancia", "Vi, Powder, Mylo y Claggor viven con Vander. Un robo en Piltover lo desencadena todo."],
-    ["T1 · Infancia", "Jayce investiga la magia y, con Viktor, consigue que la hextech funcione."],
-    ["T1 · Infancia", "Silco se hace con el subsuelo. Vi y Powder quedan separadas."],
-    ["T1 · Años después", "Piltover vive su edad de oro con las Hexpuertas. En Zaun crece el brillo."],
-    ["T1 · Juventud", "Caitlyn y Vi bajan a Zaun, las Luciérnagas sabotean a Silco y el Consejo se divide."],
-    ["Final T1", "Un intento de paz… y un ataque al Consejo que lo cambia todo."],
-    ["T2 · Después del ataque", "Piltover busca culpables en Zaun, los ejecutores bajan armados y Jinx se convierte en un símbolo."],
-    ["T2", "Noxus entra en Piltover, Viktor busca su propio camino y las dos ciudades acaban luchando juntas."],
+    ["Parte 1 · Infancia", "Vi, Powder, Mylo y Claggor viven con Vander. Un robo en Piltover lo desencadena todo."],
+    ["Parte 1 · Infancia", "Jayce investiga la magia y, con Viktor, consigue que la hextech funcione."],
+    ["Parte 1 · Infancia", "Silco se hace con el subsuelo. Vi y Powder quedan separadas."],
+    ["Parte 1 · Años después", "Piltover vive su edad de oro con las Hexpuertas. En Zaun crece el brillo."],
+    ["Parte 1 · Juventud", "Caitlyn y Vi bajan a Zaun, las Luciérnagas sabotean a Silco y el Consejo se divide."],
+    ["Final de la Parte 1", "Un intento de paz… y un ataque al Consejo que lo cambia todo."],
+    ["Parte 2 · Después del ataque", "Piltover busca culpables en Zaun, los ejecutores bajan armados y Jinx se convierte en un símbolo."],
+    ["Parte 2", "Noxus entra en Piltover, Viktor busca su propio camino y las dos ciudades acaban luchando juntas."],
   ];
   const glossary = [
     ["Runaterra", "El mundo donde pasa todo. Piltover y Zaun son solo una esquina; Noxus, Demacia o Ionia quedan lejos, pero existen."],
     ["Químbarones", "Los jefes de Zaun que controlan fábricas, calles y negocios. Casi todos trabajan para Silco, como Finn."],
-    ["Ejecutores", "La policía de Piltover. Arriba protegen; abajo, en Zaun, se les teme. Su sheriff en la T1 es Marcus."],
+    ["Ejecutores", "La policía de Piltover. Arriba protegen; abajo, en Zaun, se les teme. Su sheriff en la Parte 1 es Marcus."],
     ["Luciérnagas", "La banda de Ekko: chavales con máscaras y aerotablas que sabotean a Silco y viven en el Árbol."],
     ["Hexcore", "La investigación de Viktor que mezcla hextech y algo vivo. Funciona demasiado bien."],
     ["Día del Progreso", "La gran fiesta de Piltover: discursos, premios e inventos presentados en público."],
@@ -165,9 +250,14 @@ export function UniversePage() {
           </p>
         </div>
       </section>
-      <section className="topic-grid section-pad">
+      <figure className="universe-banner">
+        <img src="/assets/img/universo/canal-piltover.webp" alt="El canal de Piltover con sus puentes y, al fondo, la ciudad" loading="lazy" />
+        <figcaption>El canal de Piltover. Por aquí pasan los barcos que hacen rica a la ciudad; debajo, donde no llega esta luz, empieza Zaun.</figcaption>
+      </figure>
+      <section className="topic-grid universe-topics section-pad">
         {topics.map((topic, index) => (
-          <article className="topic-card" key={topic.title}>
+          <article className={`topic-card with-image ${topic.title === "Noxus" ? "emblem" : ""}`} key={topic.title}>
+            <img className="topic-image" src={topic.image} alt="" loading="lazy" />
             <span className="topic-number">0{index + 1}</span>
             <h3>{topic.title}</h3>
             <p>{topic.text}</p>
@@ -185,7 +275,8 @@ export function UniversePage() {
           ))}
         </dl>
       </section>
-      <section className="timeline section-pad">
+      <section className="timeline section-pad with-art">
+        <img className="timeline-art" src="/assets/img/universo/piltover-parte2.webp" alt="" loading="lazy" />
         <h2>Cronología</h2>
         <ol>
           {timeline.map(([when, what]) => (
@@ -198,6 +289,7 @@ export function UniversePage() {
       </section>
       <section className="comparison section-pad">
         <div className="comparison-column piltover-copy">
+          <img className="comparison-image" src="/assets/img/ciudades/piltover/panorama-t1.webp" alt="Panorámica de Piltover" loading="lazy" />
           <h2>Piltover</h2>
           <p>
             Torres art déco, cúpulas doradas y dirigibles. Mandan el Consejo y los apellidos:
@@ -210,6 +302,7 @@ export function UniversePage() {
         </div>
         <div className="comparison-line" />
         <div className="comparison-column zaun-copy">
+          <img className="comparison-image" src="/assets/img/universo/zaun-mirador.webp" alt="Una figura mira Zaun desde una pasarela" loading="lazy" />
           <h2>Zaun</h2>
           <p>
             Tuberías, neón y humo. Casi nadie tiene padres, pero todo el mundo tiene a alguien que
@@ -234,7 +327,7 @@ const cityImages: Record<
     gallery: [
       {
         src: "/assets/img/ciudades/piltover/panorama-t2.webp",
-        title: "Piltover en la T2",
+        title: "Piltover en la Parte 2",
         text: "La misma ciudad, con luz fría, estandartes noxianos y ejecutores armados.",
       },
       {
@@ -265,7 +358,7 @@ const cityImages: Record<
       {
         src: "/assets/img/ciudades/zaun/comuna-viktor.jpg",
         title: "La comuna de Viktor",
-        text: "En la T2, el sitio al que va la gente de Zaun a que la curen.",
+        text: "En la Parte 2, el sitio al que va la gente de Zaun a que la curen.",
       },
     ],
   },
@@ -297,9 +390,12 @@ function CitySection({
             <li key={point}>{point}</li>
           ))}
         </ul>
-        <Link to={`/atlas?ciudad=${city.toLowerCase()}`} className="button secondary">
-          Ver en el atlas
-        </Link>
+        <div className="city-actions">
+          <Link to={`/atlas?ciudad=${city.toLowerCase()}`} className="button secondary">
+            Ver en el atlas
+          </Link>
+          <TrackCard id={city === "Piltover" ? "piltover" : "zaun"} />
+        </div>
       </div>
       <div className="mini-gallery">
         {images.gallery.map((item, index) => (
@@ -341,7 +437,7 @@ const cityBlocks: Record<"Piltover" | "Zaun", { title: string; text: string }[]>
     { title: "Su gente", text: "Creen que el ingenio lo arregla todo. Estudiar en la Academia es el mayor honor y el apellido pesa más que el dinero. Muchos miran a los de abajo como un problema que no quieren ver." },
     { title: "Barrios", text: "El barrio académico, el Distrito del Consejo con su cúpula dorada, las terrazas de las grandes familias, el barrio de los artesanos y los muelles de las Hexpuertas. Todo acaba en el Puente." },
     { title: "Tecnología", text: "La hextech: runas y cristales mágicos. Mueve las Hexpuertas, el martillo de Jayce y el rifle de Caitlyn. Heimerdinger avisa de que es peligrosa y nadie le hace caso." },
-    { title: "T1 y T2", text: "En la T1 es un atardecer dorado de torres, dirigibles y vidrieras. En la T2 la luz se enfría: ejecutores armados, estandartes rojos de Noxus y una ciudad que se prepara para la guerra." },
+    { title: "Parte 1 y Parte 2", text: "En la Parte 1 es un atardecer dorado de torres, dirigibles y vidrieras. En la Parte 2 la luz se enfría: ejecutores armados, estandartes rojos de Noxus y una ciudad que se prepara para la guerra." },
   ],
   Zaun: [
     { title: "Historia", text: "Era la parte baja de la misma ciudad hasta que Piltover se separó y la dejó a la sombra. Años antes de la serie, Vander y Silco intentaron cruzar el Puente para reclamar lo suyo y perdieron. Desde entonces hay tregua." },
@@ -349,7 +445,7 @@ const cityBlocks: Record<"Piltover" | "Zaun", { title: string; text: string }[]>
     { title: "Su gente", text: "Casi nadie tiene padres, pero todo el mundo tiene a alguien que lo recogió. Se pelea en los fosos de los bares, se pinta en las paredes y se desconfía de cualquiera que venga de arriba." },
     { title: "Niveles", text: "La Promenade, la más cercana al Puente, con La Última Gota y el mercado. El Entresuelo, de fábricas y puentes colgantes. Y el Sumidero, donde la niebla química no deja ver el sol. Los une un ascensor." },
     { title: "Tecnología", text: "Quimtec: química, vapor y chatarra. Filtros contra el humo, prótesis como el brazo de Sevika, las bombas de Jinx y las aerotablas de las Luciérnagas. Y el brillo, que da fuerza y destroza a quien lo toma." },
-    { title: "T1 y T2", text: "En la T1, humo verde, neón y tuberías. En la T2 las paredes se llenan de los graffiti de Jinx, el púrpura del brillo está por todas partes y la ciudad se levanta contra Piltover." },
+    { title: "Parte 1 y Parte 2", text: "En la Parte 1, humo verde, neón y tuberías. En la Parte 2 las paredes se llenan de los graffiti de Jinx, el púrpura del brillo está por todas partes y la ciudad se levanta contra Piltover." },
   ],
 };
 
@@ -371,7 +467,7 @@ export function CitiesPage() {
     <>
       <PageHero
         title="Ciudades"
-        text="Cómo son Piltover y Zaun, quién manda en cada una y cómo cambian de la T1 a la T2."
+        text="Cómo son Piltover y Zaun, quién manda en cada una y cómo cambian de la Parte 1 a la Parte 2."
       />
       <nav className="local-nav" aria-label="Ciudades">
         <a href="#piltover">Piltover</a>
@@ -380,7 +476,7 @@ export function CitiesPage() {
       <CitySection
         city="Piltover"
         title="Piltover, la Ciudad del Progreso"
-        description="En la T1 es un atardecer dorado: torres escalonadas, cúpulas de oro, vidrieras y engranajes de latón. En la T2 la luz se enfría, la hextech se convierte en arma y los soldados de Noxus pasean por sus calles."
+        description="En la Parte 1 es un atardecer dorado: torres escalonadas, cúpulas de oro, vidrieras y engranajes de latón. En la Parte 2 la luz se enfría, la hextech se convierte en arma y los soldados de Noxus pasean por sus calles."
         points={[
           "Gobierna el Consejo de las grandes familias",
           "Los ejecutores guardan la ley y la frontera",
@@ -391,7 +487,7 @@ export function CitiesPage() {
       <CitySection
         city="Zaun"
         title="Zaun, la ciudad de abajo"
-        description="Hecha de capas: la Promenade, la más cercana a Piltover; el Entresuelo, de fábricas y puentes colgantes; y el Sumidero, donde no llega el sol. En la T2 las paredes se llenan de los graffiti de Jinx y el púrpura del brillo."
+        description="Hecha de capas: la Promenade, la más cercana a Piltover; el Entresuelo, de fábricas y puentes colgantes; y el Sumidero, donde no llega el sol. En la Parte 2 las paredes se llenan de los graffiti de Jinx y el púrpura del brillo."
         points={[
           "Tres niveles unidos por ascensores",
           "Mandan los químbarones de Silco",
@@ -459,7 +555,7 @@ export function CharactersPage() {
                   <dd>{selected.city}</dd>
                 </div>
                 <div>
-                  <dt>Temporadas</dt>
+                  <dt>En el juego</dt>
                   <dd>{selected.seasons}</dd>
                 </div>
                 <div>
@@ -585,7 +681,7 @@ export function PlacesPage() {
                 <dd>{selected.category}</dd>
               </div>
               <div>
-                <dt>Temporadas</dt>
+                <dt>En el juego</dt>
                 <dd>{selected.seasons}</dd>
               </div>
               <div>
@@ -747,7 +843,7 @@ export function GamePage() {
     ],
     [
       "Una historia larga",
-      "30 capítulos en dos partes, una por temporada, y 8 finales distintos según lo que hagas y con quién te lleves bien.",
+      "30 capítulos en dos partes, la Parte 1 y la Parte 2, y 8 finales distintos según lo que hagas y con quién te lleves bien.",
     ],
     [
       "Un Códice siempre abierto",
@@ -782,16 +878,13 @@ export function GamePage() {
           <h1>Rifts & Gears, el videojuego</h1>
           <p>
             Un fangame narrativo para un jugador que estoy haciendo en Godot 4 como TFG. Creas a tu
-            personaje, eliges Piltover o Zaun y vives la historia de las dos temporadas de Arcane
+            personaje, eliges Piltover o Zaun y vives la historia de Arcane, en dos partes,
             desde dentro. Lo que eliges al crearlo decide cómo te habla y cómo te trata cada
             personaje.
           </p>
           <span className="development-badge">En desarrollo</span>
         </div>
-        <Media
-          src="/assets/img/capturas/creacion-personaje.webp"
-          alt="Pantalla de creación de personaje del videojuego"
-        />
+        <Media src="/assets/img/capturas/inicio.webp" alt="Menú de inicio del videojuego Rifts & Gears" />
       </section>
       <section className="game-features section-pad">
         {features.map(([title, text], index) => (
