@@ -1,33 +1,48 @@
 # Rifts & Gears · Portal web
 
-Web informativa del proyecto. Es HTML, CSS y JavaScript estático: no necesita compilar nada.
+Portal informativo del proyecto, basado en el diseño de Figma Make «Crear portal Rifts & Gears».
+Hecho con **React + Vite** (TypeScript) y Tailwind 4.
+
+## Páginas
+Inicio · Universo · Ciudades · Personajes · Lugares · Atlas · Videojuego · Contacto
 
 ## Estructura
 ```
 Web/
-├── index.html          Página principal
-├── privacidad.html     Privacidad y aviso legal
-├── menu.js             Menú desplegable en móvil
-├── icono-arcane.svg    Icono de la pestaña y del logo
-├── css/estilos.css     Todos los estilos
-└── assets/img/
-    ├── capturas/       Capturas reales del juego (Godot)
-    ├── ciudades/       Piltover y Zaun
-    ├── personajes/     Retratos de personajes
-    └── interfaz/       Iconos
+├── index.html            Plantilla HTML (título, icono, descripción)
+├── src/
+│   ├── main.tsx          Arranque de React
+│   ├── index.css         Todos los estilos
+│   └── app/
+│       ├── routes.tsx    Rutas de cada página
+│       ├── components.tsx  Cabecera, pie, fichas, marcos de imagen
+│       ├── pages.tsx     Contenido de cada página
+│       └── data.ts       Personajes, lugares y capturas del juego
+└── public/               Archivos que se sirven tal cual
+    ├── icono-arcane.svg
+    └── assets/           Imagen de portada e imágenes de ciudades, personajes y capturas
 ```
 
-## Verla en el ordenador
-Doble clic en `index.html`, o con un servidor local:
+## Usarla en el ordenador
+Necesitas Node.js. En la carpeta `Web`:
 ```
-python -m http.server 8080
+npm install
+npm run dev
 ```
-y abrir http://localhost:8080
+y abre http://localhost:5173
 
-## Añadir una captura del juego
-1. Guarda la imagen en `assets/img/capturas/` (mejor en .webp, 1152×648).
-2. En `index.html`, dentro de `galeria-capturas`, copia una línea `<figure class="captura">` y cambia la ruta y el texto.
+Para generar la versión final (carpeta `dist/`):
+```
+npm run build
+```
 
-## Datos que aparecen en la web
-Versión 0.1 · 16 personajes · 14 lugares · 30 capítulos · 8 finales · 15 minijuegos.
-Si cambian, se editan directamente en `index.html`.
+## Cambiar contenido
+- **Personajes, lugares o capturas**: edita `src/app/data.ts`. Las imágenes van en `public/assets/img/...` y se escriben con ruta `/assets/img/...`.
+- **Textos de una página**: `src/app/pages.tsx`.
+
+## Publicar en Render
+El archivo `render.yaml` de la raíz del repositorio ya lo deja configurado como **Static Site**:
+- Root directory: `Web`
+- Build command: `npm ci && npm run build`
+- Publish directory: `dist`
+- Rewrite `/*` → `/index.html` (para que /personajes, /atlas, etc. funcionen al recargar)
