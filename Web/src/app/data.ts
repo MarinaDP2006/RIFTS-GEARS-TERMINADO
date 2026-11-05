@@ -522,4 +522,17 @@ export const screenshots = [
   { src: "/assets/img/capturas/mapa-3d-puente.webp", label: "Mapa 3D · el Puente" },
 ];
 
-export const GITHUB = "https://github.com/MarinaDP2006/RIFTS-GEARS";
+export const minigameShots = [
+  { src: "/assets/img/minijuegos/foso.webp", label: "El foso · Zaun" },
+  { src: "/assets/img/minijuegos/aerotabla.webp", label: "Carrera de aerotabla · Zaun" },
+  { src: "/assets/img/minijuegos/cartas.webp", label: "Cartas en La Última Gota · Zaun" },
+  { src: "/assets/img/minijuegos/grafiti.webp", label: "Grafiti · Zaun" },
+  { src: "/assets/img/minijuegos/mezclas.webp", label: "Mezclas de quimtec · Zaun" },
+  { src: "/assets/img/minijuegos/cristal.webp", label: "Calibrar el cristal · Piltover" },
+  { src: "/assets/img/minijuegos/consejo.webp", label: "Debate del Consejo · Piltover" },
+  { src: "/assets/img/minijuegos/gala.webp", label: "Baile de gala · Piltover" },
+  { src: "/assets/img/minijuegos/archivo.webp", label: "El Archivo · Piltover" },
+  { src: "/assets/img/minijuegos/tiro.webp", label: "Tiro de precisión · Piltover" },
+];
+
+export const GITHUB ="https://github.com/MarinaDP2006/RIFTS-GEARS";

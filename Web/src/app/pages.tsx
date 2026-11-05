@@ -7,6 +7,7 @@ import {
   characters,
   places,
   screenshots,
+  minigameShots,
   type Character,
   type City,
   type Place,
@@ -951,12 +952,28 @@ export function GamePage() {
           ))}
         </div>
       </section>
+      <section className="game-shots section-pad">
+        <div className="section-heading">
+          <h2>Bocetos de los minijuegos</h2>
+          <p>
+            Así quiero que se vean. Cada uno lleva abajo una barra con cómo se juega y sus teclas.
+          </p>
+        </div>
+        <div className="shots-grid">
+          {minigameShots.map((shot) => (
+            <figure key={shot.src}>
+              <Media src={shot.src} alt={`Boceto del minijuego ${shot.label}`} />
+              <figcaption>{shot.label}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
       <section className="game-status section-pad">
         <div>
           <h2>Todavía no se puede descargar.</h2>
           <p>
-            Cuando haya una versión jugable la pondré aquí. Mientras tanto, el código está en
-            GitHub.
+            Cuando haya una versión jugable la subiré a GitHub para ordenador: un .exe para
+            Windows y otra versión para macOS. Mientras tanto, el código está allí.
           </p>
         </div>
         <a href={GITHUB} className="button secondary">
