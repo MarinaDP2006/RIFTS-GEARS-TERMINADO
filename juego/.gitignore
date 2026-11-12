@@ -1,0 +1,16 @@
+# Godot 4: carpeta de caché que se regenera sola al abrir el proyecto
+.godot/
+
+# Copias temporales que deja el editor
+*.tmp
+*.TMP
+
+# Exportaciones / builds del juego
+export/
+builds/
+*.exe
+*.pck
+
+# Ficheros del sistema
+.DS_Store
+Thumbs.db
