@@ -1,0 +1,855 @@
+capitulos.fin.intro	Las dos ciudades aguantan la respiración. Arriba, el Consejo vota la paz. Abajo, Jinx tiene un cohete. Y tú estás justo en medio.
+capitulos.fin.nodos.a0.lines.0.t	La noche antes. En el escondite de Jinx hay una mesa larga con mantel de cuadros, tazas desparejadas y velas. Está puesta para una merienda.
+capitulos.fin.nodos.a0.lines.1.t	Vi está atada a una silla. Caitlyn a otra, amordazada. En la cabecera, Silco, atado también, con la cara llena de golpes.
+capitulos.fin.nodos.a0.lines.2.t	Al de la cabecera solo lo conocías por los carteles: el ojo rojo, la cicatriz. El hombre que manda en Zaun, atado como un regalo de cumpleaños.
+capitulos.fin.nodos.a0.lines.3.t	(Con una tetera en la mano.) Bienvenidos a la merienda familiar. ¿Azúcar? ¿Pólvora? ¿Las dos?
+capitulos.fin.nodos.a0.lines.4.t	Pow. Por favor. Esto no tiene por qué acabar así.
+capitulos.fin.nodos.a0.lines.5.t	Shh. Shhh. Hoy nadie miente. Silco, empiezas tú.
+capitulos.fin.nodos.a0.lines.6.t	(Sangre en el labio, la voz tranquila.) Jinx. Ella no es tu familia. Te dejó.
+capitulos.fin.nodos.a0.lines.7.t	(Se vuelve hacia la puerta, hacia ti.) Mira quién ha llegado. Siéntate, {name}. Hay sitio para todos.
+capitulos.fin.nodos.a0.lines.8.t	(Se vuelve hacia la puerta, hacia ti.) Anda. Una cara nueva. Tú eres la sombra que va detrás de mi hermana. ¿Cómo te llamas?
+capitulos.fin.nodos.a0.lines.10.t	{name}. Suena a nombre de lápida. (Pausa.) Es broma. Siéntate. Hay sitio para todos.
+capitulos.fin.nodos.a0.choices.2.t	«Suéltalos, Jinx. Esto no es una merienda.»
+capitulos.fin.nodos.a1.lines.0.t	Vi quiere que elija. Silco quiere que elija. Todo el mundo quiere que elija.
+capitulos.fin.nodos.a1.lines.1.t	Silco se suelta una mano. Coge una pistola de la mesa. Apunta a Caitlyn. Duda. Jinx grita y dispara sin pensar.
+capitulos.fin.nodos.a1.lines.2.t	Silco cae hacia atrás con la silla. Jinx suelta el arma y se arrodilla a su lado.
+capitulos.fin.nodos.a1.lines.3.t	(Le toca la cara con la mano manchada.) No llores. No cambiaría nada. Eres… perfecta.
+capitulos.fin.nodos.a1.lines.4.t	(Se queda en silencio mucho rato. Cuando se levanta, ya no le tiembla nada.) Vale. Entonces ya no hay nada que elegir.
+capitulos.fin.nodos.a1.lines.5.t	Coge su bolsa y sale hacia el puente sin mirar atrás. Te toca a ti cortar las cuerdas de Vi y de Caitlyn.
+capitulos.fin.nodos.a1.lines.6.t	(Frotándose las muñecas.) Ve delante, {name}. Tú llegas antes. Nosotras vamos detrás.
+capitulos.fin.nodos.a.lines.0.t	Amanece sobre el Puente del Progreso. Arriba, el Consejo discute un tratado con Zaun. Abajo, una chica de trenzas azules carga un cohete con una gema capaz de borrar media ciudad.
+capitulos.fin.nodos.a.lines.1.t	Mírala, {name}. Mi obra maestra. ¿Le pongo un lazo?
+capitulos.fin.nodos.a.lines.2.t	(Por el comunicador, entre interferencias.) {name}, ¿me oyes? Vamos para allá. Haz lo que puedas.
+capitulos.fin.nodos.a.choices.0.t	Hablar con Jinx de verdad (Afinidad con Jinx 5).
+capitulos.fin.nodos.b_jinx.lines.0.t	Pow. No necesitas esto para que te vean. Yo te veo. Vi te ve.
+capitulos.fin.nodos.b_jinx.lines.1.t	(Se le rompe la voz.) Si no lo lanzo… ¿quién soy? Silco se ha ido. Vander se fue. Mylo, Claggor. Todo el mundo se va.
+capitulos.fin.nodos.b_jinx.lines.2.t	Quien tú decidas. Nadie más tiene que decidirlo por ti.
+capitulos.fin.nodos.b_jinx.lines.3.t	(Una risa mojada.) Qué cursi, {name}. Qué cursi eres.
+capitulos.fin.nodos.b_jinx.lines.4.t	(Te aprieta la mano un segundo. Después la suelta y sube a la plataforma.) Pero Jinx no sabe parar. Lo siento. Lo siento de verdad.
+capitulos.fin.nodos.b_sabotaje.lines.0.t	Jinx canturrea una nana desafinada. Tú sueltas un cable. Luego otro. El zumbido de la gema baja medio tono.
+capitulos.fin.nodos.b_sabotaje.lines.1.t	Eh. Eh. ¿Qué haces? Ese era mi cable favorito.
+capitulos.fin.nodos.b_sabotaje.lines.2.t	(Te mira con los ojos muy abiertos. Y se ríe.) Vale. Eres buen{g:o|a|e}. Muy buen{g:o|a|e}. Ahora me caes mejor.
+capitulos.fin.nodos.b_sabotaje.lines.3.t	Arranca la gema del cohete, la encaja en Fishbones y se lo cuelga al hombro. Has parado el cohete. A Jinx no. Pero has comprado unos minutos que alguien, arriba, puede aprovechar.
+capitulos.fin.nodos.b_evacua.lines.0.t	Entras en la Sala del Consejo gritando. Los consejeros te miran como si estuvieras loc{g:o|a|e}.
+capitulos.fin.nodos.b_evacua.lines.1.t	¿Qué significa esto? Estamos votando la paz.
+capitulos.fin.nodos.b_evacua.lines.2.t	Jayce te reconoce. Mel duda un segundo. Solo uno. Después ordena desalojar.
+capitulos.fin.nodos.b_evacua.lines.3.t	Fuera. Todos. Ya.
+capitulos.fin.nodos.b_evacua.lines.4.t	(En la puerta, empujando a los demás hacia la escalera.) Vamos. Yo salgo la última. Es mi sala.
+capitulos.fin.nodos.b_deja.lines.0.t	Te das la vuelta. A veces la historia se escribe con fuego. Solo esperas que no sea el tuyo.
+capitulos.fin.nodos.b_deja.lines.1.t	(A tu espalda, contenta.) Sabía que lo entenderías.
+capitulos.fin.nodos.c.lines.0.t	En la Sala del Consejo, Jayce lee el tratado en voz alta: «Zaun será una nación libre». Algunos aplauden. Otros miran al suelo.
+capitulos.fin.nodos.c.lines.1.t	(Levanta la vista hacia la cúpula de cristal.) ¿Qué es esa luz?
+capitulos.fin.nodos.c.lines.2.t	Ya no hay tiempo. Cada amistad, cada traición, cada cosa que callaste está ahora en la balanza.
+capitulos.fin.nodos.a1_alternativo.lines.0.t	Silco se suelta una mano, pero le agarras la muñeca antes de que llegue al arma. La pistola se va resbalando por el suelo.
+capitulos.fin.nodos.a1_alternativo.lines.1.t	(Respira a golpes, mirando de Vi a Silco y de Silco a Vi.) Nadie me ha preguntado qué quiero yo. Ni una vez.
+capitulos.fin.nodos.a1_alternativo.lines.2.t	(Abre la mano, despacio.) Te quiero, Jinx. No voy a demostrarlo disparando a alguien delante de ti.
+capitulos.fin.nodos.a1_alternativo.lines.3.t	Esto no se arregla aquí. Pero podemos salir de esta habitación sin un muerto más.
+capitulos.fin.nodos.a1_alternativo.lines.4.t	Jinx se va hacia el puente. El cohete se va con ella. Silco vive, pero entre los dos queda algo roto que no se arregla con una sola decisión.
+capitulos.fin.nodos.b_salva_cassandra.lines.0.t	Los consejeros salen por el pasillo de servicio. Cassandra se niega a moverse mientras quede alguien dentro.
+capitulos.fin.nodos.b_salva_cassandra.lines.1.t	Hoy salimos todos. Usted también.
+capitulos.fin.nodos.b_salva_cassandra.lines.2.t	(Acepta tu mano en la escalera.) No tengo costumbre de recibir órdenes. Hoy haré una excepción.
+capitulos.fin.nodos.b_salva_cassandra.lines.3.t	La explosión sacude la ciudad cuando llegáis al último rellano. Cassandra sangra. Pero respira.
+finales.0.lineas.0.t	Una luz azul cruza el cielo y la cúpula del Consejo se deshace en cristales. No pudiste pararlo del todo. Pero algo ha cambiado, y lo notas.
+finales.0.lineas.1.t	(A tu lado, con la voz rota.) Tenía que hacerlo antes de que me convencieras. Casi lo consigues, {name}. Casi.
+finales.0.lineas.2.t	Estoy aquí, Pow. No me voy a ninguna parte. Pase lo que pase.
+finales.0.lineas.3.t	(Mira el humo sin llorar.) Mi madre estaba en esa sala. (Una pausa larga.) Lo intentaste, {name}. Eso no lo voy a olvidar.
+finales.0.lineas.4.t	Hoy hemos perdido. Pero arriba y abajo hemos estado en el mismo puente. Eso no lo había visto nunca.
+finales.0.lineas.5.t	Entre los escombros, una luz dorada. Mel Medarda sigue viva, envuelta en algo que nadie sabe explicar. Ni ella.
+finales.0.lineas.6.t	Desde un balcón, una mujer con armadura noxiana lo mira todo. Ambessa Medarda sonríe como quien acaba de ver una puerta abierta.
+finales.1.lineas.0.t	Una luz azul atraviesa el cielo. La Sala del Consejo se deshace en cristales.
+finales.1.lineas.1.t	Lo hemos hecho, {name}. Ahora sí que nos miran. (Levanta la vista al cielo.) ¿Lo has visto, Silco? Es para ti.
+finales.1.lineas.2.t	(Mira el humo desde la puerta de La Última Gota.) Zaun va a ser libre. Aunque tenga que nacer entre cenizas.
+finales.1.lineas.3.t	Entre los muertos está la consejera Cassandra Kiramman. Caitlyn la busca entre el humo hasta que alguien la sujeta por los brazos y no la deja seguir.
+finales.1.lineas.4.t	En los callejones gritan tu nombre. En Piltover, tu cara aparece en todos los carteles de búsqueda.
+finales.1.lineas.5.t	Desde un balcón, Ambessa Medarda mira el humo y sonríe. Una ciudad en guerra es una ciudad que se puede comprar.
+finales.2.lineas.0.t	Sacas a medio Consejo por la escalera de servicio. Cuando llega el impacto, la sala no está vacía del todo.
+finales.2.lineas.1.t	(Cubierto de polvo.) Has salvado a muchos. No a todos. (Mira los escombros.) Cassandra se quedó la última en la puerta.
+finales.2.lineas.2.t	(Las manos todavía le brillan de dorado y no entiende por qué.) Los héroes son útiles, {name}. Hasta que dejan de serlo. Cuídate.
+finales.2.lineas.3.t	Caitlyn llega corriendo. Busca a su madre entre el humo. No la encuentra.
+finales.2.lineas.4.t	Las puertas del puente se cierran. Desde arriba, Zaun nunca ha parecido tan lejos.
+finales.3.lineas.0.t	Una luz azul. Un silencio que dura demasiado. Después, sirenas.
+finales.3.lineas.1.t	(Entre los escombros.) Hemos llegado tarde. Otra vez.
+finales.3.lineas.2.t	Entre los muertos, la consejera Cassandra Kiramman. Caitlyn no le suelta la mano hasta que se hace de noche.
+finales.3.lineas.3.t	La guerra entre las dos ciudades ya no tiene vuelta atrás. Y tú te preguntas, una y otra vez, qué habría pasado si hubieras elegido otra cosa.
+finales.3.lineas.4.t	(Hay otros finales. Para llegar a ellos harán falta más aliados, más confianza, o haber elegido otra cosa a tiempo.)
+finales2.0.lineas.0.t	La ciudad despierta herida. Nada devuelve lo perdido. Pero hoy faltan nombres en la lista de muertos, y es por cosas que hiciste tú.
+finales2.0.lineas.1.t	(Apoyada en Vi.) Ya no soy la Powder de antes. Pero sigo aquí. Supongo que eso cuenta.
+finales2.0.lineas.2.t	(Te deja un dibujo en las manos: un puente y tres figuras que no se sueltan.)
+finales2.0.lineas.3.t	Lo que construimos hizo daño. Ahora toca construir algo que lo repare. Si Viktor quiere intentarlo, yo también.
+finales2.0.lineas.4.t	No puedo recuperar la confianza que rompí. Pero he aprendido que no me corresponde decidir por todo el mundo.
+finales2.0.lineas.5.t	No nos has arreglado la vida, {name}. Nos la has devuelto. Y eso es mucho más difícil.
+finales2.0.lineas.6.t	Piltover y Zaun siguen teniendo que decidir cómo vivir. Esta vez no todos sus caminos acaban en el mismo sitio.
+finales2.1.lineas.0.t	Al caer la noche, los barcos noxianos se retiran mar adentro y la luz azul de la fábrica se apaga para siempre.
+finales2.1.lineas.1.t	Lo hemos hecho juntos. Arriba y abajo. Eso no lo había conseguido nadie. (Se toca la frente.) Ni siquiera mi madre.
+finales2.1.lineas.2.t	(Sentada en el borde del puente, con la granada rosa de Isha entre las manos.) Vander estaría orgulloso. Y Pow se estará riendo de mí en alguna parte.
+finales2.1.lineas.3.t	(Se sienta a su lado.) Gracias por no soltarme, {name}. Ni a ella.
+finales2.1.lineas.4.t	Mi madre ha muerto en mis brazos. La Rosa Negra lo va a pagar. (Te mira.) Y esta vez no iré sola.
+finales2.1.lineas.5.t	(Incómoda en una silla nueva del Consejo.) Zaun tiene voz. Ya tocaba. Que nadie espere que me ponga elegante.
+finales2.1.lineas.6.t	Y que conste que lo de la silla fue idea tuya, {name}. No pienso darte las gracias en público.
+finales2.1.lineas.7.t	Ahora toca reconstruir. Y esta vez el puente es de todos.
+finales2.1.lineas.8.t	Años después, en el Puente del Progreso hay una placa con muchos nombres. Jayce. Viktor. Heimerdinger. Isha. Debajo queda sitio para los vivos. El primero es el tuyo.
+finales2.1.lineas.9.t	En un muro de Zaun, alguien pinta a una chica de trenzas azules con un mono de trapo. Nadie sabe quién.
+finales2.2.lineas.0.t	Durante un tiempo que no sabes medir, todo es azul y silencio. No hay arriba ni abajo. No hay dolor. No hay nada.
+finales2.2.lineas.1.t	Después Jayce y Viktor apagan el Hexcore. Despiertas en el puente, rodeado de ascendidos que lloran sin saber por qué.
+finales2.2.lineas.2.t	(Ayudándote a levantarte.) Eh. ¿Sigues ahí? Di algo. Lo que sea.
+finales2.2.lineas.3.t	Sigues ahí. Casi entero. Te falta algo pequeño, una risa, una manía, y no sabes qué. Lo vas a buscar el resto de tu vida.
+finales2.2.lineas.4.t	(Hay otros finales. Quizá, la próxima vez, el dolor sirva para algo.)
+finales2.3.lineas.0.t	La guerra termina porque ya no queda nadie con fuerzas para seguirla. El puente cae al amanecer.
+finales2.3.lineas.1.t	(Entre los escombros.) La he vuelto a perder. A Pow. Ni siquiera han encontrado el cuerpo.
+finales2.3.lineas.2.t	(Le coge la mano, negra de hollín.) Entonces no la des por perdida. Y mañana empezamos de cero. Las dos.
+finales2.3.lineas.3.t	Piltover y Zaun tendrán que empezar otra vez. Quizá esta vez aprendan algo. Quizá.
+finales2.3.lineas.4.t	(Hay otros finales. Para llegar a ellos harán falta más Carisma, alianzas que no se rompan y algo de esperanza: búscala en el árbol de las Luciérnagas.)
+capitulos.t1.intro	El humo del ataque no se ha ido todavía. Piltover entierra a sus consejeros y exige un culpable. Todas las miradas apuntan hacia abajo.
+capitulos.t1.nodos.a.lines.0.t	(La voz gastada.) Mi madre se está recuperando. No habría salido de esa sala si tú no hubieras estado allí.
+capitulos.t1.nodos.a.lines.1.t	Llueve sobre el cementerio de Piltover. Cuatro ataúdes con el escudo del Consejo. Uno lleva el emblema azul de los Kiramman.
+capitulos.t1.nodos.a.lines.2.t	Era tu tía. Todavía esperas oírla decirte que te pongas recta.
+capitulos.t1.nodos.a.lines.3.t	(Recta como un rifle. Sin una lágrima.) Mi madre quería la paz con Zaun. Zaun le contestó con un cohete.
+capitulos.t1.nodos.a.lines.4.t	{name}. Vamos a bajar a por Jinx. Con todo lo que tenemos. Necesito saber de qué lado estás.
+capitulos.t1.nodos.a.lines.5.t	{name}. Sé lo que hiciste en el puente. Aun así necesito a alguien que conozca Zaun. No hagas que me arrepienta.
+capitulos.t1.nodos.a.lines.6.t	(A su lado, con un uniforme de ejecutora que le sienta como un disfraz.) Esto no es venganza, Cait. Dime que no lo es.
+capitulos.t1.nodos.a.lines.7.t	Es justicia, Vi. Y si se parece a la venganza, será porque llevan mucho tiempo siendo lo mismo.
+capitulos.t1.nodos.b_caza.lines.0.t	Bien. Se van a abrir todas las puertas de Zaun. Por las buenas o por las malas.
+capitulos.t1.nodos.b_caza.lines.1.t	Te dan una placa y una chaqueta azul. Pesan más de lo que aparentan.
+capitulos.t1.nodos.b_caza.lines.2.t	(En voz baja.) Si la encontramos, dejadme hablar con ella primero. Prometédmelo.
+capitulos.t1.nodos.b_caza.lines.3.t	(No contesta. Carga el rifle.)
+capitulos.t1.nodos.b_aviso.lines.0.t	Esa noche bajas sin escolta y dejas un mensaje garabateado en la pared del escondite: «Vienen a por ti. Todos».
+capitulos.t1.nodos.b_aviso.lines.1.t	(Una risita desde la oscuridad.) Qué detalle. Nunca me habían avisado antes de una fiesta.
+capitulos.t1.nodos.b_aviso.lines.2.t	(Sale a la luz. Tiene los ojos rojos de no dormir.) ¿Sabes qué es lo peor? Yo solo quería que me miraran. Y lo van a pagar los de siempre. Los de abajo.
+capitulos.t1.nodos.b_media.lines.0.t	Si bajáis rompiendo puertas, cada crío de Zaun va a crecer odiando ese uniforme. Y la próxima bomba la pondrá él.
+capitulos.t1.nodos.b_media.lines.1.t	(Te mira con algo parecido al alivio.) Escúchal{g:o|a|e}, Cait. Por una vez, escucha a alguien que conoce las dos orillas.
+capitulos.t1.nodos.b_media.lines.2.t	(Un silencio largo.) Tienes un día para encontrar a alguien con quien hablar ahí abajo. Uno.
+capitulos.t1.nodos.b_libre.lines.0.t	Dejas a Caitlyn con la palabra en la boca y cruzas el puente sin mirar atrás. Arriba te llamarán cobarde. Abajo, sospechos{g:o|a|e}.
+capitulos.t1.nodos.b_libre.lines.1.t	(Te alcanza en mitad del puente.) Haces bien. Yo no puedo. Si me voy, Cait se queda sola con todo esto.
+capitulos.t1.nodos.b2.lines.0.t	Lo que queda del Consejo se reúne en una sala prestada. Jayce Talis ocupa el centro. Hace días que no duerme.
+capitulos.t1.nodos.b2.lines.1.t	(Te tiende la mano.) Jayce Talis. Caitlyn dice que conoces Zaun. Aquí arriba eso vale más que un escaño.
+capitulos.t1.nodos.b2.lines.2.t	Mel Medarda. Sobreviví al cohete y nadie sabe cómo. Yo tampoco. (Esconde las manos en las mangas.) Encantada.
+capitulos.t1.nodos.b2.lines.3.t	Mañana voto armar a los ejecutores con hextec. Viktor me odiaría por esto. No me habla desde el ataque.
+capitulos.t1.nodos.b2.lines.4.t	No tienes escaño, {name}, pero tienes algo que aquí falta: ojos en las dos ciudades. ¿Tú qué votarías?
+capitulos.t1.nodos.b2.choices.0.t	«Que sí. Si Jinx vuelve, vais a necesitar algo más que porras.»
+capitulos.t1.nodos.b2.choices.1.t	«Que no. Las armas de hoy son las guerras de mañana.»
+capitulos.t1.nodos.b3.lines.0.t	El Consejo vota. Las armas hextec salen adelante por mayoría.
+capitulos.t1.nodos.b3.lines.1.t	(Al salir.) Te he escuchado. Y he votado que sí igualmente. Ojalá me equivoque.
+capitulos.t1.nodos.b3.lines.2.t	Gracias por decirlo claro. Aquí todo el mundo habla en susurros.
+capitulos.t1.nodos.b3.lines.3.t	Se han reído de tu condición. Yo no. Guárdatela, {name}. Algún día habrá una silla de Zaun en esta sala.
+capitulos.t1.nodos.b3.lines.4.t	Al fondo, una mujer alta con armadura noxiana aplaude despacio. Mel se queda rígida.
+capitulos.t1.nodos.b3.lines.5.t	Ambessa Medarda. La madre de Mel. Una ciudad herida necesita un puño firme, {name}. Noxus puede prestárselo.
+capitulos.t1.nodos.b3.lines.6.t	(Sin mirarla.) Mi madre no presta. Cobra intereses.
+capitulos.t1.nodos.c.lines.0.t	Abajo, La Última Gota es ahora el cuartel de Sevika. Sin Silco, los químbarones se pelean por las sobras y ella intenta que Zaun no se rompa en pedazos.
+capitulos.t1.nodos.c.lines.1.t	Una mujer con un brazo de metal te corta el paso en la puerta. Sevika. La que fue mano derecha de Silco.
+capitulos.t1.nodos.c.lines.2.t	(Con el cigarro apagado entre los dientes.) Silco está muerto. Jinx se ha esfumado. Y Piltover baja a cazarnos a todos por lo que hizo una cría.
+capitulos.t1.nodos.c.lines.3.t	Si vienes de parte de los de arriba, {name}, dilo ya. Me ahorras el trabajo de sacártelo.
+capitulos.t1.nodos.c.lines.4.t	No sé quién eres, pero hueles a arriba. Si vienes de su parte, dilo ya. Me ahorras el trabajo de sacártelo.
+capitulos.t1.nodos.c.lines.5.t	(Mira tu placa.) Y encima con uniforme. O tienes mucho valor o muy poca cabeza.
+capitulos.t1.nodos.c.choices.0.t	«Vengo a evitar una guerra. Ayúdame.»
+capitulos.t1.nodos.c.choices.1.t	«Vengo a avisarte: Caitlyn no va a parar.»
+capitulos.t1.nodos.c.choices.2.t	«No vengo de parte de nadie. Como siempre.»
+capitulos.t1.nodos.c2.lines.0.t	Silco me dejó un despacho, un montón de deudas y una ciudad que no sabe vivir sin alguien que le diga a quién odiar.
+capitulos.t1.nodos.c2.lines.1.t	(Golpea la mesa con el brazo de metal.) Yo no soy Silco. Pero tampoco voy a dejar que la Kiramman nos pase por encima.
+capitulos.t1.nodos.c2.lines.2.t	Al salir ves la pintada nueva en todos los muros de Zaun: una chica de trenzas con una sonrisa enorme. Y debajo, en letras torcidas: «Jinx vive».
+capitulos.p3.intro	Siete años después. Piltover vive su edad dorada. Pero alguien asalta los envíos hextec, y el Brillo empieza a subir por el puente.
+capitulos.p3.nodos.a.lines.0.t	Siete años de hextec. Farolas azules, dirigibles, puertas que se abren solas. Y en cada esquina, carteles nuevos que piden «orden».
+capitulos.p3.nodos.a.lines.1.t	(Te da la mano, firme.) Caitlyn Kiramman. Conociste a mi madre en el Consejo, ¿no? Bien. Necesito a alguien sin placa. O sin miedo a mancharla.
+capitulos.p3.nodos.a.lines.2.t	{name}. Familia o no, hoy te necesito como alguien sin placa. O sin miedo a mancharla.
+capitulos.p3.nodos.a.lines.3.t	Alguien roba hextec y la baja a Zaun. Y el sheriff Marcus no quiere que lo investigue. Me ha mandado a patrullar el barrio de los museos. Los museos.
+capitulos.p3.nodos.a.lines.4.t	Mi padre decía que cuando alguien insiste tanto en que no mires, es exactamente ahí donde tienes que mirar.
+capitulos.p3.nodos.b_informes.lines.0.t	Os encerráis en el archivo de la jefatura con una lámpara y un termo de té. Ella subraya. Tú cruzas fechas.
+capitulos.p3.nodos.b_informes.lines.1.t	Calle del Reloj. Muelle tres. El taller de Talis. Siempre de noche. Nunca hay testigos.
+capitulos.p3.nodos.b_informes.lines.2.t	Hacia las tres de la mañana aparece el patrón: cada robo coincide con un pago a la jefatura. Siempre la misma firma. Una M.
+capitulos.p3.nodos.b_informes.lines.3.t	(Deja el lápiz sobre la mesa, muy despacio.) Marcus. Lo sabía. Lo sabía y no quería saberlo.
+capitulos.p3.nodos.b_marcus.lines.0.t	Marcus te recibe con una sonrisa de retrato oficial. «Convenza a la señorita Kiramman de que lo deje. Las buenas intenciones, ahí abajo, matan gente.»
+capitulos.p3.nodos.b_marcus.lines.1.t	Le tiembla la mano al decirlo. En la mesa hay una foto enmarcada: una niña. Marcus no es un villano. Es un hombre con miedo.
+capitulos.p3.nodos.b_marcus.lines.2.t	(Cuando se lo cuentas.) Un hombre con miedo y una placa es más peligroso que un criminal. Gracias, {name}.
+capitulos.p3.nodos.b_no.lines.0.t	Muy bien. Lo haré sola. Como siempre.
+capitulos.p3.nodos.b_no.lines.1.t	Al día siguiente vuelve. Ojeras, un mapa lleno de alfileres y nadie más a quien pedírselo.
+capitulos.p3.nodos.b_no.lines.2.t	He encontrado algo. Me da igual lo que pienses de los ejecutores. Esto me viene grande.
+capitulos.p3.nodos.b2.lines.0.t	(En la escalinata de la mansión, al verla llegar contigo.) Caitlyn. Me dicen que estabas en el archivo de la jefatura a las tres de la mañana.
+capitulos.p3.nodos.b2.lines.1.t	Madre. Ahora no.
+capitulos.p3.nodos.b2.lines.2.t	Contigo nunca es ahora. (Se vuelve hacia ti.) Supongo que tú eres quien la acompaña. Al menos no va sola.
+capitulos.p3.nodos.b2.choices.0.t	«No la voy a dejar sola, consejera.»
+capitulos.p3.nodos.b2.choices.1.t	«Su hija tiene razón. La jefatura está podrida.»
+capitulos.p3.nodos.c.lines.0.t	En Stillwater hay una presa que sabe quién es Silco. Lleva siete años dentro. Se llama Vi. Si la saco, puede llevarnos hasta él.
+capitulos.p3.nodos.c.lines.1.t	Stillwater es una cárcel sobre el agua: gris, húmeda, sin ventanas. Los guardias miran a Caitlyn como a una niña rica que ha venido a jugar.
+capitulos.p3.nodos.c.lines.2.t	Se abre la celda. Una mujer de pelo rosa, con un tatuaje en la cara y los nudillos vendados, te mira de arriba abajo.
+capitulos.p3.nodos.c.lines.3.t	¿Y tú qué eres? ¿La niñera de la ejecutora?
+capitulos.p3.nodos.c.choices.0.t	«Alguien que también quiere ver caer a Silco.»
+capitulos.p3.nodos.d_silco.lines.0.t	(Al oír el nombre se le endurece la cara.) Silco. ¿Sigue vivo?
+capitulos.p3.nodos.d_silco.lines.1.t	Vale. Me caes bien. Un poco. No te lo creas.
+capitulos.p3.nodos.d_broma.lines.0.t	Bonito tatuaje. ¿Es por si se te olvida cómo te llamas?
+capitulos.p3.nodos.d_broma.lines.1.t	Ja. Qué graciosill{g:o|a|e}. (Te mira un segundo más de la cuenta.) Siete años sin oír un chiste malo. Casi lo echaba de menos.
+capitulos.p3.nodos.d_broma.lines.2.t	(Aguanta la sonrisa.) Vámonos antes de que cambien de opinión.
+capitulos.p3.nodos.d_presa.lines.0.t	Ya. Ahí arriba sois todos iguales.
+capitulos.p3.nodos.d_presa.lines.1.t	{name}, por favor. La necesitamos. (A Vi.) Perdona. No todos somos así.
+capitulos.p3.nodos.d_presa.lines.2.t	(Mira a Caitlyn de otra manera.) Eso habrá que verlo, Cupcake.
+capitulos.p3.nodos.d2.lines.0.t	En el carruaje de vuelta, Vi mira las luces de Piltover por la ventanilla como si fueran de otro mundo.
+capitulos.p3.nodos.d2.lines.1.t	Siete años. Todo brilla más. Y por debajo huele igual de mal.
+capitulos.p3.nodos.d2.lines.2.t	¿Por qué te encerraron? El expediente está… incompleto.
+capitulos.p3.nodos.d2.lines.3.t	(Un silencio largo.) Porque en una noche perdí a toda mi familia. Y lo que quedaba se lo llevó Silco. ¿Contenta?
+capitulos.p3.nodos.d2.lines.4.t	(Muy bajo.) No. Lo siento.
+capitulos.p3.nodos.d2.choices.0.t	Romper el silencio: «Vamos a encontrar a tu hermana».
+capitulos.p3.nodos.d2.choices.1.t	Dejar que el silencio haga su parte.
+capitulos.p3.nodos.e.lines.0.t	Desde una ventana de la jefatura, Marcus os ve salir de Stillwater. No dice nada. Descuelga el comunicador.
+capitulos.p3.nodos.e.lines.1.t	Al día siguiente, en Zaun, alguien ya sabe que Vi ha vuelto.
+capitulos.p4.intro	Se abren las hexpuertas y Piltover celebra. En el laboratorio, lejos de la música, Viktor tose sangre y Sky le sujeta la mano.
+capitulos.p4.nodos.a.lines.0.t	Música, confeti, barcos que cruzan el istmo en un destello azul. Medio mundo está mirando a Piltover.
+capitulos.p4.nodos.a.lines.1.t	{name}. Sube al estrado. Hoy es el día que imaginábamos.
+capitulos.p4.nodos.a.lines.2.t	Hoy cambia la historia, {name}. Tienes que verlo desde delante.
+capitulos.p4.nodos.a.lines.3.t	Disfrútalo. Los días de gloria son cortos. Las facturas, largas.
+capitulos.p4.nodos.a.lines.4.t	(Repasa el discurso en voz baja.) «El progreso no es un destino…» No. «El progreso es…» (Se frota la cara.) ¿Cómo empezaba esto?
+capitulos.p4.nodos.a.choices.1.t	«Empieza por Zaun. Que se oiga también abajo.»
+capitulos.p4.nodos.a.choices.2.t	«Empieza por ti. Te lo has ganado.»
+capitulos.p4.nodos.a2.lines.0.t	(Ante la multitud.) Piltover la fundó gente que miró al horizonte y decidió que el mundo podía ser mejor. Hoy ese horizonte está un poco más cerca.
+capitulos.p4.nodos.a2.lines.1.t	Aplausos. Fuegos azules sobre el agua. Mel aplaude con dos dedos. En la primera fila, Cassandra asiente con un orgullo que no se permite enseñar.
+capitulos.p4.nodos.a2.lines.2.t	(Se inclina hacia ti sin dejar de sonreír al público.) Apunta esto, {name}: el que habla no es el que manda. Es el que se lleva los aplausos.
+capitulos.p4.nodos.b.lines.0.t	Entre la gente, una chica con gafas te tira de la manga. Sky. Viktor no ha venido. Está en el laboratorio con… eso. Y ella ya no sabe qué hacer.
+capitulos.p4.nodos.b.lines.1.t	En el laboratorio, entre papeles con manchas de sangre, algo se mueve dentro de una vitrina: una masa de cristales azules que se retuerce, como si respirara.
+capitulos.p4.nodos.b.lines.2.t	El Hexcore. Míralo. Aprende, {name}. Se adapta. Podría curar cualquier cosa.
+capitulos.p4.nodos.b.lines.3.t	(Tose en un pañuelo y lo dobla antes de que lo veas.) Incluso a mí.
+capitulos.p4.nodos.b.choices.0.t	Animarle: «Si puede salvarte, hazlo».
+capitulos.p4.nodos.c_sigue.lines.0.t	Gracias. Todos me piden que espere. Jayce tiene sus discursos. El profesor tiene siglos. Yo no tengo tiempo.
+capitulos.p4.nodos.c_sigue.lines.1.t	Sky te mira desde la puerta. No dice nada. No hace falta.
+capitulos.p4.nodos.c_para.lines.0.t	Viktor, mírame. Esto no es un experimento. Es tu vida. Si sale mal, no hay otro intento.
+capitulos.p4.nodos.c_para.lines.1.t	Hablas igual que el profesor. (Suspira.) Lo pensaré. Por Sky.
+capitulos.p4.nodos.c_analiza.lines.0.t	Las runas laten como un pulso. No es solo energía. Hay algo parecido a una voluntad ahí dentro. Y tiene hambre.
+capitulos.p4.nodos.c_analiza.lines.1.t	Viktor, esto no obedece. Responde. Ten cuidado con lo que le pides.
+capitulos.p4.nodos.c_analiza.lines.2.t	(Sin apartar la vista del cristal.) Entonces le pediré que me enseñe.
+capitulos.p4.nodos.d0.lines.0.t	De vuelta en la fiesta, Caitlyn aparece entre la gente sin uniforme. Vi va a su lado, con capucha, mirando a todo el mundo como si alguien fuera a sacar un cuchillo.
+capitulos.p4.nodos.d0.lines.1.t	Así que esto es el Día del Progreso. Mucho confeti para tapar el olor.
+capitulos.p4.nodos.d0.lines.2.t	Vi. Por favor. Al menos disimula que odias a todo el mundo.
+capitulos.p4.nodos.d0.lines.3.t	No odio a todo el mundo. (Te mira.) A ti, por ejemplo, solo un poco.
+capitulos.p4.nodos.d.lines.0.t	Una explosión en mitad de la ceremonia. Desde los tejados, una figura de trenzas azules se ríe y desaparece hacia Zaun.
+capitulos.p4.nodos.d.lines.1.t	(Se queda pálida.) Esa risa. Conozco esa risa.
+capitulos.p4.nodos.d.lines.2.t	Era Jinx. Vi dice que es su hermana. Tenemos que bajar, {name}. Ahora.
+capitulos.p5.intro	Cruzas el puente hacia abajo por primera vez. El aire pica en la garganta, las luces son violetas y nadie te sonríe.
+capitulos.p5.nodos.a.lines.0.t	Bienvenid{g:o|a|e} a Zaun. Primera regla: no mires a nadie a los ojos. Segunda: si te miran, ya llegas tarde.
+capitulos.p5.nodos.a.lines.1.t	Tercera: no te separes de nosotras.
+capitulos.p5.nodos.a.lines.2.t	Y cuarta: Cupcake, quítate ese abrigo. Gritas «Piltover» a tres calles.
+capitulos.p5.nodos.a.lines.3.t	(Se mira el abrigo.) Es lana de Freljord.
+capitulos.p5.nodos.b_sigue.lines.0.t	Bien. Boca cerrada, ojos abiertos. Aprendes rápido.
+capitulos.p5.nodos.b_integra.lines.0.t	Compras un pincho de algo que es mejor no preguntar y das conversación a la vendedora. Silco, dice, no sale de La Última Gota. Y su «hija» tiene a medio Zaun durmiendo con un ojo abierto.
+capitulos.p5.nodos.b_integra.lines.1.t	Mira tú. Al final vas a servir para algo.
+capitulos.p5.nodos.b_integra.lines.2.t	(Muerde el pincho con mucho cuidado.) Esto sabe a… No. Prefiero no saberlo.
+capitulos.p5.nodos.b_arma.lines.0.t	La gente se aparta a tu paso. Y te mira con odio. Un crío escupe junto a tus botas y sale corriendo.
+capitulos.p5.nodos.b_arma.lines.1.t	Así nos miran a los de arriba. Ahora ya lo sabes.
+capitulos.p5.nodos.b_arma.lines.2.t	(En voz baja.) Lo sé desde hace años. Por eso estoy aquí.
+capitulos.p5.nodos.b_sigilo.lines.0.t	Te mueves entre el vapor y las sombras. Dos matones hablan de un árbol donde se esconden «los críos de las máscaras».
+capitulos.p5.nodos.b_sigilo.lines.1.t	(Cuando se lo cuentas.) ¿Un árbol? En Zaun no crece nada. (Lo piensa.) Algo ha cambiado mientras no estaba.
+capitulos.p5.nodos.b2.lines.0.t	Vi se para delante de La Última Gota. Otro cartel. Otra puerta. La mira como se mira una tumba.
+capitulos.p5.nodos.b2.lines.1.t	Aquí me crié. Vander servía detrás de esa barra. Powder se escondía debajo de esa mesa. Mylo hacía trampas a las cartas y siempre le pillaban.
+capitulos.p5.nodos.b2.lines.2.t	(Le pone la mano en el hombro.) Vi.
+capitulos.p5.nodos.b2.lines.3.t	Estoy bien. (No lo está.) Silco está ahí dentro. Lo sé.
+capitulos.p5.nodos.b2.choices.0.t	«Si entras ahora, sales en una caja. Necesitamos aliados.»
+capitulos.p5.nodos.b2.choices.2.t	Abrazar a Vi sin decir nada.
+capitulos.p5.nodos.c.lines.0.t	No os da tiempo a decidir. Figuras con máscara caen de los tejados en aerotabla, os ponen una venda y os arrastran por los túneles.
+capitulos.p5.nodos.c.lines.1.t	Cuando os quitan las vendas estáis bajo un árbol inmenso que brilla en la oscuridad. El que manda se quita la máscara.
+capitulos.p5.nodos.c.lines.2.t	¿Vi? (No se mueve.) Siete años sin saber si estabas viva. Y vuelves trayendo ejecutores a mi casa.
+capitulos.p5.nodos.c.lines.3.t	¿Ekko? Mírate. La última vez me llegabas por aquí.
+capitulos.p5.nodos.c.lines.4.t	La última vez Vander estaba vivo. Han cambiado muchas cosas.
+capitulos.p5.nodos.c.lines.5.t	(Te señala con el bate.) ¿Y tú? Rápido. Aquí arriba los desconocidos no duran mucho.
+capitulos.p5.nodos.c.lines.6.t	{name}. Vengo con ellas. Y no, no llevo placa.
+capitulos.p5.nodos.c.choices.0.t	«Venimos a por Silco. Como tú.»
+capitulos.p5.nodos.c.choices.2.t	Hablarle de la hextec para Zaun.
+capitulos.p5.nodos.d_alianza.lines.0.t	(Mira a Vi. Luego a ti.) Vale. Por Vi. Pero si me la jugáis, os tiro del árbol yo mismo.
+capitulos.p5.nodos.d_alianza.lines.1.t	Entendido. Yo tampoco me fío de mí cuando llevo esta placa.
+capitulos.p5.nodos.d_pacto.lines.0.t	Si cae Silco, el Consejo tendrá que escuchar a Zaun. Pero solo si vamos juntos. Una Kiramman y las Luciérnagas. Eso no lo pueden ignorar ni arriba.
+capitulos.p5.nodos.d_pacto.lines.1.t	(Un silencio largo.) Es la primera vez que alguien de arriba dice «juntos» sin que suene a trampa. Trato hecho.
+capitulos.p5.nodos.d_pacto.lines.2.t	Mi madre lo va a oír. Tienes mi palabra.
+capitulos.p5.nodos.d_hextec.lines.0.t	¿Hextec para Zaun? ¿Eso se ha dicho en el Consejo? ¿En voz alta?
+capitulos.p5.nodos.d_hextec.lines.1.t	Si es verdad… puede que no todos los de arriba sean iguales.
+capitulos.p5.nodos.d_amenaza.lines.0.t	Fuera de mi árbol. Vi, tú te puedes quedar. Tu amig{g:o|a|e}, no.
+capitulos.p5.nodos.d_amenaza.lines.1.t	(No te mira con rabia. Peor: con decepción.) ¿Aquí, {name}? ¿En serio?
+capitulos.p5.nodos.d2.lines.0.t	(Más tarde, a solas con Vi. Tú lo oyes todo.) Tienes que saberlo. Powder… Jinx… trabaja para Silco. Es su mano derecha. Y está mal, Vi. Muy mal.
+capitulos.p5.nodos.d2.lines.1.t	Lo sé. Vi lo del puente. (Se le rompe la voz.) Es culpa mía. Yo la llamé gafe.
+capitulos.p5.nodos.d2.lines.2.t	No. Es culpa de Silco. Y vamos a pararle.
+capitulos.p5.nodos.e.lines.0.t	Esa noche Jinx roba una gema hextec enorme del laboratorio de Jayce. Silco promete que mañana Piltover escuchará a Zaun.
+capitulos.p5.nodos.e.lines.1.t	Mañana se reúne el Consejo.
+capitulos.p6.intro	Antes de volver a bajar, Caitlyn quiere saber si sabes defenderte. No te lo pregunta: te lleva a la galería de tiro.
+capitulos.p6.nodos.a.lines.0.t	La galería de la jefatura está vacía. Un par de dianas agujereadas, olor a pólvora vieja y un cadete, Loris, que se come un bocadillo sin quitarte el ojo de encima.
+capitulos.p6.nodos.a.lines.1.t	Si Jinx tiene lo que creo, la próxima vez no habrá segunda oportunidad. Enséñame cómo disparas.
+capitulos.p6.nodos.a.lines.2.t	Loris levanta la mano: apuesta por ti. Medio bocadillo.
+capitulos.p6.nodos.b_bien.lines.0.t	(Baja los prismáticos.) Bien. Muy bien. Casi me haces sombra.
+capitulos.p6.nodos.b_bien.lines.1.t	Loris ha ganado su apuesta. Se come el medio bocadillo él solo.
+capitulos.p6.nodos.b_mal.lines.0.t	Bueno. No has herido a ningún civil. Que yo sepa. Cuando bajemos, detrás de mí.
+capitulos.p6.nodos.b_plan.lines.0.t	Si Jinx usa la gema, no hay que dispararle a ella. Hay que llegar a la gema.
+capitulos.p6.nodos.b_plan.lines.1.t	(Es la primera vez en días que la ves sonreír.) Es lo más sensato que se ha dicho en esta jefatura en años.
+capitulos.p6.nodos.b2.lines.0.t	Caitlyn desmonta el rifle pieza a pieza y lo limpia despacio, como quien reza.
+capitulos.p6.nodos.b2.lines.1.t	Lo diseñé yo. Mi madre quería que fuera consejera. Mi padre, que fuera feliz. Yo solo quería que alguien hiciera bien este trabajo.
+capitulos.p6.nodos.b2.lines.2.t	¿Sabes qué me da miedo? No es Jinx. Es Vi. Lo que le va a pasar si tenemos que disparar a su hermana.
+capitulos.p6.nodos.b2.choices.0.t	«Entonces no le disparamos. Buscamos otra forma.»
+capitulos.p6.nodos.b2.choices.1.t	«Vi te importa, ¿eh?»
+capitulos.p6.nodos.b3.lines.0.t	(Se le suben los colores.) Vi es… Es mi compañera en la investigación. Nada más.
+capitulos.p6.nodos.b3.lines.1.t	(Entra con dos tazas.) ¿Hablando de mí, Cupcake? Té. Malo, que es de la jefatura.
+capitulos.p6.nodos.b3.lines.2.t	(Coge la taza sin mirarla.) Gracias.
+capitulos.p6.nodos.b3.lines.3.t	(Te mira por encima de su taza y no dice nada. No hace falta.)
+capitulos.p6.nodos.c.lines.0.t	Llega un mensaje de la Academia: Heimerdinger, Viktor y Jayce quieren verte. Han encontrado algo sobre la gema robada.
+capitulos.p7.intro	Entre pizarras y planos, los padres de la hextec tienen por fin una respuesta. Y miedo.
+capitulos.p7.nodos.a.lines.0.t	{name}. Gracias por venir. Llevamos dos noches sin dormir. Viktor, cuéntaselo tú, que yo lo explico fatal.
+capitulos.p7.nodos.a.lines.1.t	La gema que robó esa chica no es estable. Las runas siguen una secuencia. Si alguien la invierte, podría apagarla.
+capitulos.p7.nodos.a.lines.2.t	O hacerla estallar. Depende de las manos.
+capitulos.p7.nodos.a.lines.3.t	(Desde un rincón, tras un libro más grande que él.) Por eso la magia no se toca sin manual. Ni siquiera con manual.
+capitulos.p7.nodos.a.lines.4.t	(Sin mirarle.) Gracias, profesor. Muy útil.
+capitulos.p7.nodos.b_ok.lines.0.t	Notable. Con esa secuencia la gema debería dormirse. Debería.
+capitulos.p7.nodos.b_ok.lines.1.t	No te equivoques en la cuarta runa. No habrá ocasión de corregirlo.
+capitulos.p7.nodos.b_viktor.lines.0.t	(Te pasa un papel doblado.) No lo pierdas. Y no se lo enseñes a Jayce: querría mejorarlo.
+capitulos.p7.nodos.b_viktor.lines.1.t	(Desde la otra punta.) Lo he oído.
+capitulos.p7.nodos.b_ko.lines.0.t	Hm. Bueno. Confiaremos en la suerte. Detesto confiar en la suerte.
+capitulos.p7.nodos.b_ko.lines.1.t	Por una vez estamos de acuerdo, profesor.
+capitulos.p7.nodos.b2.lines.0.t	Viktor sale al pasillo a toser. Jayce espera a que la puerta se cierre para bajar la voz.
+capitulos.p7.nodos.b2.lines.1.t	Está peor. Lo noto en cómo carga el peso en el bastón. Y sigue con el Hexcore aunque le dije que lo dejara.
+capitulos.p7.nodos.b2.lines.2.t	Mel quiere que hable ante el Consejo en nombre de la hextec. Dice que soy la cara del progreso. (Una risa sin gracia.) La cara. Viktor es el cerebro y nadie lo sabe.
+capitulos.p7.nodos.b2.choices.0.t	«Pues dilo en el Consejo. Que se sepa.»
+capitulos.p7.nodos.b2.choices.1.t	«Habla con Viktor. Antes que tu socio es tu amigo.»
+capitulos.p7.nodos.b3.lines.0.t	(Vuelve, el pañuelo escondido en el puño.) ¿Conspirando a mis espaldas?
+capitulos.p7.nodos.b3.lines.1.t	Siempre. Es lo único que se me da bien sin ti.
+capitulos.p7.nodos.b3.lines.2.t	(Una sonrisa breve, de verdad.) Cuando esto termine, Jayce, la hextec baja a Zaun. Hospitales. Fábricas que no maten a nadie. Me lo prometiste.
+capitulos.p7.nodos.b3.lines.3.t	Te lo prometí. Y lo voy a cumplir.
+capitulos.p7.nodos.c.lines.0.t	Llega un mensaje de Ekko: las Luciérnagas pueden enseñarte la torre de Silco desde el aire. Te espera en el árbol.
+capitulos.p8.intro	Desde una aerotabla, Zaun es otra ciudad: un mar de luces violetas, tuberías y gente que sigue viva a pesar de todo.
+capitulos.p8.nodos.a.lines.0.t	Agárrate. Si te caes, no grites. Atrae a los de Sevika.
+capitulos.p8.nodos.a.lines.1.t	Scar, de brazos cruzados: «Y si te caes, que no sea encima de mí».
+capitulos.p8.nodos.a.lines.2.t	No le hagas caso. Scar quiere a todo el mundo. Por dentro. Muy por dentro.
+capitulos.p8.nodos.b_ok.lines.0.t	Esquivas chimeneas y tuberías hasta que la ves: la torre de Silco. En el tejado, un cohete pintado de colores chillones. Apunta a Piltover.
+capitulos.p8.nodos.b_ok.lines.1.t	Vuelas como una Luciérnaga. (Te da un golpe en el hombro.) Ya eres de los nuestros.
+capitulos.p8.nodos.b_mira.lines.0.t	Desde arriba cuentas guardias, rutas, escaleras. Cuando bajáis, ya sabes cómo llegar al cohete sin que nadie te vea.
+capitulos.p8.nodos.b_ko.lines.0.t	Una tubería te roza el hombro y termináis aterrizando en un charco químico. Ekko se ríe tanto que casi se cae él también.
+capitulos.p8.nodos.b_ko.lines.1.t	Bueno. El cohete lo hemos visto. Más o menos.
+capitulos.p8.nodos.b2.lines.0.t	De vuelta en el árbol, Ekko se sienta en una rama con las piernas sobre el vacío. A su espalda, el mural: una niña de pelo azul con un mono de trapo.
+capitulos.p8.nodos.b2.lines.1.t	Ayer la tuve. En el puente. Podía haber terminado con todo.
+capitulos.p8.nodos.b2.lines.2.t	No pude. Cuando la miro sigo viendo a la cría que me enseñó a hacer bombas de humo con harina.
+capitulos.p8.nodos.b2.choices.0.t	«Eso no es debilidad, Ekko. Es lo que te separa de Silco.»
+capitulos.p8.nodos.b2.choices.1.t	«La próxima vez puede que no tengas elección.»
+capitulos.p8.nodos.b3.lines.0.t	(Saca un engranaje del bolsillo y lo hace girar entre los dedos.) Estoy con algo. Un aparato. Si funciona, podría… no sé. Dar segundas oportunidades.
+capitulos.p8.nodos.b3.lines.1.t	(Se lo guarda.) Te lo enseño cuando deje de explotar.
+capitulos.p8.nodos.c.lines.0.t	Mañana el Consejo vota la paz. En una torre de Zaun, un cohete espera.
+capitulos.p9.intro	Llega al Consejo una denuncia: filtros de aire desviados de Zaun. Tu firma aparece en el expediente antes de que te dé tiempo a leerlo.
+capitulos.p9.nodos.a.lines.0.t	Qué curioso, {name}. Para celebrar algo nunca faltan firmas. Para responder de una injusticia, de pronto nadie recuerda cómo se escribe su nombre.
+capitulos.p9.nodos.a.lines.1.t	Si esos filtros salvaban vidas, alguien ha usado la hextec para tapar el robo. Es justo lo contrario de lo que queríamos construir.
+capitulos.p9.nodos.a.lines.2.t	Pues dejad de tratarlo como un problema de imagen. Hay gente esperando para respirar.
+capitulos.p9.nodos.b.lines.0.t	La noticia corre por los pasillos más rápido que tú. A tu familia empiezan a hacerle preguntas incómodas. En Zaun, alguien dice tu nombre sin escupir después.
+capitulos.p9.nodos.c.lines.0.t	Alguien cambió la hora de salida de los carros. No es un descuido. Es una orden. Con sello oficial.
+capitulos.p9.nodos.c.lines.1.t	Una prueba pequeña. Basta: un número cambiado en un papel puede dejar sin aire a un barrio entero.
+capitulos.p9.nodos.d.lines.0.t	Los filtros llegarán antes que el discurso. Pero recuerda esto: lo que se arregla en secreto, otros pueden fingir que nunca estuvo roto.
+capitulos.p9.nodos.e.lines.0.t	Las cajas cruzan el puente mientras dos guardias discuten de quién es la jurisdicción. Al otro lado espera una familia que solo quiere respirar.
+capitulos.p10.intro	Tirando del hilo del sabotaje encuentras una lista de testigos de Zaun. Algunos ya no están.
+capitulos.p10.nodos.a.lines.0.t	Mira las fechas. Todos declararon antes de que desapareciera el cargamento. Alguien ha usado nuestras oficinas para asustarlos.
+capitulos.p10.nodos.a.lines.1.t	No os faltan pruebas. Os falta bajar y escuchar a la gente antes de apuntarle.
+capitulos.p10.nodos.a.lines.2.t	Mientras discutimos de quién es la culpa, va a desaparecer alguien más.
+capitulos.p10.nodos.a.choices.0.t	Bajar a Zaun con Vi y hablar con los testigos cara a cara.
+capitulos.p10.nodos.b.lines.0.t	No hagas promesas bonitas. Diles lo que puedes hacer y lo que no. Aquí ya se han oído bastantes promesas de Piltover.
+capitulos.p10.nodos.b.lines.1.t	Escuchas una historia que no aparece en ningún informe. Nadie la ha escrito. Nadie la ha preguntado.
+capitulos.p10.nodos.c.lines.0.t	Pueden quitarme la placa. (Coge la carpeta.) Lo que no pueden es hacer que no lo haya leído.
+capitulos.p10.nodos.c.lines.1.t	No arregla la ciudad. Pero cambia lo que estás dispuest{g:o|a|e} a exigirle a quienes la gobiernan.
+capitulos.p10.nodos.d.lines.0.t	Un refugio es más que un techo. Es que nadie venda dónde está. Si quieres ayudar, empieza por no contarle a nadie dónde estamos.
+capitulos.p10.nodos.e.lines.0.t	Antes del amanecer te llega un mensaje sin firma: «El Consejo está a punto de votar. No dejes de mirar al cielo».
+capitulos.t2.intro	Jinx se ha convertido en un símbolo para Zaun. Y por los callejones, una niña muda con unas gafas enormes la sigue a todas partes.
+capitulos.t2.nodos.a.lines.0.t	En el escondite hay velas, latas de pintura y un colchón en el suelo. Jinx está sentada en una viga, balanceando las piernas sobre el vacío.
+capitulos.t2.nodos.a.lines.1.t	(Al verte.) ¿Has visto lo que pintan ahí fuera? Me han hecho santa. Yo no quería ser santa. Quería ser… nada. Que me dejaran en paz.
+capitulos.t2.nodos.a.lines.2.t	Y encima te presentas con el uniforme de mi hermana. Te queda fatal. A ella también.
+capitulos.t2.nodos.a.lines.3.t	Gracias por el aviso, por cierto. Me chamuscaron una trenza. Pero aquí sigo.
+capitulos.t2.nodos.a.lines.4.t	Detrás de Jinx asoma una niña con unas gafas enormes. Te observa como se observa a un animal que no sabes si muerde.
+capitulos.t2.nodos.a.lines.5.t	Isha. No habla, pero me entiende mejor que nadie. Me sigue a todas partes y no hay manera de librarse de ella. (No parece que lo intente mucho.)
+capitulos.t2.nodos.a.lines.6.t	(Levanta una mano. Luego te enseña un dibujo: un cohete con una cara sonriente.)
+capitulos.t2.nodos.a.lines.7.t	Isha. Saluda bien. Así no. Con estilo.
+capitulos.t2.nodos.a.lines.8.t	(Hace una reverencia tan exagerada que casi se cae.)
+capitulos.t2.nodos.a2.lines.0.t	(Bajito, mientras Isha juega con un muelle.) La encontré en un callejón. Iban a vendérsela a un químbarón. Le di de comer una vez y ahora cree que soy su hermana mayor.
+capitulos.t2.nodos.a2.lines.1.t	Yo no sé ser la mayor, {name}. Yo era la pequeña. La que lo rompía todo.
+capitulos.t2.nodos.a2.choices.0.t	«Lo estás haciendo mejor de lo que crees.»
+capitulos.t2.nodos.a2.choices.1.t	«Pues aprende deprisa. Te necesita.»
+capitulos.t2.nodos.a2.choices.3.t	«Entrégate, Jinx. Si no, la próxima bala va a ser para ella.»
+capitulos.t2.nodos.a3.lines.0.t	(Se le borra la sonrisa de golpe.) ¿Entregarme? ¿Para que me cuelguen en la plaza y Cait lo mire desde un balcón? No.
+capitulos.t2.nodos.a3.lines.1.t	(Te enseña, muy orgullosa, una granada pintada de rosa con un lazo.)
+capitulos.t2.nodos.a3.lines.2.t	Eso no se toca. (Se la quita con mucho cuidado.) ¿Lo ves? Es igual que yo. Un desastre.
+capitulos.t2.nodos.a3.lines.3.t	Silbatos fuera. Botas en la escalera. Los ejecutores han encontrado el escondite.
+capitulos.t2.nodos.a3.lines.4.t	Se acabó la visita. {name}, sácala por los tejados. Yo los entretengo.
+capitulos.t2.nodos.b_ok.lines.0.t	Aterrizáis lejos, entre las luces del árbol de las Luciérnagas. Isha se ríe sin sonido y se agarra a tu cintura.
+capitulos.t2.nodos.b_ok.lines.1.t	¿Otra cría de Jinx? (Suspira. Aun así se agacha para mirarla a la altura de los ojos.) Hola. Aquí estás a salvo. Por ahora.
+capitulos.t2.nodos.b_ok.lines.2.t	(Señala el mural de Powder. Luego se señala a sí misma, muy seria.)
+capitulos.t2.nodos.b_ok.lines.3.t	(Se le escapa una sonrisa triste.) Sí. Te pareces un poco.
+capitulos.t2.nodos.b_ok.lines.4.t	Antes del amanecer, Isha se escapa del árbol. Vuelve con Jinx. Siempre vuelve con Jinx.
+capitulos.t2.nodos.b_vi.lines.0.t	La cuido yo. Te lo juro. (A Isha.) Tranquila. Yo también tuve una hermana pequeña.
+capitulos.t2.nodos.b_vi.lines.1.t	(Mira a Vi de arriba abajo, frunce el ceño y le da una patada en la espinilla.)
+capitulos.t2.nodos.b_vi.lines.2.t	Au. Vale. Sí. Es de Jinx, no hay duda.
+capitulos.t2.nodos.b_vi.lines.3.t	Isha mira hacia el escondite, donde estallan colores. No te suelta la mano hasta el último segundo.
+capitulos.t2.nodos.b_ko.lines.0.t	Caéis en un callejón. Un ejecutor os acorrala. Entonces rueda hasta sus pies una granada que suelta humo rosa.
+capitulos.t2.nodos.b_ko.lines.1.t	Nadie toca a mi equipo. Corred, pringados.
+capitulos.t2.nodos.b_ko.lines.2.t	(Aplaude sin hacer ruido mientras corréis.)
+capitulos.t2.nodos.b_entrega.lines.0.t	Abres la puerta. Entran botas, linternas, fusiles hextec. Jinx ya no está. Solo queda humo rosa y un mono de trapo en el suelo.
+capitulos.t2.nodos.b_entrega.lines.1.t	(Recoge el muñeco y te mira.) Has hecho lo correcto. (No suena a que se lo crea.)
+capitulos.t2.nodos.b_entrega.lines.2.t	Desde un tejado, unas gafas enormes te miran. Isha no va a olvidar tu cara.
+capitulos.t2.nodos.c.lines.0.t	Días después, Caitlyn tiende una trampa en el puente con todo lo que tiene. Jinx aparece. Vi también.
+capitulos.t2.nodos.c.lines.1.t	(Entre las dos, con los guanteletes en alto.) Cait, baja el rifle. Pow, baja eso. Las dos.
+capitulos.t2.nodos.c.lines.2.t	¿Lo ves, Vi? Siempre en medio. Nunca a mi lado.
+capitulos.t2.nodos.c.lines.3.t	Una explosión. Cristales. Gritos. Cuando el humo se aclara, Jinx se ha ido y Caitlyn sangra de la frente. Vi no sabe a cuál de las dos ir.
+capitulos.t2.nodos.d.lines.0.t	(Más tarde, quitándose la placa.) No puedo, {name}. No puedo apuntar a mi hermana. Ni dejar que Cait lo haga.
+capitulos.t2.nodos.d.lines.1.t	A lo lejos ves a Jinx subir a un tejado con Isha en brazos. Isha le limpia la cara con la manga. Jinx se deja.
+capitulos.t2.nodos.d.lines.2.t	Por Zaun corre un rumor: en la fábrica vieja hay un hombre que cura a los enfermos de Brillo solo con tocarlos. Le llaman el Heraldo. Dicen que le brillan los ojos de azul.
+capitulos.t3.intro	Una cola de enfermos espera ante la fábrica. Salen andando derechos, con la mirada tranquila. Demasiado tranquila.
+capitulos.t3.nodos.a0.lines.0.t	(Rodeado de planos, sin afeitar, con ojeras de muchos días.) {name}. Gracias por venir. No sé a quién más preguntar.
+capitulos.t3.nodos.a0.lines.1.t	Viktor tocó el Hexcore aquella noche. Se lo llevó. Y ahora dicen que está en Zaun curando gente. Curando. Como un santo.
+capitulos.t3.nodos.a0.lines.2.t	Le prometí que la hextec bajaría a Zaun. En vez de eso, Piltover hizo armas. Y yo voté las armas.
+capitulos.t3.nodos.a0.choices.1.t	«Lo que hace Viktor no es curar, Jayce. Ten cuidado.»
+capitulos.t3.nodos.a0.choices.2.t	«Voy yo primero. Te cuento lo que vea.»
+capitulos.t3.nodos.a.lines.0.t	Dentro de la fábrica la luz es azul y no se oye nada. Los curados se mueven despacio, sin prisa, como si ya nada les doliera.
+capitulos.t3.nodos.a.lines.1.t	En el centro, un hombre alto con una túnica sin mangas apoya la mano en la frente de un niño. No lleva bastón.
+capitulos.t3.nodos.a.lines.2.t	No nos conocemos. Soy Viktor. Nací a dos calles de aquí. Acércate. No hay nada que temer.
+capitulos.t3.nodos.a.lines.3.t	{name}. Ya no cojeo. ¿Lo ves? El Hexcore me ha enseñado el camino.
+capitulos.t3.nodos.a.lines.4.t	Puedo quitarle el dolor a Zaun. A todo Zaun. Toda mi vida he sido un cuerpo roto en una ciudad rota. Ahora puedo arreglar las dos cosas.
+capitulos.t3.nodos.a.lines.5.t	Las armas del Consejo han llegado a Zaun antes que las medicinas. Las medicinas las traigo yo.
+capitulos.t3.nodos.a.lines.6.t	Ven. Deja que te enseñe lo que es vivir sin miedo.
+capitulos.t3.nodos.b_acepta.lines.0.t	Un calor azul te recorre entero. Las cicatrices, el cansancio, los recuerdos que dolían: todo se vuelve suave. Lejano. Como si le hubiera pasado a otra persona.
+capitulos.t3.nodos.b_acepta.lines.1.t	Bienvenid{g:o|a|e}. Esto es solo el principio.
+capitulos.t3.nodos.b_estudia.lines.0.t	Las runas del Hexcore no curan: reescriben. Cada persona curada pierde algo pequeño. Una manía. Una risa. Las ganas de llevar la contraria.
+capitulos.t3.nodos.b_estudia.lines.1.t	Viktor. Esto no es curar. Es borrar.
+capitulos.t3.nodos.b_estudia.lines.2.t	(Sin ninguna emoción.) Es mejorar. Ya lo entenderás.
+capitulos.t3.nodos.b_niega.lines.0.t	Lástima. Volverás. Todos vuelven cuando duele lo suficiente.
+capitulos.t3.nodos.b2.lines.0.t	La puerta de la fábrica se abre de golpe. Jayce entra solo, con el martillo a la espalda.
+capitulos.t3.nodos.b2.lines.2.t	(Se vuelve despacio. Durante un instante, algo humano le cruza la cara.) Jayce. Has venido.
+capitulos.t3.nodos.b2.lines.3.t	Vuelve conmigo. Lo arreglamos juntos. Como siempre.
+capitulos.t3.nodos.b2.lines.4.t	«Como siempre.» Tú arriba, en las fotos. Yo abajo, tosiendo sangre. No, Jayce. Esta vez lo arreglo yo.
+capitulos.t3.nodos.b2.choices.2.t	«Los dos tenéis razón. Y los dos os vais a destruir.» (Carisma 2)
+capitulos.t3.nodos.b3.lines.0.t	Jayce no levanta el martillo. Viktor no levanta la mano. Se miran durante un tiempo que no se acaba.
+capitulos.t3.nodos.b3.lines.1.t	(Al salir.) Ya no me ve, {name}. Me mira y ve a todos los que le fallaron. Y tiene razón. Yo soy uno de ellos.
+capitulos.t3.nodos.c.lines.0.t	En Piltover, Mel Medarda hace las maletas. Dice que tiene que ir a Noxus. Que alguien de su familia la espera, y que no es una invitación.
+capitulos.t4.intro	Piltover ya no tiene Consejo: tiene una comandante y un estado de guerra. Mel se marcha a Noxus. Y tú tienes que decidir dónde vas a estar.
+capitulos.t4.nodos.a.lines.0.t	Caitlyn, comandante ahora, firma toques de queda para Zaun con la misma letra con la que su madre firmaba tratados.
+capitulos.t4.nodos.a.lines.1.t	A su lado, una ejecutora rubia y pecosa le acerca el café y los papeles antes de que los pida.
+capitulos.t4.nodos.a.lines.2.t	Maddie Nolen. La comandante dice que eres de fiar. (Sonríe.) Yo todavía no lo he decidido.
+capitulos.t4.nodos.a.lines.3.t	Noxus protegerá Piltover. Sus fábricas, su hextec, su gente. A cambio solo pido lealtad. Y vuestras armas.
+capitulos.t4.nodos.a.lines.4.t	(Sin levantar la vista del mapa.) Ambessa me ha dado lo que el Consejo no me dio nunca: soldados y una dirección.
+capitulos.t4.nodos.a.lines.5.t	(En la puerta, con el abrigo de viaje.) Me voy a Noxus esta noche, {name}. Mi madre dice que allí no hay nada para mí. Por eso tengo que ir.
+capitulos.t4.nodos.n_viaje.lines.0.t	(En cubierta, te enseña una chispa dorada en la palma de la mano.) Cuando el cohete cayó sobre el Consejo, esto me salvó. Una luz. Una barrera.
+capitulos.t4.nodos.n_viaje.lines.1.t	Soy maga, {name}. Mi madre lo sabía. Me sacó de Noxus de niña para que nadie lo descubriera.
+capitulos.t4.nodos.n_viaje.lines.2.t	Toda la vida pensando que me había desterrado por débil. Y me estaba escondiendo por fuerte.
+capitulos.t4.nodos.n_viaje.choices.1.t	«Puede que te quiera más de lo que sabe demostrar.»
+capitulos.t4.nodos.n_celda.lines.0.t	En Noxus, bajo una villa abandonada de los Medarda, Mel encuentra lo que buscaba: una celda. Y dentro, un hombre encadenado.
+capitulos.t4.nodos.n_celda.lines.1.t	(Levanta la cabeza muy despacio.) ¿Mel? Has crecido. Madre te escondió de ellos. A mí no pudo.
+capitulos.t4.nodos.n_celda.lines.2.t	(Le tiembla la voz.) Kino murió cuando yo era pequeña. Madre lo dijo.
+capitulos.t4.nodos.n_celda.lines.3.t	Madre dice muchas cosas. Sácame de aquí, hermana. Antes de que vuelvan.
+capitulos.t4.nodos.n_celda.choices.1.t	Mirarle bien antes de nada: algo no encaja (Ingenio 2).
+capitulos.t4.nodos.n_rosa.lines.0.t	Mel. Mírale las muñecas. Ni una marca de las cadenas. Años aquí abajo y ni una marca.
+capitulos.t4.nodos.n_rosa.lines.1.t	La cara de Kino se derrite como cera junto al fuego. Debajo sonríe una mujer de pelo blanco con una máscara. LeBlanc. La Rosa Negra.
+capitulos.t4.nodos.n_rosa.lines.2.t	Todavía con la voz de Kino, LeBlanc os cuenta la verdad: el Kino de verdad murió hace años. Lo mataron porque creían que él era el hijo mágico de Ambessa.
+capitulos.t4.nodos.n_rosa.lines.3.t	(Muy despacio.) Se equivocaron de hijo. (Te mira.) Era yo. Siempre fui yo.
+capitulos.t4.nodos.n_rosa.lines.4.t	La luz dorada estalla en las manos de Mel. Cuando se apaga, LeBlanc ya no está. En el suelo queda una rosa negra.
+capitulos.t4.nodos.p_cait.lines.0.t	(Le ofrece una taza de té.) Comandante. Lleva dos días sin dormir. Con todo el respeto, así no se gana una guerra.
+capitulos.t4.nodos.p_cait.lines.1.t	(La coge sin mirarla.) Gracias, Maddie.
+capitulos.t4.nodos.p_cait.lines.2.t	Vi no está. Dicen que ha dejado la placa y que se pega en los fosos de Zaun por cuatro monedas.
+capitulos.t4.nodos.p_cait.choices.0.t	«Maddie te cuida mucho, Caitlyn.»
+capitulos.t4.nodos.p_cait.choices.2.t	«¿Y Vi? ¿Nadie va a ir a buscarla?»
+capitulos.t4.nodos.p_mapa.lines.0.t	Maddie se queda mirando el mapa un segundo más de lo necesario. Luego saluda y sale. Va derecha a los aposentos de Ambessa.
+capitulos.t4.nodos.p_mapa.lines.1.t	(Más tarde, a solas, delante de un mapa de Zaun lleno de cruces rojas.) Vi dice que me estoy convirtiendo en otra persona. Puede que tenga razón.
+capitulos.t4.nodos.p_mapa.lines.2.t	Pero la Caitlyn de antes no pudo salvar a su madre.
+capitulos.t4.nodos.p_mapa.choices.0.t	«La Caitlyn de antes es de la que se enamoró Vi.»
+capitulos.t4.nodos.p_mapa.choices.2.t	«Tu madre quería paz, Caitlyn. No esto.»
+capitulos.t4.nodos.a3.lines.0.t	Días después, de vuelta en Piltover, Ambessa reúne lo que queda del poder de la ciudad.
+capitulos.t4.nodos.a3.lines.1.t	(Delante de todos, sin bajar la voz.) Madre. He visto a Kino. O lo que la Rosa Negra hizo con su cara.
+capitulos.t4.nodos.a3.lines.2.t	(Se queda inmóvil. Por primera vez, no tiene respuesta.) Kino.
+capitulos.t4.nodos.a3.lines.3.t	(Se recompone.) Bien, {name}. Todos te miran. Eres el puente entre esta ciudad y la de abajo. Dime qué quiere Piltover.
+capitulos.t4.nodos.b_trato.lines.0.t	(Se ríe.) Negocias como una noxiana. De acuerdo: a Zaun no se le toca. Por ahora.
+capitulos.t4.nodos.b_trato.lines.1.t	(Te mira con algo que podría ser gratitud. O cansancio.) Bien jugado.
+capitulos.t4.nodos.b_mel.lines.0.t	Gracias. Lo que llevo dentro puede proteger a mucha gente. Pero necesito tiempo. Y alguien que me cubra la espalda.
+capitulos.t4.nodos.b_mel.lines.1.t	(Desde la puerta, fría.) Elegir a mi hija es elegir a alguien que aún no sabe usar sus armas. Espero que no te arrepientas.
+capitulos.t4.nodos.b_ambessa.lines.0.t	Soldados noxianos desfilan por el Puente del Progreso. Desde abajo, Zaun los mira con un odio nuevo.
+capitulos.t4.nodos.b_ambessa.lines.1.t	Así se hacen las cosas, {name}. Deprisa y sin temblar.
+capitulos.t4.nodos.b_ambessa.lines.2.t	(Al pasar a tu lado, en un susurro.) Acabas de abrirle la puerta al lobo. Ya veremos quién lo echa.
+capitulos.t4.nodos.c.lines.0.t	Esa noche, algo enorme destroza un puesto de ejecutores en el Sumidero. Los que sobreviven hablan de un lobo del tamaño de un carro, con tubos de Brillo clavados en la espalda.
+capitulos.t5.intro	Garras en el metal. Aullidos en la niebla. La criatura de Singed anda suelta, y parece que busca a alguien.
+capitulos.t5.nodos.a0.lines.0.t	Encuentras a Vi en el foso de Sevika. Sin placa, sin vendas, encajando golpes como si se los mereciera.
+capitulos.t5.nodos.a0.lines.1.t	(Escupe sangre y sonríe.) ¿Vienes a sacarme de aquí? Llegas tarde. O pronto. Ya no lo sé.
+capitulos.t5.nodos.a.lines.0.t	Esa noche, en la niebla violeta, se encienden unos ojos. La bestia avanza hacia vosotras jadeando, con un collar de metal roto y tubos de Brillo clavados en el lomo.
+capitulos.t5.nodos.a.lines.1.t	(Se pone los guanteletes.) {name}, atrás. Esa cosa ha matado a tres ejecutores.
+capitulos.t5.nodos.a.lines.2.t	La bestia se para. Mira a Vi. Y hace un sonido que se parece demasiado a una palabra.
+capitulos.t5.nodos.a.lines.3.t	Suena a «Vi».
+capitulos.t5.nodos.b_pelea.lines.0.t	La bestia retrocede herida y la niebla se la traga. En el suelo queda un guantelete viejo. Como los que Vander guardaba en su baúl.
+capitulos.t5.nodos.b_pelea.lines.1.t	(Lo recoge. Le tiemblan las manos.) No. No puede ser.
+capitulos.t5.nodos.b_cae.lines.0.t	Un zarpazo te estampa contra una tubería. Cuando abres los ojos, la bestia ya no está. Vi te sujeta la cabeza.
+capitulos.t5.nodos.b_cae.lines.1.t	Eh. Quédate conmigo. Esta semana no pierdo a nadie más.
+capitulos.t5.nodos.b_verdad.lines.0.t	Vi. Es Vander. Singed se llevó su cuerpo aquella noche. Y lo trajo de vuelta. Así.
+capitulos.t5.nodos.b_verdad.lines.1.t	(Baja los puños. La bestia baja la cabeza.) ¿Viejo?
+capitulos.t5.nodos.b_verdad.lines.2.t	Durante un instante, el monstruo y ella se miran como un padre y una hija. Luego la bestia aúlla y huye hacia la oscuridad. Ya no es Vander. Es Warwick.
+capitulos.t5.nodos.b2.lines.0.t	Vi no vuelve a la jefatura. La encuentras en el escondite de Jinx. Y Jinx está allí, en la otra punta de la habitación, con Isha dormida en el regazo.
+capitulos.t5.nodos.b2.lines.1.t	Hace dos días Isha se escapó de Vi para volver con Jinx. Nadie pudo impedirlo.
+capitulos.t5.nodos.b2.lines.2.t	(Sin subir la voz, para no despertarla.) Le he visto, Vi. Le he oído. Era su voz, aunque saliera de esa cosa.
+capitulos.t5.nodos.b2.lines.3.t	Lo sé, Pow.
+capitulos.t5.nodos.b2.lines.4.t	(Abre mucho los ojos.) Me has llamado Pow. Hacía siglos.
+capitulos.t5.nodos.b3.lines.0.t	Siempre pensé que si volvías, todo volvería a estar bien. Y volviste. Y nada estaba bien. Yo tampoco.
+capitulos.t5.nodos.b3.lines.1.t	Ninguna de las dos lo está. (Se acerca un poco.) Pero podemos estar mal juntas.
+capitulos.t5.nodos.b3.lines.2.t	(Medio dormida, estira la mano hacia Vi y se la coge.)
+capitulos.t5.nodos.b3.lines.3.t	(Una risa muy baja.) Traidora.
+capitulos.t5.nodos.d.lines.0.t	Al amanecer, Warwick vuelve. Esta vez no se para. Atraviesa la pared del escondite y tumba a Jinx de un golpe.
+capitulos.t5.nodos.d.lines.1.t	Isha coge el arma de Jinx. Mete tres gemas en el cargador, una detrás de otra, igual que se lo ha visto hacer cien veces.
+capitulos.t5.nodos.e.lines.0.t	No llegas. Nadie habría llegado.
+capitulos.t5.nodos.e.lines.1.t	(Te mira. Se sube las gafas. Sonríe. Aprieta el gatillo.)
+capitulos.t5.nodos.e.lines.2.t	La explosión lanza a Warwick contra la pared del Sumidero. Cuando el humo se aparta, Isha no se levanta.
+capitulos.t5.nodos.e.lines.3.t	(Abrazada a ella.) No. No, no, no. Tú no. Tú eras la buena. Tú eras la que tenía que salir bien.
+capitulos.t5.nodos.f.lines.0.t	(Isha dormita apoyada en su hombro.) Casi la pierdo. Hoy nada de bromas.
+capitulos.t5.nodos.f.lines.1.t	Jinx se guarda la granada rosa del lazo en el bolsillo. No dice nada en todo el día.
+capitulos.t5.nodos.f.lines.2.t	(Mira tu chaqueta encima de la niña.) Gracias. Odiaba el frío. No lo decía, pero lo odiaba.
+capitulos.t5.nodos.f.lines.3.t	Esa noche Jinx se entrega en la jefatura. Deja las armas en el mostrador, una a una. Por primera vez en años, no oye voces.
+capitulos.t5.nodos.f.lines.4.t	En Piltover nadie sabe dónde está Jayce: desapareció en un fogonazo azul en su laboratorio.
+capitulos.t5.nodos.f.lines.5.t	Te llega un mensaje de Ekko: Heimerdinger y él han encontrado algo en el árbol. Una grieta en el aire.
+capitulos.t5.nodos.e_salva_isha.lines.0.t	Arrancas la válvula del conducto. El vapor golpea a Warwick de lleno y apaga los tubos de Brillo durante unos segundos.
+capitulos.t5.nodos.e_salva_isha.lines.1.t	Isha. Conmigo. Ya.
+capitulos.t5.nodos.e_salva_isha.lines.2.t	(Suelta el arma, corre hacia ti y se agarra a tu cintura. Está temblando.)
+capitulos.t5.nodos.e_salva_isha.lines.3.t	(La coge en brazos. Por primera vez no le sale ninguna broma.) Te tengo. Te tengo. No vuelvas a hacer eso nunca.
+capitulos.t5.nodos.e_salva_isha.lines.4.t	Warwick se pierde entre las tuberías. Isha vive. Zaun sigue teniendo una bestia suelta.
+capitulos.t6.intro	Un resto del Hexcore ha abierto una grieta en el aire. Al otro lado hay un Zaun donde nada de esto llegó a pasar.
+capitulos.t6.nodos.a.lines.0.t	Sentado en una rama, con la bata llena de hojas, hay un yordle de bigote blanco. Heimerdinger. El que fue decano de la Academia.
+capitulos.t6.nodos.a.lines.1.t	Encantado. Desde el ataque vivo aquí, entre críos con máscara. Es lo más parecido a una Academia que he tenido en años. Y aprenden más deprisa.
+capitulos.t6.nodos.a.lines.2.t	(En una rama, la bata llena de hojas.) {name}. Desde el ataque vivo aquí, entre críos con máscara. Es lo más parecido a una Academia que he tenido en años. Y aprenden más deprisa.
+capitulos.t6.nodos.a.lines.3.t	(Junto a una esfera de luz que gira en el aire. Tiene la voz rara.) Lo he visto, {name}. Al otro lado hay un sitio donde Powder nunca fue Jinx. Donde Vander sigue detrás de la barra.
+capitulos.t6.nodos.a.lines.4.t	Una anomalía. Fascinante y espantosa a partes iguales. Si entramos, no sé si sabremos salir.
+capitulos.t6.nodos.a.lines.5.t	Voy a entrar. Tengo que saber cómo lo arreglaron allí. Para arreglarlo aquí.
+capitulos.t6.nodos.a.choices.1.t	Pedirles que no vayan: «Este mundo os necesita».
+capitulos.t6.nodos.b_ok.lines.0.t	Al otro lado, el aire huele a flores. Hay árboles de verdad en los callejones. Powder, mayor, se ríe en la barra de La Última Gota.
+capitulos.t6.nodos.b_ok.lines.1.t	Vander, con un delantal, le revuelve el pelo a Vi. Es tan normal que duele.
+capitulos.t6.nodos.b_ok.lines.2.t	(Le brillan los ojos.) Aquí construye cosas que funcionan. Me enseñó a pintar. Me… (Se corta.) Da igual. Tenemos que volver.
+capitulos.t6.nodos.b_ok.lines.3.t	La grieta empieza a cerrarse. Para volver, alguien tiene que quedarse al otro lado sujetando la máquina.
+capitulos.t6.nodos.b_ok.lines.4.t	Llevo trescientos años siendo prudente, {name}. Dejadme ser valiente una vez.
+capitulos.t6.nodos.b_ok.lines.5.t	Profesor. No.
+capitulos.t6.nodos.b_ok.lines.6.t	Cuida de él. Y cuidad del mundo de verdad. Este no es más que un sueño bonito.
+capitulos.t6.nodos.b_ok.lines.7.t	La luz se lo lleva. Ekko vuelve con un dibujo en el bolsillo, de la Powder de allí: dos hermanas y un mono de trapo.
+capitulos.t6.nodos.b_ko.lines.0.t	La grieta te escupe de vuelta al árbol. Horas después sale Ekko. Solo. Temblando.
+capitulos.t6.nodos.b_ko.lines.1.t	Se quedó para que yo pudiera volver. El profesor. No me dejó ni despedirme.
+capitulos.t6.nodos.b_queda.lines.0.t	(Te pone la mano en el hombro.) Por eso tengo que ir. Porque nos necesita.
+capitulos.t6.nodos.b_queda.lines.1.t	A mi edad uno aprende que los sueños son lo único que mueve de verdad a la gente. Volveremos pronto. Eso espero.
+capitulos.t6.nodos.b_queda.lines.2.t	Cruzan igualmente. Horas después solo vuelve Ekko. Heimerdinger se quedó al otro lado para que él pudiera salir.
+capitulos.t6.nodos.b2.lines.0.t	Esa noche llega la noticia: Jinx ha salido de Stillwater. La ha sacado Vi. Ninguna de las dos quiere contar cómo.
+capitulos.t6.nodos.b2.lines.1.t	Alguien sube por las cuerdas del árbol. Jinx. Sin armas. Las manos en los bolsillos y una granada rosa colgando del cinturón.
+capitulos.t6.nodos.b2.lines.2.t	Ekko. Me han dicho que querías verme.
+capitulos.t6.nodos.b2.lines.3.t	(Se levanta despacio.) Powder. Jinx. La última vez que hablamos intentamos matarnos en un puente.
+capitulos.t6.nodos.b2.lines.4.t	Técnicamente, la que casi te mata fui yo. Pero vale. Estamos en paz.
+capitulos.t6.nodos.b3.lines.0.t	Hay un sitio, otro, donde tú y yo seguimos siendo amigos. Donde no pasó nada de esto.
+capitulos.t6.nodos.b3.lines.1.t	(Se ríe, y la risa se le rompe por la mitad.) Qué suerte tiene esa Powder. (Pausa.) ¿Era feliz?
+capitulos.t6.nodos.b3.lines.2.t	Mucho.
+capitulos.t6.nodos.b3.lines.3.t	Bien. Al menos una de las dos.
+capitulos.t6.nodos.c.lines.0.t	Al amanecer, las campanas de Piltover tocan a guerra. Noxus por un lado. El ejército del Heraldo por el otro. Y las dos ciudades en medio.
+capitulos.t7.intro	La anomalía ha dejado una pregunta sin respuesta: qué mundo merece salvarse. Piltover y Zaun se preparan para la batalla, y cada alianza tiene un precio que alguien va a tener que pagar.
+capitulos.t7.nodos.a.lines.0.t	La sala del Consejo está llena de mapas, vendas y tazas de café frío. Nadie se sienta en el sitio que ocupaba antes del ataque.
+capitulos.t7.nodos.a.lines.1.t	Los exploradores han visto columnas noxianas al norte, y a los seguidores del Heraldo saliendo de las fábricas. No podemos parar a los dos por separado.
+capitulos.t7.nodos.a.lines.2.t	Zaun no va a morir para que Piltover conserve las ventanas limpias. Si queréis que luchemos juntos, quiero algo que pueda llevarme a la calle. Algo que se pueda tocar.
+capitulos.t7.nodos.a.lines.3.t	Mi madre lo llama orden. La Rosa Negra, destino. Yo lo llamo una guerra que otros han elegido por nosotros.
+capitulos.t7.nodos.a.lines.4.t	Todas las miradas acaban en ti. No tienes escaño ni mando. Pero has estado a los dos lados del puente, y sabes lo que cuesta cada decisión.
+capitulos.t7.nodos.a.choices.0.t	Exigir que Zaun tenga voz propia cuando acabe la guerra.
+capitulos.t7.nodos.a.choices.1.t	Proponer una tregua táctica: cooperar ahora, negociar después.
+capitulos.t7.nodos.a.choices.2.t	No legitimar a ningún mando y exigir un plan para sacar a los civiles.
+capitulos.t7.nodos.b_union.lines.0.t	Eso sí lo puedo vender. No como una promesa: como una silla, una firma y alguien que dé la cara si vuelve a haber redadas.
+capitulos.t7.nodos.b_union.lines.1.t	No puedo prometer que todo Piltover lo acepte. Sí que no voy a volver a hablar por Zaun sin Zaun en la mesa.
+capitulos.t7.nodos.b_union.lines.2.t	La alianza nace con desconfianza, no con abrazos. Por primera vez, parece suficiente.
+capitulos.t7.nodos.b_tregua.lines.0.t	Una tregua no es la paz. Es el tiempo que compramos para que la próxima decisión no la tome el enemigo.
+capitulos.t7.nodos.b_tregua.lines.1.t	Acepto. Pero nadie dispara a civiles. Y nadie usa la evacuación para ajustar cuentas.
+capitulos.t7.nodos.b_tregua.lines.2.t	Si tus soldados cumplen eso, comandante, a lo mejor llegamos vivos a la mesa.
+capitulos.t7.nodos.b_civiles.lines.0.t	Por fin alguien se acuerda de la gente que no lleva uniforme.
+capitulos.t7.nodos.b_civiles.lines.1.t	Las Luciérnagas podemos abrir rutas por los túneles. No vamos a salvar a todo el mundo. Pero la ciudad no va a ser una ratonera.
+capitulos.t7.nodos.b_civiles.lines.2.t	No todos aceptan tu plan. Aun así, empiezan a llegar nombres, direcciones, listas de gente que tiene que salir antes del amanecer.
+capitulos.t7.nodos.c.lines.0.t	Encuentras a Jinx sola, desmontando una bomba que ya estaba desmontada. En la mesa, la granada rosa de Isha.
+capitulos.t7.nodos.c.lines.1.t	Si vienes a decirme que todo va a salir bien, ahórratelo. Las cosas salen como salen. Y después alguien tiene que recoger los trozos.
+capitulos.t7.nodos.c.lines.2.t	No sé cómo va a acabar. Pero no tienes que decidirlo todo tú sola.
+capitulos.t7.nodos.c.lines.3.t	(Se queda quieta. Por un instante es Powder. Después vuelve a esconderse detrás de una sonrisa torcida.) No prometo nada. Pero voy a estar.
+capitulos.t7.nodos.c.choices.0.t	Ofrecerte a luchar a su lado sin pedirle que sea otra persona.
+capitulos.t7.nodos.c.choices.1.t	Pedirle que ayude a sacar a los civiles antes de la batalla.
+capitulos.t7.nodos.c.choices.2.t	Respetar su silencio y quedarte un rato sin preguntar nada.
+capitulos.t7.nodos.d.lines.0.t	Amanece sobre un puente cubierto de niebla y de barricadas improvisadas. Nadie cree que vaya a ser una victoria limpia. La única esperanza es que las dos ciudades decidan, por fin, no dejarse tiradas.
+capitulos.t8.intro	La última batalla llega al núcleo hextec. Los planes se rompen, las alianzas se tensan, y el futuro de las dos ciudades se decide bajo el fuego.
+capitulos.t8.nodos.a.lines.0.t	El Hexgate ruge como una tormenta metida en una máquina. Las luces del núcleo parpadean a un ritmo que no sigue ningún circuito.
+capitulos.t8.nodos.a.lines.1.t	He visto un futuro donde todo se queda quieto bajo una sola voluntad. No sé si era inevitable. Sé que no podemos dejar que pase.
+capitulos.t8.nodos.a.lines.2.t	Me pidieron que acabara con el sufrimiento. Les di un mundo sin miedo. No entendí que también les estaba quitando la elección.
+capitulos.t8.nodos.a.lines.3.t	Por un instante, Viktor parece escuchar una voz que llega desde muy lejos. Después levanta la vista hacia el núcleo.
+capitulos.t8.nodos.a.choices.0.t	Confiar en Jayce y ayudarle a llegar hasta Viktor.
+capitulos.t8.nodos.a.choices.1.t	Intentar hablar con Viktor antes de que no haya otra salida que pelear.
+capitulos.t8.nodos.a.choices.2.t	Cerrar los conductos primero y proteger a los que siguen atrapados.
+capitulos.t8.nodos.b_jayce.lines.0.t	No te pido que me perdones lo que hice con la hextec. Solo ayúdame a llegar hasta él antes de que el núcleo vuelva a abrirse.
+capitulos.t8.nodos.b_jayce.lines.1.t	Te cubres detrás de una columna agrietada y cuentas el ritmo de las descargas. Cuando Jayce se mueve, tú quitas el seguro de la compuerta.
+capitulos.t8.nodos.b_jayce.lines.2.t	Gracias. Si salimos de esta, recuérdame que la ciencia no sirve de nada si se olvida de a quién tenía que ayudar.
+capitulos.t8.nodos.b_viktor.lines.0.t	No puedes curar el dolor quitándole a todo el mundo la posibilidad de elegir.
+capitulos.t8.nodos.b_viktor.lines.1.t	Y tú no puedes pedirle a quien sufre que acepte el dolor como si fuera una virtud.
+capitulos.t8.nodos.b_viktor.lines.2.t	Ninguna respuesta cierra la discusión. Pero Viktor duda un segundo. Y Jayce aprovecha ese segundo para acercarse.
+capitulos.t8.nodos.b_rescate.lines.0.t	Por aquí. El conducto está cediendo. Si abrimos las válvulas a la vez, los de abajo tienen salida.
+capitulos.t8.nodos.b_rescate.lines.1.t	Nunca pensé que acabaría obedeciendo a un crío con una tabla voladora. No te acostumbres.
+capitulos.t8.nodos.b_rescate.lines.2.t	El rescate cuesta tiempo y material. Pero decenas de personas llegan a los túneles antes de que el núcleo se desestabilice.
+capitulos.t8.nodos.c.lines.0.t	La batalla estalla en todos los frentes a la vez. Caitlyn sostiene la ruta de evacuación. Mel se enfrenta a la Rosa Negra. Vi busca a Jinx entre el humo. Ekko corre hacia el corazón de la anomalía.
+capitulos.t8.nodos.c.lines.1.t	No persigas una victoria que nos cueste la ciudad. Saca a la gente de aquí.
+capitulos.t8.nodos.c.lines.2.t	La Rosa Negra no decide quién soy. Mi madre tampoco.
+capitulos.t8.nodos.c.lines.3.t	(A lo lejos, entre el estruendo.) Pow. No vuelvas a desaparecer sin decírmelo.
+capitulos.t8.nodos.c.lines.4.t	No puedes estar en todas partes. Elige dónde vas a pesar más.
+capitulos.t8.nodos.c.choices.1.t	Ayudar a Vi a encontrar a Jinx entre los restos de la torre.
+capitulos.t8.nodos.c.choices.2.t	Ir con Mel a contener a la Rosa Negra.
+capitulos.t8.nodos.d.lines.0.t	El núcleo se enciende hasta borrar las sombras. Jayce y Viktor se acercan a la misma luz desde lados opuestos. Nadie sabe si van a volver.
+capitulos.t8.nodos.d.lines.1.t	La guerra no se acaba con una respuesta sencilla. Se acaba con pérdidas que no tienen arreglo, y con la obligación de decidir qué se construye después.
+capitulos.fin2.intro	Todo acaba en el Puente del Progreso: soldados de Noxus, ejecutores, zaunitas y los ascendidos de Viktor, que caminan sin hacer ruido.
+capitulos.fin2.nodos.a0.lines.0.t	Antes de la batalla, en una sala de mapas, Piltover y Zaun se sientan a la misma mesa por primera vez.
+capitulos.fin2.nodos.a0.lines.1.t	(Con los pies encima de la mesa.) No me gustáis. Ninguno. Pero Noxus me gusta menos.
+capitulos.fin2.nodos.a0.lines.2.t	Con eso me basta.
+capitulos.fin2.nodos.a0.lines.3.t	(Detrás de Caitlyn, como siempre.) Comandante. Los hombres de Ambessa esperan su señal.
+capitulos.fin2.nodos.a0.lines.4.t	Jayce ha vuelto. Nadie sabe de dónde. Ni cuánto tiempo ha pasado para él.
+capitulos.fin2.nodos.a0.lines.5.t	(Más viejo de lo que debería, con una cicatriz nueva.) He visto lo que pasa si gana Viktor, {name}. Un mundo de ceniza. Si alguien puede llegar hasta él, soy yo.
+capitulos.fin2.nodos.a0.lines.6.t	De mi madre me encargo yo. Y de la Rosa Negra, si se atreve a venir.
+capitulos.fin2.nodos.a0.lines.7.t	(En la puerta, con la armadura puesta.) Noxus luchará con vosotros contra el Heraldo. Un trato es un trato.
+capitulos.fin2.nodos.a0.lines.8.t	(En la puerta, con la armadura puesta.) Noxus luchará. A su manera. Y cuando termine, hablaremos de a quién pertenece esta ciudad.
+capitulos.fin2.nodos.a.lines.0.t	Isha espera en el refugio de las Luciérnagas, lejos del frente. Jinx pelea para tener un sitio al que volver.
+capitulos.fin2.nodos.a.lines.1.t	El cielo está rojo de fuego noxiano y azul de magia hextec. Jinx aparece en lo alto de una torre con la granada rosa de Isha colgada del cinturón.
+capitulos.fin2.nodos.a.lines.2.t	{name}, es ahora. Si Piltover y Zaun no luchan juntas hoy, mañana no queda ninguna de las dos.
+capitulos.fin2.nodos.a.lines.3.t	(Se ajusta los guanteletes.) Por Vander. Por Mylo y Claggor. Por Isha. Por todos los que se quedaron por el camino.
+capitulos.fin2.nodos.a.lines.4.t	(Su voz suena desde todas partes a la vez.) No tiene por qué haber guerra. Venid conmigo y nadie volverá a sufrir.
+capitulos.fin2.nodos.a.choices.6.t	Cortar los conductos del Hexcore y abrir una salida para Jayce y Viktor (Ingenio 4).
+capitulos.fin2.nodos.a.choices.7.t	Pedir a Jinx que luche contigo y preparar una ruta de retirada (Afinidad con Jinx 5).
+capitulos.fin2.nodos.b_union.lines.0.t	Escuchadme. Arriba, abajo, da igual. Hoy somos el mismo puente.
+capitulos.fin2.nodos.b_union.lines.1.t	Ejecutores y zaunitas se miran. Sevika levanta el brazo de metal. Caitlyn asiente. Y cargan juntos.
+capitulos.fin2.nodos.b_union.lines.2.t	(Riéndose mientras tumba a un ascendido.) Esto sí que es un foso.
+capitulos.fin2.nodos.b_jinx.lines.0.t	(Mira el dibujo mucho rato.) Powder. Hacía mucho que nadie me llamaba así.
+capitulos.fin2.nodos.b_jinx.lines.1.t	Vale. Una última explosión. Pero esta vez para los nuestros.
+capitulos.fin2.nodos.b_maddie.lines.0.t	En mitad del caos, Maddie se coloca detrás de Caitlyn y levanta la pistola. No apunta a los ascendidos. Apunta a su espalda.
+capitulos.fin2.nodos.b_maddie.lines.1.t	Caitlyn. Al suelo.
+capitulos.fin2.nodos.b_maddie.lines.2.t	Caitlyn se tira a tiempo. Una barrera dorada de Mel cae sobre ella; la bala rebota en la luz y vuelve por donde ha venido. Maddie no se levanta.
+capitulos.fin2.nodos.b_maddie.lines.3.t	(Mira el cuerpo sin entender.) Era de Ambessa. Todo el tiempo. Y yo le daba las gracias por el té.
+capitulos.fin2.nodos.b_mel.lines.0.t	Entre los soldados noxianos aparecen figuras con máscaras y rosas negras. Van a por Ambessa. Y a por Mel.
+capitulos.fin2.nodos.b_mel.lines.1.t	(La luz dorada le sube por los brazos.) Esta vez no me esconde nadie. Cúbreme, {name}.
+capitulos.fin2.nodos.b_mel.lines.2.t	Peleas a su espalda hasta que se rompe la última máscara. La Rosa Negra se retira. Pero no se va sin cobrarse algo.
+capitulos.fin2.nodos.b_evo.lines.0.t	Das un paso hacia la luz azul. El ruido de la guerra se apaga. El miedo también. Y algo más, que ya no recuerdas qué era.
+capitulos.fin2.nodos.b_solo.lines.0.t	Peleas con todo lo que tienes. Pero el puente es demasiado grande para una sola persona.
+capitulos.fin2.nodos.c.lines.0.t	En el corazón de la fábrica, Jayce llega hasta Viktor. No lleva el martillo. Lo ha dejado atrás.
+capitulos.fin2.nodos.c.lines.1.t	Si vas a hacerlo, no lo vas a hacer solo. Me quedo contigo. Hasta el final.
+capitulos.fin2.nodos.c.lines.2.t	(La luz azul de sus ojos parpadea.) Jayce. Lo siento. Lo siento mucho.
+capitulos.fin2.nodos.c.lines.3.t	La luz se los traga a los dos. Cuando se apaga, no queda nadie. En el puente, los ascendidos se paran de golpe, como si despertaran.
+capitulos.fin2.nodos.c2.lines.0.t	En la plaza, Ambessa cae bajo la magia de la Rosa Negra. Muere en brazos de Mel, con la espada todavía en la mano.
+capitulos.fin2.nodos.c2.lines.1.t	Maddie apunta a la espalda de Caitlyn. Una barrera dorada de Mel desvía la bala. Maddie no se levanta.
+capitulos.fin2.nodos.c2.lines.2.t	En lo alto de una torre, Warwick, lo que queda de Vander, se lanza contra Vi.
+capitulos.fin2.nodos.c2.lines.3.t	(Agarrada a la mano de Vi, colgando sobre el vacío.) Vi. Suéltame.
+capitulos.fin2.nodos.c2.lines.4.t	Ni hablar. Ni hablar, Pow.
+capitulos.fin2.nodos.c2.lines.5.t	(Sonríe. Por fin tranquila.) Te quiero, hermanita. Gracias por volver.
+capitulos.fin2.nodos.c2.lines.6.t	Jinx se suelta y cae con Warwick hacia la explosión. Una luz rosa. Después, nada. Nadie encuentra el cuerpo.
+capitulos.fin2.nodos.c2.lines.7.t	Cuando Warwick salta sobre Vi, Jinx la aparta de un empujón y se tira hacia la tubería de escape que preparasteis. Llegáis al otro lado antes de la explosión.
+capitulos.fin2.nodos.c2.lines.8.t	(Tosiendo, sin soltarle la muñeca a Vi.) Ni una palabra de lo heroica que he sido. Lo he hecho porque me ha dado la gana.
+capitulos.fin2.nodos.c2.lines.9.t	No te he soltado nunca, Pow. No iba a empezar hoy.
+capitulos.fin2.nodos.b_rescate_hexcore.lines.0.t	No intentas destruir el Hexcore. Le cortas la alimentación de las líneas de la ciudad mientras Jayce llega hasta Viktor.
+capitulos.fin2.nodos.b_rescate_hexcore.lines.1.t	Viktor, mírame. No necesito un mundo perfecto. Te necesito aquí, para arreglar este.
+capitulos.fin2.nodos.b_rescate_hexcore.lines.2.t	(La luz de sus ojos titubea.) Me he pasado la vida intentando comprar tiempo. Y estaba gastando el de todos.
+capitulos.fin2.nodos.b_rescate_hexcore.lines.3.t	El núcleo se apaga. Salen los dos de la cámara entre escombros: vivos, cambiados, y sabiendo lo que han hecho.
+capitulos.fin2.nodos.b_salva_jinx.lines.0.t	Si algo sale mal, no te quedes sola. Es la única condición.
+capitulos.fin2.nodos.b_salva_jinx.lines.1.t	¿Me estás poniendo normas? Qué descaro. (Mira la salida que has marcado.) Vale. Una. Ni una más.
+capitulos.fin2.nodos.b_salva_jinx.lines.2.t	Trazáis una retirada por las tuberías bajo el puente. No cambia la batalla. Cambia quién tiene por dónde salir cuando todo arda.
+capitulos.z3.intro	Siete años. El Brillo corre por las cañerías de Zaun como corría el agua, y es Silco quien abre y cierra la llave. Sobreviviste a aquella noche. Ahora alguien va a querer cobrártelo.
+capitulos.z3.nodos.a.lines.0.t	La Última Gota sigue en pie, pero ya no es la de Vander. Otra música, otra luz, y arriba, donde él dormía, un despacho con la puerta siempre cerrada.
+capitulos.z3.nodos.a.lines.1.t	Sevika fuma en la barra. El brazo de metal descansa sobre la madera, como un arma que no hace falta esconder. El otro se lo quitó Vander. Ella no lo ha olvidado.
+capitulos.z3.nodos.a.lines.2.t	{name}. Me dicen que eres buen{g:o|a|e} {job}. Y que saliste de la fábrica por tu propio pie. Eso, aquí abajo, es una carta de presentación.
+capitulos.z3.nodos.a.lines.3.t	Silco paga, no hace preguntas y tiene muy buena memoria. Para los leales. Y para los otros.
+capitulos.z3.nodos.a.choices.1.t	Negarte: «Vander no habría querido esto.»
+capitulos.z3.nodos.b_acepta.lines.0.t	Sevika te sube por la escalera estrecha. Silco está de espaldas, mirando las chimeneas por la ventana. No se da la vuelta hasta que ha terminado de pensar.
+capitulos.z3.nodos.b_acepta.lines.1.t	La libertad tiene un precio. Lo que nadie dice en voz alta es quién lo paga.
+capitulos.z3.nodos.b_acepta.lines.2.t	Mi padre decía que nadie se sacrifica por otra persona. Se sacrifican por una idea. La mía se llama Zaun. Una nación, no un sótano.
+capitulos.z3.nodos.b_acepta.lines.3.t	Bienvenid{g:o|a|e}, {name}.
+capitulos.z3.nodos.b_acepta.lines.4.t	Esto, al laboratorio de Singed. No lo abras, no lo agites, no preguntes. Las tres cosas son importantes.
+capitulos.z3.nodos.b_niega.lines.0.t	(Una risa corta, sin ganas.) Vander está muerto. Los muertos no pagan alquileres. Tampoco protegen a nadie.
+capitulos.z3.nodos.b_niega.lines.1.t	Él no habría dejado que el Brillo se comiera a los críos de los callejones.
+capitulos.z3.nodos.b_niega.lines.2.t	(Te echa el humo a la cara.) Él dejó que Piltover se comiera Zaun entero, y encima le daba las gracias. Silco, al menos, nos da de comer.
+capitulos.z3.nodos.b_niega.lines.3.t	Te vas. A la mañana siguiente hay un paquete en tu puerta, con tu nombre y la dirección de Singed. Nadie te ha preguntado. En Zaun, decir que no también se paga.
+capitulos.z3.nodos.b_doble.lines.0.t	Cuenta conmigo. Prefiero trabajar para el que gana.
+capitulos.z3.nodos.b_doble.lines.1.t	(Te sostiene la mirada un segundo de más.) No me fío de ti.
+capitulos.z3.nodos.b_doble.lines.2.t	Pero Silco sí, y de momento con eso me vale. Esto, a Singed. Y si me entero de que hablas con quien no debes…
+capitulos.z3.nodos.b_doble.lines.3.t	No termina la frase. Cierra el puño de metal, despacio, y los dedos crujen como un engranaje que lleva años sin aceite.
+capitulos.z3.nodos.c.lines.0.t	El laboratorio de Singed está donde ya no llega ni el ruido del mercado. Huele a formol, a óxido y a algo que respira.
+capitulos.z3.nodos.c.lines.1.t	Singed recibe el paquete sin levantar la vista. «En la mesa.» Detrás de una cortina, algo grande se mueve. «No te preocupes por mi paciente», añade, con la voz de quien habla de una planta.
+capitulos.z3.nodos.c.lines.2.t	Una garra enorme raspa los barrotes. Por el hueco de la cortina, unos ojos casi humanos te miran. No hay rabia en ellos. Hay dolor.
+capitulos.z3.nodos.d_pregunta.lines.0.t	Singed se limpia las gafas sin prisa. «Alguien que se negó a morir. La ciencia no juzga, {name}. Observa.»
+capitulos.z3.nodos.d_pregunta.lines.1.t	La criatura apoya la frente en los barrotes. En el brazo tiene una cicatriz con la forma exacta de un guantelete.
+capitulos.z3.nodos.d_pregunta.lines.2.t	Conoces esa mirada. No sabes de qué. Y no estás segur{g:o|a|e} de querer saberlo.
+capitulos.z3.nodos.d_sale.lines.0.t	El aire de los callejones nunca te había parecido limpio. Hoy sí. El gruñido te acompaña tres calles más, o eso crees.
+capitulos.z3.nodos.d_roba.lines.0.t	Singed apunta algo en un cuaderno. Cuando vuelve a levantar la vista, en la estantería hay un frasco menos y en tu bolsillo uno más.
+capitulos.z3.nodos.d_roba.lines.1.t	Está tibio. Late. Si alguien quiere acabar con esto algún día, va a tener que entender primero qué es.
+capitulos.z3.nodos.e0.lines.0.t	En La Última Gota, Silco y Sevika hablan en voz baja junto a la escalera. Ejecutores. Un sheriff llamado Marcus. Dinero que tendría que haber llegado y no ha llegado.
+capitulos.z3.nodos.e0.lines.1.t	¿Y ella dónde está?
+capitulos.z3.nodos.e0.lines.2.t	Jugando con fuego, como siempre. Literalmente. Ayer voló uno de nuestros almacenes, Silco. De los nuestros.
+capitulos.z3.nodos.e0.lines.3.t	(Sin alzar la voz, lo cual es peor.) Ella es mía, Sevika. Lo que rompa, se repone. No vuelvas a hablar así de ella.
+capitulos.z3.nodos.e0.lines.4.t	(Aprieta la mandíbula y se gira hacia ti.) ¿Y tú qué miras?
+capitulos.z3.nodos.e0.choices.0.t	«Nada. No he oído nada.»
+capitulos.z3.nodos.e.lines.0.t	Algo estalla sobre los tejados y la noche se llena de colores. Una risa. Una chica de trenzas azules salta de un tejado a otro con un lanzacohetes que tiene cara de tiburón.
+capitulos.z3.nodos.e.lines.1.t	¿{name}? No. No puede ser. Estás viv{g:o|a|e}. (Ladea la cabeza.) Te presento a Fishbones. Fishbones, saluda. (Pausa.) Es tímido.
+capitulos.z3.nodos.e.lines.2.t	¿{name}? Tú estabas en la taberna. Antes. Antes de… todo. (Te mira de arriba abajo.) Has crecido. Yo también, dicen.
+capitulos.z3.nodos.e.lines.3.t	(Se queda quieta de golpe y se tapa una oreja, como si alguien le hablara pegado a la nuca.) Callad. Callaos. Estoy hablando yo.
+capitulos.z3.nodos.e.lines.4.t	(La sonrisa vuelve, como si no hubiera pasado nada.) Me voy. Si ves a Silco, dile que el almacén ya era feo antes.
+capitulos.z3.nodos.e.lines.5.t	Ya nadie la llama Powder. Ahora es Jinx: la palabra que Vi le gritó aquella noche, antes de irse. Se la ha quedado como quien se queda una cicatriz.
+capitulos.z4.intro	Falta un cargamento de Brillo. En los callejones dicen que han sido las Luciérnagas. Silco no quiere rumores: quiere nombres.
+capitulos.z4.nodos.a.lines.0.t	Alguien con máscara aterriza a tu lado en una aerotabla, te pone una venda y te lleva por el aire. Cuando te la quitan, estás en una caverna, delante de un árbol enorme que brilla en la oscuridad.
+capitulos.z4.nodos.a.lines.1.t	Hay decenas de chavales a tu alrededor, con máscaras y pintura fosforescente en la cara. El de la cicatriz, Scar, se cruza de brazos: «Dame una razón para no tirarte por el borde. Y que sea buena.»
+capitulos.z4.nodos.a.lines.2.t	(Baja de una rama de un salto.) Déjalo, Scar. {name} y yo nos conocemos de antes.
+capitulos.z4.nodos.a.lines.3.t	Has crecido. Yo también. Antes hacía volar teteras. Ahora vuelo yo.
+capitulos.z4.nodos.a.choices.0.t	«Sigo de vuestro lado, Ekko. Siempre lo he estado.»
+capitulos.z4.nodos.b_lado.lines.0.t	Aquí arriba duermen los que el Brillo dejó sin casa. Huérfanos. Obreros. Gente a la que Silco exprimió hasta la última gota.
+capitulos.z4.nodos.b_lado.lines.1.t	Mañana vamos a por otro envío. Nos falta alguien que conozca las rutas de Silco desde dentro.
+capitulos.z4.nodos.b_salir.lines.0.t	De Silco no se sale así como así. Pero aquí todos hemos salido de algo.
+capitulos.z4.nodos.b_salir.lines.1.t	Ayúdanos y te ayudamos. Si no, te devolvemos donde te encontramos. Con la venda puesta.
+capitulos.z4.nodos.b_salir.lines.2.t	Scar no te quita los ojos de encima. «Te voy a estar mirando», dice. Y lo dice en serio.
+capitulos.z4.nodos.b_info.lines.0.t	Singed tiene algo en una jaula. Algo enorme. Y creo que antes era una persona.
+capitulos.z4.nodos.b_info.lines.1.t	(Se le borra la sonrisa.) Si Silco está fabricando monstruos, tenemos menos tiempo del que creía.
+capitulos.z4.nodos.b_info.lines.2.t	Scar baja el arma. No se disculpa. Pero la baja.
+capitulos.z4.nodos.b_traicion.lines.0.t	Sonríes. Asientes. Y cuentas. Cada rama, cada puente de cuerda, cada túnel. Silco pagará bien por este mapa.
+capitulos.z4.nodos.b_traicion.lines.1.t	Me alegro de verte. De verdad. Aquí arriba hasta se respira mejor, ¿no?
+capitulos.z4.nodos.b_arbol.lines.0.t	Ekko te enseña el árbol. Las paredes están llenas de murales: caras de gente que ya no está. Un hombretón de barba espesa. Dos chicos. Una niña de pelo azul abrazada a un mono de trapo.
+capitulos.z4.nodos.b_arbol.lines.1.t	Powder. Era mi mejor amiga. Hasta que Silco hizo de ella… eso.
+capitulos.z4.nodos.b_arbol.lines.2.t	Hace unas semanas me la crucé en un puente. Me apuntó a la cara. (Pasa la mano por la pintura.) Y yo la sigo pintando así. Como era.
+capitulos.z4.nodos.c.lines.0.t	La noche del golpe. Un convoy de Brillo avanza despacio por los callejones, con los hombres de Sevika a los lados.
+capitulos.z4.nodos.c.lines.1.t	Arriba, en los tejados, las Luciérnagas esperan con las máscaras bajadas y los botes de pintura en la mano. Nadie habla.
+capitulos.z4.nodos.c.lines.2.t	(En voz baja.) A mi señal. (Una pausa larga.) Ahora.
+capitulos.z4.nodos.d_pelea.lines.0.t	Pintura, golpes, alguien que grita. Ekko gira el bate como si llevara la música por dentro. Tú tumbas a un matón que te dobla en tamaño y no sabes muy bien cómo.
+capitulos.z4.nodos.d_pelea.lines.1.t	Cuando llega Sevika, el Brillo ya arde en el canal y el humo violeta sube hasta las chimeneas.
+capitulos.z4.nodos.d_pelea.lines.2.t	{name}. Ya me lo olía. Silco se va a enterar.
+capitulos.z4.nodos.d_pelea.lines.3.t	(Desde un tejado, con la máscara subida.) Dile que le mandamos recuerdos.
+capitulos.z4.nodos.d_sabotaje.lines.0.t	Una mezcla tuya y los barriles se convierten en espuma. Nadie sangra. El Brillo se va canal abajo entre burbujas violetas.
+capitulos.z4.nodos.d_sabotaje.lines.1.t	(Silba.) ¿Y eso dónde lo has aprendido?
+capitulos.z4.nodos.d_sabotaje.lines.2.t	Trabajando de {job} en {district}. Allí se aprende o se muere.
+capitulos.z4.nodos.d_sabotaje.lines.3.t	(A lo lejos, hundiendo la bota en la espuma.) ¿Quién ha sido? (Nadie contesta.) ¿QUIÉN?
+capitulos.z4.nodos.d_aviso.lines.0.t	Un silbido tuyo. Sevika estaba esperando. Sus hombres salen de cada portal a la vez.
+capitulos.z4.nodos.d_aviso.lines.1.t	Ahora. Que no se escape ni uno.
+capitulos.z4.nodos.d_aviso.lines.2.t	Las Luciérnagas se dispersan por los tejados. Ekko se queda un segundo quieto, mirándote desde arriba.
+capitulos.z4.nodos.d_aviso.lines.3.t	¿Por qué?
+capitulos.z4.nodos.d_aviso.lines.4.t	(Te da una palmada en la espalda que casi te tira al suelo.) Buen trabajo. Silco sabe agradecer las cosas.
+capitulos.z4.nodos.d_margen.lines.0.t	Miras desde la sombra cómo el caos decide sin ti. Unos ganan. Otros sangran. No elegir también es una forma de elegir.
+capitulos.z4.nodos.d_margen.lines.1.t	(Al pasar a tu lado, sin detenerse.) La próxima vez avisa si vas a mirar desde la grada.
+capitulos.z4.nodos.e.lines.0.t	(En su despacho, los nudillos blancos sobre la mesa.) Las Luciérnagas me roban. Los ejecutores quieren más cada mes. Y el Consejo hace como si no existiéramos.
+capitulos.z4.nodos.e.lines.1.t	Eso va a cambiar.
+capitulos.z4.nodos.e.lines.2.t	Al amanecer corre un rumor por los callejones: alguien ha salido de Stillwater. Una mujer de pelo rosa. Y no viene sola: la acompaña una ejecutora de Piltover.
+capitulos.z5.intro	Vi ha vuelto. Busca a Powder, y busca a Silco. Detrás de ella, como una sombra con placa, camina una ejecutora de Piltover.
+capitulos.z5.nodos.a.lines.0.t	La reconoces por cómo camina, como si el mundo le debiera una pelea. Pelo rosa, más hombros que antes y dos letras tatuadas bajo el ojo: «VI».
+capitulos.z5.nodos.a.lines.1.t	¿{name}? (Te abraza tan fuerte que te crujen las costillas.) Creía que ya no quedaba nadie.
+capitulos.z5.nodos.a.lines.2.t	(Te suelta y te da un empujón en el hombro.) Aunque no me olvido de quién le iba con el cuento a Vander, ¿eh?
+capitulos.z5.nodos.a.lines.3.t	Aquella noche, en el puente. Te vi correr detrás del carro. Fuiste la única que vino a por mí.
+capitulos.z5.nodos.a.lines.4.t	Siete años en Stillwater dándole vueltas a esa noche. A lo que le dije a Powder.
+capitulos.z5.nodos.a.lines.5.t	(Rifle a la espalda, un abrigo que huele a Piltover desde lejos.) Caitlyn Kiramman. Vi dice que conoces Zaun mejor que nadie. Buscamos a Silco.
+capitulos.z5.nodos.a.lines.6.t	Tranqui, es de fiar. Para ser de arriba. Yo la llamo Cupcake. Le encanta.
+capitulos.z5.nodos.a.lines.7.t	No me encanta.
+capitulos.z5.nodos.a.choices.0.t	«Os llevo hasta Jinx. Es lo que Vi necesita.»
+capitulos.z5.nodos.a.choices.1.t	«Silco está en La Última Gota. Os llevo.»
+capitulos.z5.nodos.b_jinx.lines.0.t	Los guías por los túneles hasta el escondite de Jinx. Dibujos en todas las paredes. Peluches con cabezas de muñeca cosidas. Cohetes a medio montar. Una mesa puesta para una merienda que no termina nunca.
+capitulos.z5.nodos.b_jinx.lines.1.t	(Muy bajo.) Esto no es un escondite. Es una herida con pintura por encima.
+capitulos.z5.nodos.b_jinx.lines.2.t	(Desde una viga, con las piernas colgando.) ¿Vi? No. No, no. Tú estás muerta. Me lo dijeron.
+capitulos.z5.nodos.b_jinx.lines.3.t	Pow. Soy yo. He vuelto. (Se le quiebra la voz.) Siento haber tardado tanto.
+capitulos.z5.nodos.b_jinx.lines.4.t	(Se tapa los oídos.) Mylo dice que mientes. Claggor también. Y ellos nunca mienten. Ya no.
+capitulos.z5.nodos.b_silco.lines.0.t	Si cae Silco, cae el Brillo. Y entonces el Consejo no tendrá más remedio que escuchar a Zaun.
+capitulos.z5.nodos.b_silco.lines.1.t	¿Ves? Habla como un cartel de propaganda. Lo raro es que se lo cree.
+capitulos.z5.nodos.b_silco.lines.2.t	En La Última Gota no está Silco. Está Jinx, sentada en la barra, balanceando las piernas y mordiendo una manzana.
+capitulos.z5.nodos.b_silco.lines.3.t	Hola, hermanita. Has tardado. Siete años, ¿no? Los he ido contando. Con bombas.
+capitulos.z5.nodos.b_desconfia.lines.0.t	Lo entiendo. Si viviera aquí abajo, yo tampoco me fiaría de un uniforme.
+capitulos.z5.nodos.b_desconfia.lines.1.t	No te pido que te fíes de él. Te pido que te fíes de Vi.
+capitulos.z5.nodos.b_desconfia.lines.2.t	Cait es distinta, {name}. Me sacó de Stillwater cuando ya nadie se acordaba de mí. (Pausa.) Por favor.
+capitulos.z5.nodos.b_desconfia.lines.3.t	Vas con ellas. No porque te convenza la placa. En la puerta de La Última Gota os espera una chica de trenzas azules.
+capitulos.z5.nodos.c.lines.0.t	Pow. Lo que te dije aquella noche… no lo pensaba. No lo he pensado nunca.
+capitulos.z5.nodos.c.lines.1.t	(Sonríe con todos los dientes.) Pero lo dijiste. Y tenías razón. Mira todo lo que he roto desde entonces.
+capitulos.z5.nodos.c.lines.2.t	(Apunta a Caitlyn con Pow-Pow, casi con cariño.) ¿Y esta? ¿Mi sustituta? ¿Ya tienes una hermana nueva, de las de arriba?
+capitulos.z5.nodos.c.lines.3.t	(La mano cerca del rifle, sin tocarlo.) Vi. No me gusta cómo me mira.
+capitulos.z5.nodos.c.lines.4.t	¿Y tú, {name}? ¿Con quién estás? ¿Conmigo o con la de la placa?
+capitulos.z5.nodos.c.choices.0.t	«Contigo. Con la familia.»
+capitulos.z5.nodos.c.choices.1.t	«Con Vi. Ella no ha dejado de buscarte ni un día.» (Carisma 3)
+capitulos.z5.nodos.c.choices.2.t	«Con Zaun. Y Zaun está harto de explosiones.»
+capitulos.z5.nodos.d_familia.lines.0.t	(La sonrisa se le ensancha despacio.) Lo sabía. Tú y yo vamos a hacer algo grande, {name}. Algo que se oiga desde arriba.
+capitulos.z5.nodos.d_familia.lines.1.t	{name}. ¿En serio?
+capitulos.z5.nodos.d_familia.lines.2.t	No pongas esa cara, Vi. La que se fue fuiste tú. La familia es la que se queda.
+capitulos.z5.nodos.d_vi.lines.0.t	Vi se ha pasado siete años en una celda pensando en ti. Lo primero que ha hecho al salir ha sido buscarte. No a Silco. A ti.
+capitulos.z5.nodos.d_vi.lines.1.t	(Baja el arma. Le tiembla la mano.) ¿Es verdad?
+capitulos.z5.nodos.d_vi.lines.2.t	Todos los días, Pow.
+capitulos.z5.nodos.d_vi.lines.3.t	Durante un segundo, Powder está ahí. La cría que hacía bombas con latas de sardinas y se colgaba de la espalda de su hermana para ir a todas partes. Luego parpadea, y no.
+capitulos.z5.nodos.d_zaun.lines.0.t	Aburrid{g:o|a|e}. Zaun lleva años dormido. Hay que despertarlo con ruido.
+capitulos.z5.nodos.d_zaun.lines.1.t	(Ladea la cabeza.) Pero me gusta que me lo digas a la cara. Ya casi nadie se atreve.
+capitulos.z5.nodos.d2.lines.0.t	Pasos lentos en la escalera. El golpe de un bastón. Un ojo rojo que aparece antes que el resto.
+capitulos.z5.nodos.d2.lines.1.t	Así que esta es Vi. La hermana que se fue.
+capitulos.z5.nodos.d2.lines.2.t	(Los puños cerrados.) Tú te la llevaste. Tú mataste a Vander.
+capitulos.z5.nodos.d2.lines.3.t	Yo la saqué del agua cuando tú la dejaste allí. Pregúntale quién ha estado a su lado estos siete años. Ella lo sabe.
+capitulos.z5.nodos.d2.lines.4.t	(Mira a uno, mira al otro, con las manos en la cabeza.) Parad. Parad. Parad ya.
+capitulos.z5.nodos.e.lines.0.t	Silbatos fuera. Ejecutores. Alguien les ha avisado. Cada uno sale corriendo por una puerta distinta.
+capitulos.z5.nodos.e.lines.1.t	En el caos ves cómo Jinx mete algo en la bolsa: una gema hextec del tamaño de un puño, que zumba con un poder que no debería caber ahí.
+capitulos.z5.nodos.e.lines.2.t	(Tirando de Vi hacia la salida.) Ahora no, Vi. Volveremos a por ella. Te doy mi palabra.
+capitulos.z5.nodos.e.lines.3.t	(Desde la escalera, sin moverse.) Mañana Piltover va a escuchar a Zaun. De una forma o de otra.
+capitulos.z6.intro	Silco prepara algo grande. Sevika sabe qué. Y en Zaun lo que uno sabe no se pregunta: se cobra.
+capitulos.z6.nodos.a.lines.0.t	El foso huele a sudor y a Brillo. La grada golpea las rejas cuando bajas. En el serrín del centro hay manchas que nadie se molesta ya en tapar.
+capitulos.z6.nodos.a.lines.1.t	(Apoyada en la barandilla, jugando a las cartas con la mano buena.) Mira quién ha bajado a mi salón.
+capitulos.z6.nodos.a.lines.2.t	¿Quieres saber qué trama Silco? Gánatelo. Aquí abajo la palabra de alguien vale lo que valen sus puños.
+capitulos.z6.nodos.a.lines.3.t	Alguien grita tu nombre desde la grada. Otros ya están apostando a que no te levantas.
+capitulos.z6.nodos.a.choices.2.t	«No peleo para que nadie se divierta.»
+capitulos.z6.nodos.b_gana.lines.0.t	(Escupe sangre al serrín y se ríe.) Vale. Tienes agallas. Me recuerdas a alguien que no me caía bien.
+capitulos.z6.nodos.b_gana.lines.1.t	Jinx ha montado un cohete con la gema que robó. Grande. Pintado de colores. Con dientes.
+capitulos.z6.nodos.b_gana.lines.2.t	Silco quiere usarlo para sentar al Consejo y que firme. Jinx… no sé qué quiere. Y eso es lo que me quita el sueño.
+capitulos.z6.nodos.b_labia.lines.0.t	Si lo de Silco sale mal, lo primero que arde es este foso. Y tú lo sabes mejor que nadie.
+capitulos.z6.nodos.b_labia.lines.1.t	(Un silencio largo. Deja las cartas boca abajo.) Un cohete. Con la gema de Piltover dentro.
+capitulos.z6.nodos.b_labia.lines.2.t	Yo no te he dicho nada.
+capitulos.z6.nodos.b_pierde.lines.0.t	Terminas con la cara en el serrín. La grada aplaude. No a ti.
+capitulos.z6.nodos.b_pierde.lines.1.t	Vuelve cuando sepas pelear. O mejor no vuelvas.
+capitulos.z6.nodos.b2.lines.0.t	Sevika baja de la barandilla y se sienta a tu lado en un banco. Se sirve un trago. Te sirve otro sin preguntar.
+capitulos.z6.nodos.b2.lines.1.t	¿Sabes cómo perdí el brazo? Aquella noche, en la fábrica. Yo apuntaba a Silco. Vander se puso en medio. Un puñetazo.
+capitulos.z6.nodos.b2.lines.2.t	Todos creen que soy su perro. Le sigo porque es el único que se ha atrevido a pensar en grande. Pero esa cría…
+capitulos.z6.nodos.b2.lines.3.t	Esa cría le va a costar la ciudad. Y él no lo ve. La quiere como a una hija, y eso le deja ciego.
+capitulos.z6.nodos.b2.choices.0.t	«Pues díselo tú. Alguien tiene que hacerlo.»
+capitulos.z6.nodos.c.lines.0.t	(Mira el vaso vacío.) Lo que yo quiera da igual. Lo que importa es no amanecer mañana debajo de los escombros.
+capitulos.z6.nodos.c.lines.1.t	Al salir hay ejecutores en cada esquina. Marcus ha ordenado una redada en los callejones. Alguien en Piltover tiene mucha prisa por encontrar a Jinx.
+capitulos.z7.intro	Los ejecutores registran Zaun puerta por puerta. Ekko necesita que alguien lleve un aviso al árbol, y el único camino que no vigilan es el de arriba.
+capitulos.z7.nodos.a.lines.0.t	(Por un tubo de mensajes, la voz cortada.) {name}. Los ejecutores van hacia el árbol. Alguien les ha dado la ruta.
+capitulos.z7.nodos.a.lines.1.t	Yo estoy en el puente, detrás de Jinx. Avisa a Scar antes que ellos. Hay críos durmiendo ahí arriba.
+capitulos.z7.nodos.a.lines.2.t	Abajo, Marcus grita por un megáfono: que nadie se mueva, por orden del Consejo. Sus hombres echan abajo una puerta. Luego otra.
+capitulos.z7.nodos.b_llega.lines.0.t	Saltas el último hueco y caes sobre una rama del árbol. Scar ya ha dado la alarma; los críos bajan por las cuerdas, medio dormidos, sin hacer ruido.
+capitulos.z7.nodos.b_llega.lines.1.t	Scar te agarra del brazo un segundo. «Te debemos una, {name}.» Luego desaparece entre las hojas que brillan.
+capitulos.z7.nodos.b_distrae.lines.0.t	¡Sheriff! ¿Busca a alguien de Zaun? Aquí tiene a una.
+capitulos.z7.nodos.b_distrae.lines.1.t	Marcus te señala con el megáfono. Media patrulla sale detrás de ti, justo en dirección contraria al árbol.
+capitulos.z7.nodos.b_distrae.lines.2.t	Los arrastras por tres mercados, dos lavanderías y un puesto de pescado. Para cuando te pierden, Ekko ya ha tenido su oportunidad.
+capitulos.z7.nodos.b_soborno.lines.0.t	Unas monedas en el bolsillo adecuado y el ejecutor se equivoca de calle. Marcus no se entera.
+capitulos.z7.nodos.b_soborno.lines.1.t	Más tarde Marcus se cruza contigo en un callejón. No te detiene. «Sé lo que has hecho», dice sin mirarte. «Gracias. No quiero más sangre en las manos.» Y sigue andando.
+capitulos.z7.nodos.b_atrapado.lines.0.t	Una chapa cede bajo tus pies. Caes justo delante de dos ejecutores.
+capitulos.z7.nodos.b_atrapado.lines.1.t	(Llega a la carrera, el rifle a la espalda.) Viene conmigo. Soltadl{g:o|a|e}. Ya.
+capitulos.z7.nodos.b_atrapado.lines.2.t	(En voz baja, mientras te ayuda a levantarte.) No voy a preguntarte qué hacías en un tejado. Todavía.
+capitulos.z7.nodos.b_atrapado.lines.3.t	Sales de esta. El aviso no llega al árbol a tiempo.
+capitulos.z7.nodos.b2.lines.0.t	Desde arriba se ve el puente del Entresuelo. Dos figuras pelean sobre él: una con un bate y una aerotabla; la otra con trenzas azules y una ametralladora que parece un juguete.
+capitulos.z7.nodos.b2.lines.1.t	¡Powder, para! ¡Sé que sigues ahí!
+capitulos.z7.nodos.b2.lines.2.t	Powder está muerta, Ekko. La enterraste tú cuando te fuiste con esos críos de las máscaras.
+capitulos.z7.nodos.b2.lines.3.t	Ekko la tiene. Solo tendría que empujar. No lo hace. Ella sí.
+capitulos.z7.nodos.b3.lines.0.t	Una explosión. El puente gime. Ekko cae… y una aerotabla lo recoge en el último segundo.
+capitulos.z7.nodos.b3.lines.1.t	(Sola en el borde, respirando muy deprisa.) Siempre me hacéis elegir. Siempre.
+capitulos.z7.nodos.b3.lines.2.t	(Te ve. Por un momento no parece peligrosa: parece perdida.) {name}. ¿Tú también me odias?
+capitulos.z7.nodos.b3.lines.3.t	No te da tiempo a contestar. Salta hacia la niebla y ya no está.
+capitulos.z7.nodos.c.lines.0.t	Esa noche sube un grito desde el Sumidero. No es humano. Algo ha salido del laboratorio de Singed.
+capitulos.z8.intro	El laboratorio del Sumidero está abierto y vacío. Las máquinas siguen zumbando como si nadie les hubiera dicho que se ha acabado. En una pared, alguien ha dejado un nombre.
+capitulos.z8.nodos.a.lines.0.t	Cristales rotos. Jaulas abiertas. Marcas de garras en el metal. Y en la pared, arañado con algo que no era una herramienta: VANDER.
+capitulos.z8.nodos.a.lines.1.t	Singed sale del vapor con la calma de alguien a quien han interrumpido el té. «Se fue antes de terminar el tratamiento», dice. «Una lástima. Estaba tan cerca.»
+capitulos.z8.nodos.a.choices.4.t	Irte de allí.
+capitulos.z8.nodos.b_sabotaje.lines.0.t	Cambias los tubos de sitio. Las cubas de Brillo se cuajan en una pasta gris, muerta. Meses de producción a la basura.
+capitulos.z8.nodos.b_sabotaje.lines.1.t	Singed mira el desastre con las manos a la espalda. «Ingenioso. A Silco no le va a gustar.» Una pausa. «A mí sí.»
+capitulos.z8.nodos.b_falla.lines.0.t	Saltan chispas. Una nube violeta te hace retroceder, tosiendo.
+capitulos.z8.nodos.b_falla.lines.1.t	Singed ni se mueve. «La química no perdona la prisa. Vuelve cuando sepas lo que estás haciendo.»
+capitulos.z8.nodos.b_verdad.lines.0.t	Singed se quita las gafas. «Alguien que lo dio todo por sus hijos. Yo le devolví la fuerza.» Las vuelve a limpiar. «La memoria es otra cosa.»
+capitulos.z8.nodos.b_verdad.lines.1.t	Se te hiela la espalda. Sabes de quién habla. Y Vi no puede enterarse así, en un sitio como este.
+capitulos.z8.nodos.b_notas.lines.0.t	Entre fórmulas encuentras un diagrama de la gema de Jinx, y marcado en rojo, el punto exacto en el que se vuelve inestable.
+capitulos.z8.nodos.b_notas.lines.1.t	Al margen, con letra temblorosa: «Si la secuencia se invierte, la gema duerme». Te lo guardas.
+capitulos.z8.nodos.b2.lines.0.t	En La Última Gota, Silco está solo en el despacho. Un vaso en la mano. La mirada en la ventana, en ninguna parte.
+capitulos.z8.nodos.b2.lines.1.t	Siéntate, {name}. Esta noche no muerdo.
+capitulos.z8.nodos.b2.lines.2.t	El Consejo me ofrece un trato. La independencia de Zaun. A cambio, quieren a Jinx.
+capitulos.z8.nodos.b2.lines.3.t	Todo por lo que he sangrado. Una nación. Y lo único que tengo que hacer es entregar a la única persona que me ha querido sin pedirme nada.
+capitulos.z8.nodos.b2.choices.0.t	«Zaun es más que una persona, Silco.»
+capitulos.z8.nodos.b2.choices.1.t	«Si la entregas, no te lo va a perdonar. Y tú tampoco.»
+capitulos.z8.nodos.b3.lines.0.t	(Una risa sin aire.) Vander. Siempre Vander. ¿Sabes de dónde sale esta cicatriz? Me sujetó bajo el agua del río hasta que dejé de patalear.
+capitulos.z8.nodos.b3.lines.1.t	Salí de ese río sabiendo una cosa: los hermanos te traicionan. Los hijos… los hijos son otra cosa.
+capitulos.z8.nodos.b3.lines.2.t	Pasos en la escalera. Jinx asoma la cabeza, la cara manchada de grasa, sonriendo de oreja a oreja.
+capitulos.z8.nodos.b3.lines.3.t	¿Interrumpo? Está terminado. El cohete. Tenéis que verlo.
+capitulos.z8.nodos.b3.lines.4.t	(La mira de una forma que da miedo, porque es amor.) Ya voy, Jinx. Ya voy.
+capitulos.z8.nodos.c.lines.0.t	Mañana es el día. El Consejo vota. Jinx carga el cohete. Zaun aguanta la respiración.
+capitulos.z9.intro	Ha desaparecido un envío de filtros de aire. La Última Gota, las Luciérnagas y los hombres de Silco quieren respuestas distintas. Y todos se las piden a la misma persona.
+capitulos.z9.nodos.a.lines.0.t	El aviso llega escrito al dorso de una factura: tres cajas de filtros para {district} que nunca cruzaron el puente. Reconoces la firma de quien pagó el encargo.
+capitulos.z9.nodos.a.lines.1.t	(Golpea el papel con un dedo de metal.) Eso no es mercancía de Silco. Alguien quiere que parezcamos ladrones.
+capitulos.z9.nodos.a.lines.2.t	Eran para familias que no pueden pagarse el aire. No son una ficha más de vuestra guerra.
+capitulos.z9.nodos.a.lines.3.t	Pues decide qué haces, {name}. Aquí abajo las buenas intenciones no limpian los pulmones de nadie.
+capitulos.z9.nodos.b.lines.0.t	Pasas la noche entre almacenes. Un vigilante cobra por mirar hacia otro lado. Tú pagas con una deuda vieja y recuperas dos cajas de tres.
+capitulos.z9.nodos.b.lines.1.t	No basta. Pero esta noche alguien va a dormir sin toser.
+capitulos.z9.nodos.c.lines.0.t	(Lee la factura sin alzar la voz.) Todo favor tiene precio. La diferencia es que yo lo digo antes de cobrarlo.
+capitulos.z9.nodos.c.lines.1.t	Quiero los filtros en Zaun. No otra deuda que deje a la ciudad de rodillas.
+capitulos.z9.nodos.c.lines.2.t	Entonces vamos a ver cuánto vale tu palabra. Y cuánto vale la mía.
+capitulos.z9.nodos.d.lines.0.t	En el árbol nadie te va a preguntar quién pagó el filtro. Si respiras, lo necesitas. Con eso basta.
+capitulos.z9.nodos.d.lines.1.t	Las Luciérnagas trazan una ruta por los tejados. Las cajas viajan por encima de los ojos de Silco.
+capitulos.z9.nodos.e.lines.0.t	A la salida del turno de la fábrica se forma una cola. Algunos te dan las gracias. Otros no dicen nada: saben que esto se acabará pagando.
+capitulos.z9.nodos.e.lines.1.t	En el puente, un mensajero de Piltover te pone una nota en la mano y se va. Alguien ha descubierto por dónde iban las cajas.
+capitulos.z10.intro	Entre ejecutores y contrabandistas circula una lista de testigos. Uno de los nombres es el tuyo.
+capitulos.z10.nodos.a.lines.0.t	Papel con el sello de Piltover. Siete nombres en tinta roja. El último es {name}.
+capitulos.z10.nodos.a.lines.1.t	(Arruga la hoja.) ¿Quién hace una lista con gente que solo intentaba ayudar? Dime dónde vive.
+capitulos.z10.nodos.a.lines.2.t	No todos los que llevan uniforme han firmado esto. Dame tiempo para averiguar quién ha ordenado la vigilancia.
+capitulos.z10.nodos.a.lines.3.t	Estoy cansad{g:o|a|e} de que todo el mundo decida quién soy por la orilla del río en la que nací.
+capitulos.z10.nodos.a.choices.2.t	Guardar una copia y buscar quién comercia con los nombres.
+capitulos.z10.nodos.b.lines.0.t	(Cierra la puerta.) No te voy a prometer que esto acabe bien. Te prometo que no voy a mirar hacia otro lado.
+capitulos.z10.nodos.b.lines.1.t	Al salir te das cuenta de lo que le ha costado decirlo. Para alguien de Piltover, admitir que la ley también hace daño es casi una traición.
+capitulos.z10.nodos.c.lines.0.t	Bien. Que vengan a por mí. (Se calla.) No. Olvídalo. Ya he decidido demasiadas veces por los demás.
+capitulos.z10.nodos.c.lines.1.t	La última hoja se convierte en ceniza. Los nombres no. Esos te los llevas tú, y pesan más que el papel.
+capitulos.z10.nodos.d.lines.0.t	Una copia es poder. Escóndela donde nadie sepa que existe. Ni siquiera yo.
+capitulos.z10.nodos.d.lines.1.t	El traidor no da la cara. Lo único que sacas en claro es que a alguien le interesa que las dos ciudades se miren con desconfianza.
+capitulos.z10.nodos.e.lines.0.t	Esa noche miras el puente desde la orilla. Antes creías que había dos ciudades. Ahora ves una sola herida. Y estás dentro.

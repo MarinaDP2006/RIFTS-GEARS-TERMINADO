@@ -115,23 +115,63 @@ func _abrir_ajustes() -> void:
 			ajustes.queue_free()
 			panel_central.visible = true)
 
+# Lista de minijuegos (guía Paso a paso): pestañas Piltover y Zaun, la lista a un lado
+# y, al otro, la imagen, qué sube, con quién y JUGAR.
+var pestana_mj := ""
+var elegido_mj := ""
+
 func _menu_minijuegos() -> void:
 	_limpiar()
+	if pestana_mj == "":
+		pestana_mj = "Zaun" if DatosPartida.ciudad_elegida == "Zaun" else "Piltover"
+	var lista_ids := Minijuegos.de_ciudad(pestana_mj)
+	if not elegido_mj in lista_ids:
+		elegido_mj = lista_ids[0]
 	contenido.add_child(Estilo.titulo("MINIJUEGOS", 40))
-	var rejilla := GridContainer.new()
-	rejilla.columns = 2
-	rejilla.add_theme_constant_override("h_separation", 10)
-	rejilla.add_theme_constant_override("v_separation", 10)
-	contenido.add_child(rejilla)
-	var primero := true
-	for id in Minijuegos.ORDEN:
-		var record := int(Progreso.records.get(id, 0))
-		var b := Estilo.boton("%s   ·   récord %d" % [Minijuegos.NOMBRES[id], record], 250)
-		b.pressed.connect(_jugar.bind(id))
-		rejilla.add_child(b)
-		if primero:
+	var pestanas := TabBar.new()
+	pestanas.add_tab("Piltover")
+	pestanas.add_tab("Zaun")
+	pestanas.current_tab = 1 if pestana_mj == "Zaun" else 0
+	pestanas.tab_alignment = TabBar.ALIGNMENT_CENTER
+	pestanas.tab_changed.connect(func(t):
+		pestana_mj = "Zaun" if t == 1 else "Piltover"
+		_menu_minijuegos.call_deferred())
+	contenido.add_child(pestanas)
+	var fila := HBoxContainer.new()
+	fila.add_theme_constant_override("separation", 24)
+	contenido.add_child(fila)
+	var lista := VBoxContainer.new()
+	lista.add_theme_constant_override("separation", 8)
+	fila.add_child(lista)
+	for id in lista_ids:
+		var b := Estilo.boton(Minijuegos.DATOS[id]["nombre"], 280, id == elegido_mj)
+		b.pressed.connect(func():
+			elegido_mj = id
+			_menu_minijuegos())
+		lista.add_child(b)
+		if id == elegido_mj:
 			b.grab_focus.call_deferred()
-			primero = false
+	var d: Dictionary = Minijuegos.DATOS[elegido_mj]
+	var detalle := VBoxContainer.new()
+	detalle.custom_minimum_size.x = 520
+	detalle.add_theme_constant_override("separation", 8)
+	fila.add_child(detalle)
+	var img := TextureRect.new()
+	img.custom_minimum_size = Vector2(520, 292)
+	img.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	img.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	if ResourceLoader.exists(Minijuegos.captura(elegido_mj)):
+		img.texture = load(Minijuegos.captura(elegido_mj))
+	detalle.add_child(img)
+	detalle.add_child(Estilo.etiqueta(d["nombre"].to_upper(), 24, Estilo.MARFIL, true))
+	detalle.add_child(Estilo.etiqueta("%s · sube %s · con %s" % [d["lugar"], d["sube"], d["con"]], 16, Estilo.acento(), false, true))
+	detalle.add_child(Estilo.etiqueta(d["texto"], 16, Estilo.TEXTO, false, true))
+	var record := int(Progreso.records.get(elegido_mj, 0))
+	if record > 0:
+		detalle.add_child(Estilo.etiqueta("Récord: %d" % record, 15, Estilo.TEXTO))
+	var jugar := Estilo.boton("JUGAR", 220, true)
+	jugar.pressed.connect(_jugar.bind(elegido_mj))
+	detalle.add_child(jugar)
 	var v := Estilo.boton("Volver", 200)
 	v.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	v.pressed.connect(_menu_principal)

@@ -27,3 +27,5 @@ const out={
 };
 require('fs').writeFileSync(process.argv[2],JSON.stringify(out,null,1));
 console.log(out.rutas, Object.values(caps).map(c=>c.titulo).join(' | '));
+
+// Después de generar historia.json, aplica el tono reescrito: node aplicar_reescritura.js

@@ -1,0 +1,58 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+JUEGO OK, lugar=Puente
+Piltover P1 C1 Placa y pólvora @Plaza pasos=28 fin=true
+Piltover P1 C2 El Día del Progreso @Hexpuertas pasos=22 fin=true
+Piltover P1 C3 Bajar @Mercado pasos=26 fin=true
+Piltover P1 C4 Prueba de puntería @Plaza pasos=15 fin=true
+Piltover P1 C5 Las runas de la gema @Academia pasos=17 fin=true
+Piltover P1 C6 Vuelo sobre Zaun @Luciernagas pasos=13 fin=true
+Piltover P1 C7 Una grieta en el mármol @Consejo pasos=6 fin=true
+Piltover P1 C8 Los nombres que faltan @Kiramman pasos=7 fin=true
+Piltover P1 C9 El Puente @EsconditeJinx pasos=33 fin=true
+Piltover P2 C1 Cenizas @Kiramman pasos=28 fin=true
+Piltover P2 C2 La niña de las gafas @EsconditeJinx pasos=28 fin=true
+Piltover P2 C3 El Heraldo @Taller pasos=22 fin=true
+Piltover P2 C4 La loba y la rosa @Plaza pasos=28 fin=true
+Piltover P2 C5 La bestia del Sumidero @UltimaGota pasos=32 fin=true
+Piltover P2 C6 Ecos del tiempo @Luciernagas pasos=25 fin=true
+Piltover P2 C7 La última tregua @Consejo pasos=15 fin=true
+Piltover P2 C8 El corazón del Hexgate @Hexpuertas pasos=16 fin=true
+Piltover P2 C9 Final · La guerra por el puente @Consejo pasos=36 fin=true
+FLAGS Piltover: ["final_zaun_libre", "final_t2_union"]
+Zaun P1 C1 Siete años después @UltimaGota pasos=28 fin=true
+Zaun P1 C2 Luciérnagas @Luciernagas pasos=23 fin=true
+Zaun P1 C3 Reencuentro @Mercado pasos=31 fin=true
+Zaun P1 C4 El foso de Sevika @UltimaGota pasos=15 fin=true
+Zaun P1 C5 Persecución en los tejados @Fabricas pasos=16 fin=true
+Zaun P1 C6 Lo que oculta Singed @LabSinged pasos=16 fin=true
+Zaun P1 C7 El precio del silencio @UltimaGota pasos=9 fin=true
+Zaun P1 C8 El nombre en la lista @Puente pasos=8 fin=true
+Zaun P1 C9 El Puente @EsconditeJinx pasos=35 fin=true
+Zaun P2 C1 Cenizas @Kiramman pasos=27 fin=true
+Zaun P2 C2 La niña de las gafas @EsconditeJinx pasos=28 fin=true
+Zaun P2 C3 El Heraldo @Taller pasos=21 fin=true
+Zaun P2 C4 La loba y la rosa @Plaza pasos=28 fin=true
+Zaun P2 C5 La bestia del Sumidero @UltimaGota pasos=32 fin=true
+Zaun P2 C6 Ecos del tiempo @Luciernagas pasos=25 fin=true
+Zaun P2 C7 La última tregua @Consejo pasos=15 fin=true
+Zaun P2 C8 El corazón del Hexgate @Hexpuertas pasos=16 fin=true
+Zaun P2 C9 Final · La guerra por el puente @Consejo pasos=36 fin=true
+FLAGS Zaun: ["final_paz", "final_t2_union"]
+CAPITULOS OK, afinidades={ "vi": 34, "caitlyn": 22, "cassandra": 2, "viktor": 17, "jayce": 16, "heimerdinger": -1, "ekko": 18, "jinx": 24, "sevika": 11, "mel": 16, "ambessa": -2, "isha": 2, "silco": 1 }
+derecha desde Puente: Mercado
+ascensor abajo: AscensorEntresuelo
+MINIJUEGO OK cristal
+MINIJUEGO OK tiro
+MINIJUEGO OK consejo
+MINIJUEGO OK archivo
+MINIJUEGO OK gala
+MINIJUEGO OK foso
+MINIJUEGO OK aerotabla
+MINIJUEGO OK grafiti
+MINIJUEGO OK mezclas
+MINIJUEGO OK cartas
+PAUSA OK ranura=1
+FIN OK
+CARGAR OK
+PROLOGO OK

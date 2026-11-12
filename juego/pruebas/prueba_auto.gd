@@ -1,6 +1,7 @@
 extends SceneTree
 
 func _initialize() -> void:
+	create_timer(400.0).timeout.connect(func(): print("TIMEOUT: la prueba se ha colgado"); quit(1))
 	_correr.call_deferred()
 
 func _frames(n: int) -> void:
@@ -55,12 +56,15 @@ func _correr() -> void:
 	var Cat = load("res://escenas/juego/minijuegos/catalogo.gd")
 	for id in Cat.ORDEN:
 		var m = Cat.crear(id)
+		if m == null:
+			print("MINIJUEGO FALLA ", id)
+			continue
 		root.add_child(m)
 		await _frames(2)
 		m._arrancar()
 		for k in 30:
 			await process_frame
-		m._acabar()
+		m.acabar(false)
 		await _frames(2)
 		m.queue_free()
 		print("MINIJUEGO OK ", id)

@@ -370,7 +370,6 @@ func _finalizar_personaje() -> void:
 	DatosPartida.afinidades = _familia_elegida().get("afinidad", {}).duplicate()
 	DatosPartida.personaje_creado = true
 	aviso.text = "¡Personaje creado!"
-	print("Personaje creado: ", DatosPartida.nombre_personaje)
 	# Empieza la partida: guarda en una ranura y abre el prólogo.
 	var ranura := Progreso.ranura
 	Progreso.reiniciar()
