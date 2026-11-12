@@ -146,8 +146,14 @@ func _aplicar_estilo_boton(boton: Button) -> void:
 
 # --- Funciones de acción de los botones ---
 func _on_boton_jugar_pressed() -> void:
-	# Por ahora no lleva a ningún sitio: llevará a juego.tscn cuando exista (finales de noviembre).
-	pass
+	# Continúa la partida guardada más reciente; si no hay ninguna, empieza una nueva.
+	var ranura := Guardado.mas_reciente()
+	if ranura > 0 and Guardado.cargar(ranura):
+		var destino := "res://escenas/juego/juego.tscn" if Progreso.prologo_visto else "res://escenas/juego/prologo.tscn"
+		get_tree().change_scene_to_file(destino)
+	else:
+		Progreso.reiniciar()
+		get_tree().change_scene_to_file("res://escenas/nueva_partida.tscn")
 # Abre la ventana para empezar una partida nueva
 func _on_boton_nueva_pressed() -> void:
 	get_tree().change_scene_to_file("res://escenas/nueva_partida.tscn")

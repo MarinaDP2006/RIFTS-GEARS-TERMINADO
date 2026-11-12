@@ -11,14 +11,16 @@ config_version=5
 [application]
 
 config/name="RiftsAndGears"
-run/main_scene="uid://cecu1nkvtiah0"
+run/main_scene="res://escenas/inicio.scn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Partida="*uid://cgs326p5evmi1"
-DatosPartida="*uid://6ateb78so13v"
+Partida="*res://escenas/partida.gd"
+DatosPartida="*res://escenas/datos_partida.gd"
+Progreso="*res://escenas/juego/progreso.gd"
+Guardado="*res://escenas/juego/guardado.gd"
 
 [display]
 

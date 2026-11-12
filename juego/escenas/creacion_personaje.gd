@@ -371,6 +371,13 @@ func _finalizar_personaje() -> void:
 	DatosPartida.personaje_creado = true
 	aviso.text = "¡Personaje creado!"
 	print("Personaje creado: ", DatosPartida.nombre_personaje)
+	# Empieza la partida: guarda en una ranura y abre el prólogo.
+	var ranura := Progreso.ranura
+	Progreso.reiniciar()
+	Progreso.ranura = ranura
+	Guardado.guardar()
+	await get_tree().create_timer(0.8).timeout
+	get_tree().change_scene_to_file("res://escenas/juego/prologo.tscn")
 
 # Muestra el apartado actual y actualiza la lista lateral y los botones.
 func _mostrar_apartado() -> void:
