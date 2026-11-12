@@ -1,0 +1,517 @@
+[gd_scene format=3 uid="uid://drsjf0gb4w1ek"]
+
+[ext_resource type="Script" uid="uid://biun8vngw6ejm" path="res://escenas/creacion_personaje.gd" id="1_4ptdp"]
+[ext_resource type="Texture2D" uid="uid://heun5u585v83" path="res://assets/juego-inicio/inicioJuego-background.png" id="2_4ptdp"]
+[ext_resource type="Shader" uid="uid://cx3bwgggh8y6w" path="res://desenfoque_fondo.gdshader" id="2_o4bqh"]
+[ext_resource type="FontFile" uid="uid://dxc78ttolt7go" path="res://assets/fonts/Arcane Nine.otf" id="2_obvdu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qrjgp"]
+shader = ExtResource("2_o4bqh")
+shader_parameter/intensidad = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.09019608, 0.23921569, 0.2901961, 0.88)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_campo"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 6.0
+bg_color = Color(0.058627453, 0.1554902, 0.18862745, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_normal"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.09019608, 0.23921569, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_pulsado"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.07666667, 0.20333333, 0.24666668, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_hover"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.16297647, 0.30007845, 0.34698042, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8521569, 0.7603922, 0.5819608, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_desactivado"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.09019608, 0.23921569, 0.2901961, 0.5)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 0.35)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_activo_normal"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.2357647, 0.36094117, 0.40376472, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.77254903, 0.6313726, 0.35686275, 0.5)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_activo_pulsado"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.07666667, 0.20333333, 0.24666668, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.77254903, 0.6313726, 0.35686275, 0.5)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_activo_hover"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.16297647, 0.30007845, 0.34698042, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8521569, 0.7603922, 0.5819608, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0.77254903, 0.6313726, 0.35686275, 0.5)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_activo_desactivado"]
+content_margin_left = 22.0
+content_margin_top = 8.0
+content_margin_right = 22.0
+content_margin_bottom = 8.0
+bg_color = Color(0.09019608, 0.23921569, 0.2901961, 0.5)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 0.35)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="CreacionPersonaje" type="Control" unique_id=283686256]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ptdp")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=260160336]
+material = SubResource("ShaderMaterial_qrjgp")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4ptdp")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MargenPrincipal" type="MarginContainer" parent="." unique_id=1938554562]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 28
+
+[node name="ContenedorPrincipal" type="VBoxContainer" parent="MargenPrincipal" unique_id=2125920624]
+propagate_maximum_size = false
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Encabezado" type="HBoxContainer" parent="MargenPrincipal/ContenedorPrincipal" unique_id=2147298617]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="MargenPrincipal/ContenedorPrincipal/Encabezado" unique_id=1614616233]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0.03137255, 0.043137256, 0.0627451, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 30
+text = "CREA TU PERSONAJE"
+
+[node name="TituloCreacion" type="Label" parent="MargenPrincipal/ContenedorPrincipal/Encabezado" unique_id=84179252]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 30
+
+[node name="CuerpoCreacion" type="HBoxContainer" parent="MargenPrincipal/ContenedorPrincipal" unique_id=97005450]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContenido" type="PanelContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion" unique_id=1436688475]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="ContenidoIdentidad" type="VBoxContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido" unique_id=1872220188]
+layout_mode = 2
+
+[node name="NombrePersonaje" type="LineEdit" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad" unique_id=1521199112]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_placeholder_color = Color(0.9137255, 0.8745098, 0.7882353, 0.6)
+theme_override_colors/caret_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_campo")
+theme_override_styles/focus = SubResource("StyleBoxFlat_campo")
+placeholder_text = "Escribe el nombre de tu personaje..."
+
+[node name="ZonaAvatar" type="HBoxContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad" unique_id=33380231]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelPersonajes" type="VBoxContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad/ZonaAvatar" unique_id=1993672989]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SelectorTipoAvatar" type="HBoxContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad/ZonaAvatar/PanelPersonajes" unique_id=1346328766]
+custom_minimum_size = Vector2(240, 45)
+layout_mode = 2
+
+[node name="BotonMujer" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad/ZonaAvatar/PanelPersonajes/SelectorTipoAvatar" unique_id=993651415]
+custom_minimum_size = Vector2(110, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+text = "MUJER"
+
+[node name="BotonHombre" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad/ZonaAvatar/PanelPersonajes/SelectorTipoAvatar" unique_id=1900463243]
+custom_minimum_size = Vector2(110, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_activo_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_activo_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_activo_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_activo_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_activo_normal")
+text = "HOMBRE"
+
+[node name="Edad" type="SpinBox" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad/ZonaAvatar/PanelPersonajes/SelectorTipoAvatar" unique_id=1630044875]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 18.0
+max_value = 60.0
+value = 20.0
+prefix = "Edad"
+
+[node name="TarjetasAvatares" type="GridContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad/ZonaAvatar/PanelPersonajes" unique_id=1265872364]
+custom_minimum_size = Vector2(440, 260)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 3
+columns = 4
+
+[node name="VistaPrevia" type="TextureRect" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ContenidoIdentidad/ZonaAvatar" unique_id=524643315]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ZonaApartado" type="ScrollContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido" unique_id=1630044871]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="ContenidoApartado" type="VBoxContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelContenido/ZonaApartado" unique_id=1630044872]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="PanelApartados" type="PanelContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion" unique_id=623513068]
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="ListaApartados" type="VBoxContainer" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelApartados" unique_id=733966322]
+propagate_maximum_size = false
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 14
+
+[node name="BotonIdentidad" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelApartados/ListaApartados" unique_id=186854109]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_activo_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_activo_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_activo_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_activo_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_activo_normal")
+text = "01 · Identidad"
+
+[node name="BotonFamilia" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelApartados/ListaApartados" unique_id=1056528978]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+disabled = true
+text = "02 · Familia y vínculos"
+
+[node name="BotonProcedencia" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelApartados/ListaApartados" unique_id=358818402]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+disabled = true
+text = "03 · Procedencia"
+
+[node name="BotonOcupacion" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelApartados/ListaApartados" unique_id=2146503322]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+disabled = true
+text = "04 · Ocupación"
+
+[node name="BotonPersonalidad" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelApartados/ListaApartados" unique_id=1964536081]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+disabled = true
+text = "05 · Personalidad"
+
+[node name="BotonAficiones" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelApartados/ListaApartados" unique_id=1349069413]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+disabled = true
+text = "06 · Aficiones"
+
+[node name="BotonFichaFinal" type="Button" parent="MargenPrincipal/ContenedorPrincipal/CuerpoCreacion/PanelApartados/ListaApartados" unique_id=2082828992]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+disabled = true
+text = "07 · Ficha final"
+
+[node name="Pie" type="HBoxContainer" parent="MargenPrincipal/ContenedorPrincipal" unique_id=1730482619]
+layout_mode = 2
+
+[node name="BotonVolver" type="Button" parent="MargenPrincipal/ContenedorPrincipal/Pie" unique_id=1860598460]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+text = "VOLVER"
+
+[node name="Aviso" type="Label" parent="MargenPrincipal/ContenedorPrincipal/Pie" unique_id=1630044873]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0.03137255, 0.043137256, 0.0627451, 1)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonContinuar" type="Button" parent="MargenPrincipal/ContenedorPrincipal/Pie" unique_id=942784175]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(0.9137255, 0.8745098, 0.7882353, 0.45)
+theme_override_fonts/font = ExtResource("2_obvdu")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+text = "CONTINUAR"
+
+[connection signal="pressed" from="MargenPrincipal/ContenedorPrincipal/Pie/BotonVolver" to="." method="_on_boton_volver_pressed"]
+[connection signal="pressed" from="MargenPrincipal/ContenedorPrincipal/Pie/BotonContinuar" to="." method="_on_boton_continuar_pressed"]

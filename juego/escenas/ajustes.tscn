@@ -1,0 +1,994 @@
+[gd_scene format=3 uid="uid://3b5qbed6pbrt"]
+
+[ext_resource type="Script" uid="uid://c14icjiee342o" path="res://escenas/ajustes.gd" id="1_5n3j7"]
+[ext_resource type="Texture2D" uid="uid://heun5u585v83" path="res://assets/juego-inicio/inicioJuego-background.png" id="1_fondo"]
+[ext_resource type="Shader" uid="uid://cx3bwgggh8y6w" path="res://desenfoque_fondo.gdshader" id="2_desenfoque"]
+[ext_resource type="FontFile" uid="uid://dxc78ttolt7go" path="res://assets/fonts/Arcane Nine.otf" id="3_fuente"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fondo"]
+shader = ExtResource("2_desenfoque")
+shader_parameter/intensidad = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_encabezado"]
+content_margin_left = 20.0
+content_margin_top = 12.0
+content_margin_right = 20.0
+content_margin_bottom = 12.0
+bg_color = Color(0.035, 0.12, 0.21, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.83, 0.67, 0.34, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.025, 0.075, 0.14, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.54, 0.27, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_normal"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.025, 0.075, 0.14, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.54, 0.27, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apartado_activo"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.055, 0.15, 0.24, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.83, 0.67, 0.34, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+shadow_color = Color(0.7725, 0.6314, 0.3569, 0.5)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_hover"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.055, 0.15, 0.24, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.54, 0.27, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_apartados"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_pulsado"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.044, 0.12, 0.192, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.54, 0.27, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_pista"]
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.015, 0.05, 0.1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7, 0.54, 0.27, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slider_relleno"]
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.83, 0.67, 0.34, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_destacado"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.035, 0.12, 0.21, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.83, 0.67, 0.34, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[node name="Ajustes" type="Control" unique_id=934610456]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5n3j7")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=974234940]
+material = SubResource("ShaderMaterial_fondo")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fondo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ContenedorPrincipal" type="VBoxContainer" parent="." unique_id=676090878]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 28.0
+offset_right = -32.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Encabezado" type="PanelContainer" parent="ContenedorPrincipal" unique_id=469860739]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_encabezado")
+
+[node name="Titulo" type="Label" parent="ContenedorPrincipal/Encabezado" unique_id=719016454]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.015, 0.035, 0.95)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 40
+text = "AJUSTES"
+horizontal_alignment = 1
+
+[node name="CuerpoAjustes" type="HBoxContainer" parent="ContenedorPrincipal" unique_id=1714920126]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="PanelApartados" type="PanelContainer" parent="ContenedorPrincipal/CuerpoAjustes" unique_id=499415794]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="ListaApartados" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelApartados" unique_id=396668150]
+layout_mode = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="BotonGeneral" type="Button" parent="ContenedorPrincipal/CuerpoAjustes/PanelApartados/ListaApartados" unique_id=1521837402]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_apartado_activo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_apartado_activo")
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_apartados")
+text = "GENERAL"
+
+[node name="BotonAudio" type="Button" parent="ContenedorPrincipal/CuerpoAjustes/PanelApartados/ListaApartados" unique_id=1521837403]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_apartado_activo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_apartado_activo")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_apartados")
+text = "AUDIO"
+
+[node name="BotonJuego" type="Button" parent="ContenedorPrincipal/CuerpoAjustes/PanelApartados/ListaApartados" unique_id=1567247812]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_apartado_activo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_apartado_activo")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_apartados")
+text = "JUEGO"
+
+[node name="BotonPantalla" type="Button" parent="ContenedorPrincipal/CuerpoAjustes/PanelApartados/ListaApartados" unique_id=1521837404]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_apartado_activo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_apartado_activo")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_apartados")
+text = "PANTALLA"
+
+[node name="BotonControles" type="Button" parent="ContenedorPrincipal/CuerpoAjustes/PanelApartados/ListaApartados" unique_id=636108028]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_apartado_activo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_apartado_activo")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_apartados")
+text = "CONTROLES"
+
+[node name="PanelContenido" type="PanelContainer" parent="ContenedorPrincipal/CuerpoAjustes" unique_id=774660576]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="ContenidoGeneral" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido" unique_id=1912323439]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TituloSeccion" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral" unique_id=1560306384]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.015, 0.035, 0.95)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 30
+text = "GENERAL"
+horizontal_alignment = 1
+
+[node name="DesplazamientoGeneral" type="ScrollContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral" unique_id=1669214017]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="OpcionesGeneral" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral" unique_id=1909942767]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="FilaIdioma" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral" unique_id=225674603]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaIdioma" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral/FilaIdioma" unique_id=846391598]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Idioma"
+
+[node name="SelectorIdioma" type="OptionButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral/FilaIdioma" unique_id=1715391391]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+selected = 0
+item_count = 3
+popup/item_0/text = "Español"
+popup/item_0/id = 1
+popup/item_1/text = "English"
+popup/item_1/id = 2
+popup/item_2/text = "Français"
+popup/item_2/id = 3
+
+[node name="TituloAccesibilidad" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral" unique_id=1480401508]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83, 0.67, 0.34, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 22
+text = "ACCESIBILIDAD"
+
+[node name="FilaVelocidad" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral" unique_id=634074388]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaVelocidad" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral/FilaVelocidad" unique_id=1099538068]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Velocidad del texto"
+
+[node name="SelectorVelocidad" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral/FilaVelocidad" unique_id=1152633682]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+value = 100.0
+
+[node name="FilaTamanoLetra" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral" unique_id=1131639229]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaTamanoLetra" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral/FilaTamanoLetra" unique_id=457641261]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Tamaño de letra"
+
+[node name="SelectorTamanoLetra" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoGeneral/DesplazamientoGeneral/OpcionesGeneral/FilaTamanoLetra" unique_id=1179480231]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+value = 100.0
+
+[node name="ContenidoAudio" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido" unique_id=933372266]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TituloSeccion" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio" unique_id=566487309]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.015, 0.035, 0.95)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 30
+text = "AUDIO"
+horizontal_alignment = 1
+
+[node name="DesplazamientoAudio" type="ScrollContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio" unique_id=1707926910]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="OpcionesAudio" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio" unique_id=554838462]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="FilaVolumenGeneral" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio" unique_id=1403587640]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaVolumenGeneral" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaVolumenGeneral" unique_id=1372978977]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Volumen general"
+
+[node name="SelectorVolumenGeneral" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaVolumenGeneral" unique_id=1002051392]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+value = 80.0
+
+[node name="FilaMusica" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio" unique_id=1576747688]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaMusica" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaMusica" unique_id=1133053945]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Música"
+
+[node name="SelectorMusica" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaMusica" unique_id=499001529]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+value = 80.0
+
+[node name="FilaEfectos" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio" unique_id=407200662]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaEfectos" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaEfectos" unique_id=1392377034]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Efectos"
+
+[node name="SelectorEfectos" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaEfectos" unique_id=423141719]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+value = 80.0
+
+[node name="FilaVoces" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio" unique_id=1700508480]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaVoces" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaVoces" unique_id=1572895682]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Voces"
+
+[node name="SelectorVoces" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaVoces" unique_id=247473416]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+value = 80.0
+
+[node name="FilaSilenciar" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio" unique_id=1826628064]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaSilenciar" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaSilenciar" unique_id=387068297]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Silenciar todo"
+
+[node name="SelectorSilenciar" type="CheckButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoAudio/DesplazamientoAudio/OpcionesAudio/FilaSilenciar" unique_id=386280469]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ContenidoJuego" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido" unique_id=1579633650]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TituloSeccion" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego" unique_id=861888212]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.015, 0.035, 0.95)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 30
+text = "JUEGO"
+horizontal_alignment = 1
+
+[node name="DesplazamientoJuego" type="ScrollContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego" unique_id=493413527]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="OpcionesJuego" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego" unique_id=1256089363]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="FilaDificultad" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego" unique_id=1025678643]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaDificultad" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego/FilaDificultad" unique_id=216616863]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Dificultad"
+
+[node name="SelectorDificultad" type="OptionButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego/FilaDificultad" unique_id=616628545]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+selected = 1
+item_count = 3
+popup/item_0/text = "Fácil"
+popup/item_0/id = 1
+popup/item_1/text = "Normal"
+popup/item_1/id = 2
+popup/item_2/text = "Difícil"
+popup/item_2/id = 3
+
+[node name="FilaAutoguardado" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego" unique_id=839524116]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaAutoguardado" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego/FilaAutoguardado" unique_id=1372974295]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Autoguardado"
+
+[node name="SelectorAutoguardado" type="CheckButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego/FilaAutoguardado" unique_id=1800046496]
+layout_mode = 2
+size_flags_vertical = 4
+button_pressed = true
+
+[node name="FilaConfirmarSalida" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego" unique_id=1518512434]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaConfirmarSalida" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego/FilaConfirmarSalida" unique_id=730377155]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Confirmar al salir"
+
+[node name="SelectorConfirmarSalida" type="CheckButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego/FilaConfirmarSalida" unique_id=1079356481]
+layout_mode = 2
+size_flags_vertical = 4
+button_pressed = true
+
+[node name="FilaConsejos" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego" unique_id=1158086413]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaConsejos" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego/FilaConsejos" unique_id=571089440]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Mostrar consejos"
+
+[node name="SelectorConsejos" type="CheckButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoJuego/DesplazamientoJuego/OpcionesJuego/FilaConsejos" unique_id=251091990]
+layout_mode = 2
+size_flags_vertical = 4
+button_pressed = true
+
+[node name="ContenidoPantalla" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido" unique_id=1312301716]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TituloSeccion" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla" unique_id=1402236234]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.015, 0.035, 0.95)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 30
+text = "PANTALLA"
+horizontal_alignment = 1
+
+[node name="DesplazamientoPantalla" type="ScrollContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla" unique_id=624289949]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="OpcionesPantalla" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla" unique_id=1840017424]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="FilaPantallaCompleta" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla" unique_id=630939936]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaPantallaCompleta" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla/FilaPantallaCompleta" unique_id=1906121069]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Pantalla completa (F11)"
+
+[node name="SelectorPantallaCompleta" type="CheckButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla/FilaPantallaCompleta" unique_id=527087860]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TituloGraficos" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla" unique_id=1994748957]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83, 0.67, 0.34, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 22
+text = "GRÁFICOS"
+
+[node name="FilaCalidadGrafica" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla" unique_id=1570602979]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaCalidadGrafica" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla/FilaCalidadGrafica" unique_id=1028164270]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Calidad gráfica"
+
+[node name="SelectorCalidadGrafica" type="OptionButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla/FilaCalidadGrafica" unique_id=1122986726]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_boton_normal")
+selected = 2
+item_count = 4
+popup/item_0/text = "Baja"
+popup/item_0/id = 1
+popup/item_1/text = "Media"
+popup/item_1/id = 2
+popup/item_2/text = "Alta"
+popup/item_2/id = 3
+popup/item_3/text = "Ultra"
+popup/item_3/id = 4
+
+[node name="FilaBrillo" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla" unique_id=1805571719]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaBrillo" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla/FilaBrillo" unique_id=1758223263]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Brillo"
+
+[node name="SelectorBrillo" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla/FilaBrillo" unique_id=779610453]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+min_value = 50.0
+max_value = 150.0
+value = 100.0
+
+[node name="FilaMostrarFPS" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla" unique_id=810271172]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaMostrarFPS" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla/FilaMostrarFPS" unique_id=1342655872]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Mostrar FPS"
+
+[node name="SelectorMostrarFPS" type="CheckButton" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoPantalla/DesplazamientoPantalla/OpcionesPantalla/FilaMostrarFPS" unique_id=1666402403]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ContenidoControles" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido" unique_id=1019442792]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TituloSeccion" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles" unique_id=638688138]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.015, 0.035, 0.95)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 30
+text = "CONTROLES"
+horizontal_alignment = 1
+
+[node name="DesplazamientoControles" type="ScrollContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles" unique_id=1099378698]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="OpcionesControles" type="VBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles" unique_id=1999316283]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="TituloOrdenador" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles" unique_id=1847715946]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83, 0.67, 0.34, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 22
+text = "ORDENADOR"
+
+[node name="FilaMoverse" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles" unique_id=1791077625]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaMoverse" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaMoverse" unique_id=638008659]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Moverse"
+
+[node name="TeclaMoverse" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaMoverse" unique_id=1872594794]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+text = "WASD / Flechas"
+horizontal_alignment = 1
+
+[node name="FilaInteractuar" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles" unique_id=1685830512]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaInteractuar" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaInteractuar" unique_id=1884997140]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Interactuar"
+
+[node name="TeclaInteractuar" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaInteractuar" unique_id=1334653829]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+text = "E"
+horizontal_alignment = 1
+
+[node name="FilaPausa" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles" unique_id=1209376410]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaPausa" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaPausa" unique_id=445858972]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Pausa / Menú"
+
+[node name="TeclaPausa" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaPausa" unique_id=1758167616]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+text = "Esc"
+horizontal_alignment = 1
+
+[node name="FilaPantallaCompletaTecla" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles" unique_id=1567222117]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaPantallaCompletaTecla" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaPantallaCompletaTecla" unique_id=1765073811]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Pantalla completa"
+
+[node name="TeclaPantallaCompletaTecla" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaPantallaCompletaTecla" unique_id=1286943653]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+text = "F11"
+horizontal_alignment = 1
+
+[node name="TituloMovil" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles" unique_id=930699602]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83, 0.67, 0.34, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 22
+text = "MÓVIL"
+
+[node name="FilaTamanoBotones" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles" unique_id=1267926052]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaTamanoBotones" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaTamanoBotones" unique_id=1450708054]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Tamaño de los botones"
+
+[node name="SelectorTamanoBotones" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaTamanoBotones" unique_id=301715901]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+min_value = 50.0
+max_value = 150.0
+value = 100.0
+
+[node name="FilaOpacidad" type="HBoxContainer" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles" unique_id=830568935]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EtiquetaOpacidad" type="Label" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaOpacidad" unique_id=1812563592]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+text = "Opacidad de los controles"
+
+[node name="SelectorOpacidad" type="HSlider" parent="ContenedorPrincipal/CuerpoAjustes/PanelContenido/ContenidoControles/DesplazamientoControles/OpcionesControles/FilaOpacidad" unique_id=218748195]
+custom_minimum_size = Vector2(260, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_slider_pista")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_slider_relleno")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_slider_relleno")
+value = 80.0
+
+[node name="BarraInferior" type="HBoxContainer" parent="ContenedorPrincipal" unique_id=2033012478]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="BotonVolver" type="Button" parent="ContenedorPrincipal/BarraInferior" unique_id=245568327]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+text = "VOLVER"
+
+[node name="BotonAplicar" type="Button" parent="ContenedorPrincipal/BarraInferior" unique_id=1674344880]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.91, 0.93, 0.95, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_boton_destacado")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_boton_hover")
+text = "APLICAR"

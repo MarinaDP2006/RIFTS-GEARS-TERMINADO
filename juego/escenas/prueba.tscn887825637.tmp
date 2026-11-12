@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bho853b47dfq7"]
+
+[ext_resource type="Script" uid="uid://bn0jrh6xht0el" path="res://escenas/prueba.gd" id="1_2jt68"]
+[ext_resource type="Texture2D" uid="uid://nc13irunfood" path="res://icon.svg" id="1_bfths"]
+
+[node name="Mundo" type="Node2D" unique_id=1457188830]
+script = ExtResource("1_2jt68")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1714366024]
+position = Vector2(644, 382)
+texture = ExtResource("1_bfths")

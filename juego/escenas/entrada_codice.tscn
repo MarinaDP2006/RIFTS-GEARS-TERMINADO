@@ -1,0 +1,231 @@
+[gd_scene format=3 uid="uid://bsymlqakomltg"]
+
+[ext_resource type="FontFile" uid="uid://dw4tbr2hm3q2n" path="res://assets/fonts/RobotoCondensed-VariableFont_wght.ttf" id="2_texto"]
+[ext_resource type="Texture2D" uid="uid://vmki387rb0bn" path="res://assets/caras/vander.png" id="3_ejemplo"]
+[ext_resource type="FontFile" uid="uid://dxc78ttolt7go" path="res://assets/fonts/Arcane Nine.otf" id="3_fuente"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pagina"]
+content_margin_left = 18.0
+content_margin_top = 16.0
+content_margin_right = 18.0
+content_margin_bottom = 16.0
+bg_color = Color(0.93, 0.89, 0.79, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.48, 0.36, 0.13, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nada"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_item_hover"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.85, 0.79, 0.64, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.48, 0.36, 0.13, 0.4)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_item_elegido"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.82, 0.74, 0.55, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.48, 0.36, 0.13, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_marco_imagen"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.85, 0.79, 0.64, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.48, 0.36, 0.13, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etiqueta_zaun"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.93, 0.86, 0.95, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.24, 0.72, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etiqueta_parte"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.83, 0.87, 0.92, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.42, 0.57, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 1
+
+[node name="EntradaCodice" type="HBoxContainer" unique_id=494249013]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 4
+
+[node name="ListaEntradas" type="ItemList" parent="." unique_id=1406537184]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17, 0.13, 0.09, 1)
+theme_override_colors/font_hovered_color = Color(0.23, 0.16, 0.07, 1)
+theme_override_colors/font_selected_color = Color(0.23, 0.16, 0.07, 1)
+theme_override_constants/v_separation = 6
+theme_override_fonts/font = ExtResource("2_texto")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/panel = SubResource("StyleBoxFlat_pagina")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nada")
+theme_override_styles/hovered = SubResource("StyleBoxFlat_item_hover")
+theme_override_styles/selected = SubResource("StyleBoxFlat_item_elegido")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_item_elegido")
+item_count = 10
+item_0/text = "Vander"
+item_1/text = "Vi"
+item_2/text = "Powder / Jinx"
+item_3/text = "Silco"
+item_4/text = "Ekko"
+item_5/text = "Sevika"
+item_6/text = "Singed"
+item_7/text = "Benzo"
+item_8/text = "Finn"
+item_9/text = "Isha"
+
+[node name="PaginaDerecha" type="PanelContainer" parent="." unique_id=1287690910]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_pagina")
+
+[node name="Ficha" type="VBoxContainer" parent="PaginaDerecha" unique_id=1248806965]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Cabecera" type="HBoxContainer" parent="PaginaDerecha/Ficha" unique_id=236053923]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="MarcoImagen" type="PanelContainer" parent="PaginaDerecha/Ficha/Cabecera" unique_id=1224545550]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_marco_imagen")
+
+[node name="Imagen" type="TextureRect" parent="PaginaDerecha/Ficha/Cabecera/MarcoImagen" unique_id=1416990703]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("3_ejemplo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Datos" type="VBoxContainer" parent="PaginaDerecha/Ficha/Cabecera" unique_id=505508856]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Nombre" type="Label" parent="PaginaDerecha/Ficha/Cabecera/Datos" unique_id=964925380]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.23, 0.16, 0.07, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 30
+text = "VANDER"
+
+[node name="Etiquetas" type="HFlowContainer" parent="PaginaDerecha/Ficha/Cabecera/Datos" unique_id=1400175647]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 6
+
+[node name="EtiquetaCiudad" type="Label" parent="PaginaDerecha/Ficha/Cabecera/Datos/Etiquetas" unique_id=326804230]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.12, 0.5, 1)
+theme_override_fonts/font = ExtResource("2_texto")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_etiqueta_zaun")
+text = "Zaun"
+
+[node name="EtiquetaParte" type="Label" parent="PaginaDerecha/Ficha/Cabecera/Datos/Etiquetas" unique_id=616462943]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.11, 0.23, 0.33, 1)
+theme_override_fonts/font = ExtResource("2_texto")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_etiqueta_parte")
+text = "Parte 1"
+
+[node name="EtiquetaLugar" type="Label" parent="PaginaDerecha/Ficha/Cabecera/Datos/Etiquetas" unique_id=1311863005]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.12, 0.5, 1)
+theme_override_fonts/font = ExtResource("2_texto")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_etiqueta_zaun")
+text = "La Última Gota"
+
+[node name="Relacion" type="Label" parent="PaginaDerecha/Ficha/Cabecera/Datos" unique_id=1250326102]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.48, 0.36, 0.13, 1)
+theme_override_fonts/font = ExtResource("3_fuente")
+theme_override_font_sizes/font_size = 17
+text = "Contigo: ♥ familia"
+
+[node name="Texto" type="RichTextLabel" parent="PaginaDerecha/Ficha" unique_id=1325311314]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.17, 0.13, 0.09, 1)
+theme_override_fonts/normal_font = ExtResource("2_texto")
+theme_override_font_sizes/normal_font_size = 19
+theme_override_font_sizes/bold_font_size = 19
+bbcode_enabled = true
+text = "Dueño de [color=#7a5d22]La Última Gota[/color] y protector de los Callejones. Tras la revuelta del puente pactó una tregua con Piltover para que no muriera nadie más.
+
+Acogió a Vi y a Powder cuando se quedaron solas.
+
+[i]«Aquí siempre hay sitio para ti.»[/i]"

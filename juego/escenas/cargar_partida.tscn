@@ -1,0 +1,1008 @@
+[gd_scene format=3 uid="uid://bilaa6sa1jg61"]
+
+[ext_resource type="Script" uid="uid://xmnqaddsrc6m" path="res://escenas/cargarpartida.gd" id="0_script"]
+[ext_resource type="Shader" uid="uid://cx3bwgggh8y6w" path="res://desenfoque_fondo.gdshader" id="1_j60ou"]
+[ext_resource type="Texture2D" uid="uid://heun5u585v83" path="res://assets/juego-inicio/inicioJuego-background.png" id="2_8axgb"]
+[ext_resource type="FontFile" uid="uid://dxc78ttolt7go" path="res://assets/fonts/Arcane Nine.otf" id="3_8axgb"]
+[ext_resource type="Texture2D" uid="uid://ba1iyvrerfh8m" path="res://assets/simbolos/piltover.png" id="r_emb_p"]
+[ext_resource type="Texture2D" uid="uid://mosxnmqx5rc4" path="res://assets/simbolos/zaun.png" id="r_emb_z"]
+[ext_resource type="FontFile" uid="uid://dw4tbr2hm3q2n" path="res://assets/fonts/RobotoCondensed-VariableFont_wght.ttf" id="r_rob"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_desactivado"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 14.0
+content_margin_bottom = 8.0
+bg_color = Color(0.025, 0.075, 0.14, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.54, 0.27, 0.35)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_foco"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_hover"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 14.0
+content_margin_bottom = 8.0
+bg_color = Color(0.055, 0.15, 0.24, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.83, 0.67, 0.34, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_normal"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 14.0
+content_margin_bottom = 8.0
+bg_color = Color(0.025, 0.075, 0.14, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.54, 0.27, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boton_pulsado"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 14.0
+content_margin_bottom = 8.0
+bg_color = Color(0.044, 0.12, 0.19, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.83, 0.67, 0.34, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="Theme" id="Theme_botones"]
+Button/colors/font_color = Color(0.91, 0.93, 0.95, 1)
+Button/colors/font_disabled_color = Color(0.91, 0.93, 0.95, 0.4)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("3_8axgb")
+Button/styles/disabled = SubResource("StyleBoxFlat_boton_desactivado")
+Button/styles/focus = SubResource("StyleBoxEmpty_foco")
+Button/styles/hover = SubResource("StyleBoxFlat_boton_hover")
+Button/styles/normal = SubResource("StyleBoxFlat_boton_normal")
+Button/styles/pressed = SubResource("StyleBoxFlat_boton_pulsado")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7i06b"]
+shader = ExtResource("1_j60ou")
+shader_parameter/intensidad = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_encabezado"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.035, 0.12, 0.21, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.83, 0.67, 0.34, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 8
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_espacio_piltover"]
+bg_color = Color(0.035, 0.09, 0.17, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.64, 0.36, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 1
+shadow_color = Color(0.83, 0.67, 0.34, 0.18)
+shadow_size = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_piltover"]
+color = Color(0.78, 0.64, 0.36, 0.55)
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id="SB_marco_p"]
+bg_color = Color(0.02, 0.05, 0.1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.64, 0.36, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="SB_chip_p"]
+content_margin_left = 8.0
+content_margin_top = 1.0
+content_margin_right = 8.0
+content_margin_bottom = 1.0
+bg_color = Color(0.09, 0.24, 0.29, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.77, 0.63, 0.36, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="SB_chip_auto"]
+content_margin_left = 8.0
+content_margin_top = 1.0
+content_margin_right = 8.0
+content_margin_bottom = 1.0
+bg_color = Color(0.23, 0.07, 0.1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.75, 0.19, 0.25, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="SB_barra_fondo"]
+bg_color = Color(0.08, 0.13, 0.2, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="SB_barra_parte"]
+bg_color = Color(0.31, 0.78, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="SB_barra_p"]
+bg_color = Color(0.83, 0.67, 0.34, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="SB_circulo_p"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.64, 0.36, 0.6)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_espacio_zaun"]
+bg_color = Color(0.09, 0.055, 0.13, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.761, 0.302, 0.878, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 1
+shadow_color = Color(0.761, 0.302, 0.878, 0.25)
+shadow_size = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_zaun"]
+color = Color(0.761, 0.302, 0.878, 0.6)
+thickness = 2
+
+[sub_resource type="StyleBoxFlat" id="SB_marco_z"]
+bg_color = Color(0.06, 0.03, 0.09, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.761, 0.302, 0.878, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="SB_chip_z"]
+content_margin_left = 8.0
+content_margin_top = 1.0
+content_margin_right = 8.0
+content_margin_bottom = 1.0
+bg_color = Color(0.118, 0.078, 0.157, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.761, 0.302, 0.878, 1)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="StyleBoxFlat" id="SB_barra_z"]
+bg_color = Color(0.843, 0.482, 0.941, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="SB_circulo_z"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.761, 0.302, 0.878, 0.7)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="SB_boton_z"]
+content_margin_left = 14.0
+content_margin_top = 8.0
+content_margin_right = 14.0
+content_margin_bottom = 8.0
+bg_color = Color(0.07, 0.04, 0.1, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.761, 0.302, 0.878, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[node name="CargarPartida" type="Control" unique_id=1214954656]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_botones")
+script = ExtResource("0_script")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1730525702]
+material = SubResource("ShaderMaterial_7i06b")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_8axgb")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1847807296]
+
+[node name="ContenedorPrincipal" type="VBoxContainer" parent="CanvasLayer" unique_id=701725881]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 36.0
+offset_right = -48.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_botones")
+theme_override_constants/separation = 26
+
+[node name="Encabezado" type="PanelContainer" parent="CanvasLayer/ContenedorPrincipal" unique_id=307676776]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_encabezado")
+
+[node name="Titulo" type="Label" parent="CanvasLayer/ContenedorPrincipal/Encabezado" unique_id=652072190]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9411765, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.015686275, 0.03529412, 0.9490196)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 34
+text = "CARGAR PARTIDA"
+horizontal_alignment = 1
+
+[node name="ContenedorEspaciosGuardado" type="GridContainer" parent="CanvasLayer/ContenedorPrincipal" unique_id=81397181]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 32
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="Espacio1" type="PanelContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado" unique_id=434647840]
+custom_minimum_size = Vector2(420, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_espacio_piltover")
+
+[node name="MargenInterior1" type="MarginContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1" unique_id=1630738781]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 18
+
+[node name="Contenido1" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1" unique_id=1283545760]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CabeceraCiudad1" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1" unique_id=1152300896]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Emblema1" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/CabeceraCiudad1" unique_id=153847765]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("r_emb_p")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EtiquetaCiudadFija1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/CabeceraCiudad1" unique_id=805029508]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.902, 0.78, 0.475, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 28
+text = "PILTOVER"
+horizontal_alignment = 1
+
+[node name="LineaSuperior1" type="HSeparator" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1" unique_id=1912294092]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_piltover")
+
+[node name="DatosPartida1" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1" unique_id=10562915]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="MarcoAvatar1" type="PanelContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1" unique_id=676343890]
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_marco_p")
+
+[node name="Avatar1" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/MarcoAvatar1" unique_id=118597778]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Info1" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1" unique_id=1414763525]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="FilaNombre1" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1" unique_id=1140993598]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Personaje1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/FilaNombre1" unique_id=1385488816]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 26
+
+[node name="ChipCiudad1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/FilaNombre1" unique_id=28196227]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.902, 0.78, 0.475, 1)
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("SB_chip_p")
+text = "PILTOVER"
+
+[node name="Hueco1" type="Control" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/FilaNombre1" unique_id=1874391993]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="ChipGuardado1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/FilaNombre1" unique_id=1314669016]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.63, 0.66, 1)
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("SB_chip_auto")
+text = "GUARDADO AUTO"
+
+[node name="Progreso1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1" unique_id=854432107]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.902, 0.78, 0.475, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 16
+
+[node name="Ciudad1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1" unique_id=1319267565]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 13
+
+[node name="FilaParte1" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1" unique_id=1976212881]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Capitulos1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/FilaParte1" unique_id=503611024]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+
+[node name="BarraParte1" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/FilaParte1" unique_id=284366170]
+custom_minimum_size = Vector2(60, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_parte")
+show_percentage = false
+
+[node name="Columnas1" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1" unique_id=550995817]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Estadisticas1" type="GridContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1" unique_id=1821517459]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 2
+columns = 2
+
+[node name="EtiquetaIngenio1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Estadisticas1" unique_id=1820701781]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Ingenio"
+
+[node name="BarraIngenio1" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Estadisticas1" unique_id=1495247613]
+custom_minimum_size = Vector2(90, 8)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_p")
+show_percentage = false
+
+[node name="EtiquetaCarisma1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Estadisticas1" unique_id=17407488]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Carisma"
+
+[node name="BarraCarisma1" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Estadisticas1" unique_id=16269624]
+custom_minimum_size = Vector2(90, 8)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_p")
+show_percentage = false
+
+[node name="EtiquetaValor1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Estadisticas1" unique_id=419529233]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Valor"
+
+[node name="BarraValor1" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Estadisticas1" unique_id=1812912217]
+custom_minimum_size = Vector2(90, 8)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_p")
+show_percentage = false
+
+[node name="EtiquetaSigilo1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Estadisticas1" unique_id=776007046]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Sigilo"
+
+[node name="BarraSigilo1" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Estadisticas1" unique_id=762234499]
+custom_minimum_size = Vector2(90, 8)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_p")
+show_percentage = false
+
+[node name="Tiempo1" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1" unique_id=40761099]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TituloTiempo1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Tiempo1" unique_id=2069499945]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Tiempo jugado"
+
+[node name="TiempoJugado1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Tiempo1" unique_id=816866440]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 14
+
+[node name="TituloGuardado1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Tiempo1" unique_id=283222365]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Guardado"
+
+[node name="Fecha1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Columnas1/Tiempo1" unique_id=367671880]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 14
+
+[node name="Vinculos1" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1" unique_id=1198948714]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TituloVinculos1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Vinculos1" unique_id=901496551]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Vínculos"
+
+[node name="Vinculo1_1" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Vinculos1" unique_id=1787798897]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Vinculo1_2" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Vinculos1" unique_id=2006500950]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Vinculo1_3" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/DatosPartida1/Info1/Vinculos1" unique_id=1432616184]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="EstadoVacio1" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1" unique_id=716221374]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Circulo1" type="PanelContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/EstadoVacio1" unique_id=2046892785]
+custom_minimum_size = Vector2(74, 74)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("SB_circulo_p")
+
+[node name="Mas1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/EstadoVacio1/Circulo1" unique_id=1086486218]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.902, 0.78, 0.475, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 40
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SinPartida1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/EstadoVacio1" unique_id=2145357626]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.902, 0.78, 0.475, 1)
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 22
+text = "SIN PARTIDA GUARDADA"
+horizontal_alignment = 1
+
+[node name="DescripcionSinPartida1" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/EstadoVacio1" unique_id=1508313900]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 15
+text = "Empieza una historia en Piltover para guardarla aquí"
+horizontal_alignment = 1
+
+[node name="BotonesVacio1" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/EstadoVacio1" unique_id=1857923861]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="BotonNuevaPartida1" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/EstadoVacio1/BotonesVacio1" unique_id=1621596104]
+custom_minimum_size = Vector2(170, 40)
+layout_mode = 2
+text = "NUEVA PARTIDA"
+
+[node name="BotonImportar1" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1/EstadoVacio1/BotonesVacio1" unique_id=1446951383]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+text = "IMPORTAR"
+
+[node name="LineaInferior1" type="HSeparator" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio1/MargenInterior1/Contenido1" unique_id=2006468691]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_piltover")
+
+[node name="Espacio2" type="PanelContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado" unique_id=1217079050]
+custom_minimum_size = Vector2(420, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_espacio_zaun")
+
+[node name="MargenInterior2" type="MarginContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2" unique_id=778820296]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 18
+
+[node name="Contenido2" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2" unique_id=989677764]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CabeceraCiudad2" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2" unique_id=1903850373]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Emblema2" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/CabeceraCiudad2" unique_id=1917119947]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("r_emb_z")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EtiquetaCiudadFija2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/CabeceraCiudad2" unique_id=531044609]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.639, 0.969, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 28
+text = "ZAUN"
+horizontal_alignment = 1
+
+[node name="LineaSuperior2" type="HSeparator" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2" unique_id=162202366]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_zaun")
+
+[node name="DatosPartida2" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2" unique_id=882148583]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="MarcoAvatar2" type="PanelContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2" unique_id=1213581813]
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_marco_z")
+
+[node name="Avatar2" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/MarcoAvatar2" unique_id=1099701705]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Info2" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2" unique_id=26723237]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="FilaNombre2" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2" unique_id=1458185169]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Personaje2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/FilaNombre2" unique_id=665547244]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 26
+
+[node name="ChipCiudad2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/FilaNombre2" unique_id=1396198457]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.639, 0.969, 1)
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("SB_chip_z")
+text = "ZAUN"
+
+[node name="Hueco2" type="Control" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/FilaNombre2" unique_id=363009309]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="ChipGuardado2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/FilaNombre2" unique_id=549122722]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.63, 0.66, 1)
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("SB_chip_auto")
+text = "GUARDADO AUTO"
+
+[node name="Progreso2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2" unique_id=1422148942]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.639, 0.969, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 16
+
+[node name="Ciudad2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2" unique_id=2027038037]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 13
+
+[node name="FilaParte2" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2" unique_id=919532296]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Capitulos2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/FilaParte2" unique_id=1197848538]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+
+[node name="BarraParte2" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/FilaParte2" unique_id=1295915980]
+custom_minimum_size = Vector2(60, 8)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_parte")
+show_percentage = false
+
+[node name="Columnas2" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2" unique_id=284626]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Estadisticas2" type="GridContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2" unique_id=690787958]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 2
+columns = 2
+
+[node name="EtiquetaIngenio2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Estadisticas2" unique_id=708216008]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Ingenio"
+
+[node name="BarraIngenio2" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Estadisticas2" unique_id=552530710]
+custom_minimum_size = Vector2(90, 8)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_z")
+show_percentage = false
+
+[node name="EtiquetaCarisma2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Estadisticas2" unique_id=547955898]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Carisma"
+
+[node name="BarraCarisma2" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Estadisticas2" unique_id=571520582]
+custom_minimum_size = Vector2(90, 8)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_z")
+show_percentage = false
+
+[node name="EtiquetaValor2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Estadisticas2" unique_id=1884633944]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Valor"
+
+[node name="BarraValor2" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Estadisticas2" unique_id=265352724]
+custom_minimum_size = Vector2(90, 8)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_z")
+show_percentage = false
+
+[node name="EtiquetaSigilo2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Estadisticas2" unique_id=2057506781]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Sigilo"
+
+[node name="BarraSigilo2" type="ProgressBar" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Estadisticas2" unique_id=50499815]
+custom_minimum_size = Vector2(90, 8)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("SB_barra_fondo")
+theme_override_styles/fill = SubResource("SB_barra_z")
+show_percentage = false
+
+[node name="Tiempo2" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2" unique_id=1526767044]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TituloTiempo2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Tiempo2" unique_id=1892927186]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Tiempo jugado"
+
+[node name="TiempoJugado2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Tiempo2" unique_id=1956454697]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 14
+
+[node name="TituloGuardado2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Tiempo2" unique_id=1620541422]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Guardado"
+
+[node name="Fecha2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Columnas2/Tiempo2" unique_id=1405286819]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94, 0.79, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 14
+
+[node name="Vinculos2" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2" unique_id=584706062]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TituloVinculos2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Vinculos2" unique_id=268449691]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 12
+text = "Vínculos"
+
+[node name="Vinculo2_1" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Vinculos2" unique_id=1252914017]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Vinculo2_2" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Vinculos2" unique_id=881631326]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Vinculo2_3" type="TextureRect" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/DatosPartida2/Info2/Vinculos2" unique_id=45941279]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="EstadoVacio2" type="VBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2" unique_id=1068383762]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Circulo2" type="PanelContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/EstadoVacio2" unique_id=1376366493]
+custom_minimum_size = Vector2(74, 74)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("SB_circulo_z")
+
+[node name="Mas2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/EstadoVacio2/Circulo2" unique_id=1649057663]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.639, 0.969, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 40
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SinPartida2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/EstadoVacio2" unique_id=550891900]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906, 0.639, 0.969, 1)
+theme_override_fonts/font = ExtResource("3_8axgb")
+theme_override_font_sizes/font_size = 22
+text = "SIN PARTIDA GUARDADA"
+horizontal_alignment = 1
+
+[node name="DescripcionSinPartida2" type="Label" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/EstadoVacio2" unique_id=820256856]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.76, 0.83, 1)
+theme_override_fonts/font = ExtResource("r_rob")
+theme_override_font_sizes/font_size = 15
+text = "Empieza una historia en Zaun para guardarla aquí"
+horizontal_alignment = 1
+
+[node name="BotonesVacio2" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/EstadoVacio2" unique_id=1871997008]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="BotonNuevaPartida2" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/EstadoVacio2/BotonesVacio2" unique_id=1856108179]
+custom_minimum_size = Vector2(170, 40)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SB_boton_z")
+text = "NUEVA PARTIDA"
+
+[node name="BotonImportar2" type="Button" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2/EstadoVacio2/BotonesVacio2" unique_id=901593922]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+theme_override_styles/normal = SubResource("SB_boton_z")
+text = "IMPORTAR"
+
+[node name="LineaInferior2" type="HSeparator" parent="CanvasLayer/ContenedorPrincipal/ContenedorEspaciosGuardado/Espacio2/MargenInterior2/Contenido2" unique_id=2077532373]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_zaun")
+
+[node name="BarraInferior" type="HBoxContainer" parent="CanvasLayer/ContenedorPrincipal" unique_id=719113142]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="BotonVolver" type="Button" parent="CanvasLayer/ContenedorPrincipal/BarraInferior" unique_id=2144849588]
+custom_minimum_size = Vector2(220, 46)
+layout_mode = 2
+text = "VOLVER AL MENÚ"
+
+[node name="SeparadorInferior" type="Control" parent="CanvasLayer/ContenedorPrincipal/BarraInferior" unique_id=1937698277]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="BotonImportarPartida" type="Button" parent="CanvasLayer/ContenedorPrincipal/BarraInferior" unique_id=1020635791]
+custom_minimum_size = Vector2(220, 46)
+layout_mode = 2
+text = "IMPORTAR PARTIDA"

@@ -1,0 +1,371 @@
+[gd_scene format=3 uid="uid://ckygepyvhpu8t"]
+
+[ext_resource type="Script" uid="uid://r27jijul56v1" path="res://escenas/nueva_partida.gd" id="1_dp3hj"]
+[ext_resource type="Texture2D" uid="uid://c0lo8ukpjcd6o" path="res://assets/ciudades/piltover/00_vistas/Piltover-panorama-T1.webp" id="2_b388t"]
+[ext_resource type="Texture2D" uid="uid://bctfo77xnlpiu" path="res://assets/ciudades/zaun/centro.jpg" id="3_5wqsp"]
+[ext_resource type="FontFile" uid="uid://dxc78ttolt7go" path="res://assets/fonts/Arcane Nine.otf" id="4_5wqsp"]
+[ext_resource type="Texture2D" uid="uid://heun5u585v83" path="res://assets/juego-inicio/inicioJuego-background.png" id="5_fondo"]
+[ext_resource type="Shader" uid="uid://cx3bwgggh8y6w" path="res://desenfoque_fondo.gdshader" id="6_desenfoque"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fondo"]
+shader = ExtResource("6_desenfoque")
+shader_parameter/intensidad = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tarjeta_piltover"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+
+[sub_resource type="Gradient" id="Gradient_sombra"]
+offsets = PackedFloat32Array(0.45, 1)
+colors = PackedColorArray(0.03137255, 0.043137256, 0.0627451, 0, 0.03137255, 0.043137256, 0.0627451, 0.92)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sombra"]
+gradient = SubResource("Gradient_sombra")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piltover_normal"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.09019608, 0.23921569, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piltover_pulsado"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.07666667, 0.20333333, 0.24666668, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piltover_hover"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.2357647, 0.36094117, 0.40376472, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tarjeta_zaun"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7607843, 0.3019608, 0.8784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_zaun_normal"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.11764706, 0.078431375, 0.15686275, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7607843, 0.3019608, 0.8784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_zaun_pulsado"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.1, 0.066666670, 0.13333334, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7607843, 0.3019608, 0.8784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_zaun_hover"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.27, 0.19, 0.32, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_volver_normal"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.09019608, 0.105882354, 0.1254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_volver_pulsado"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.07666667, 0.09, 0.10666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.77254903, 0.6313726, 0.35686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_volver_hover"]
+content_margin_left = 22.0
+content_margin_top = 12.0
+content_margin_right = 22.0
+content_margin_bottom = 12.0
+bg_color = Color(0.2357647, 0.24894118, 0.26541176, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[node name="Control" type="Control" unique_id=815219477]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dp3hj")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1730482701]
+material = SubResource("ShaderMaterial_fondo")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_fondo")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MargenPrincipal" type="MarginContainer" parent="." unique_id=1730482702]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 28
+
+[node name="ContenedorPrincipal" type="VBoxContainer" parent="MargenPrincipal" unique_id=1730482703]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Titulo" type="Label" parent="MargenPrincipal/ContenedorPrincipal" unique_id=1944918703]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0.03137255, 0.043137256, 0.0627451, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("4_5wqsp")
+theme_override_font_sizes/font_size = 32
+text = "¿Dónde comienza tu historia?"
+horizontal_alignment = 1
+
+[node name="Tarjetas" type="HBoxContainer" parent="MargenPrincipal/ContenedorPrincipal" unique_id=1730482704]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="TarjetaPiltover" type="PanelContainer" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas" unique_id=1730482705]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_tarjeta_piltover")
+
+[node name="ImgPiltover" type="TextureRect" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaPiltover" unique_id=1164273370]
+layout_mode = 2
+texture = ExtResource("2_b388t")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="SombraPiltover" type="TextureRect" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaPiltover" unique_id=1730482706]
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_sombra")
+expand_mode = 1
+
+[node name="MargenPiltover" type="MarginContainer" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaPiltover" unique_id=1730482707]
+layout_mode = 2
+theme_override_constants/margin_bottom = 24
+
+[node name="ColumnaPiltover" type="VBoxContainer" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaPiltover/MargenPiltover" unique_id=1730482708]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="LabelPiltover" type="Label" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaPiltover/MargenPiltover/ColumnaPiltover" unique_id=13557340]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0.03137255, 0.043137256, 0.0627451, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("4_5wqsp")
+theme_override_font_sizes/font_size = 44
+text = "PILTOVER"
+horizontal_alignment = 1
+
+[node name="BotonPiltover" type="Button" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaPiltover/MargenPiltover/ColumnaPiltover" unique_id=600712146]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_5wqsp")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_piltover_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_piltover_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_piltover_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_piltover_normal")
+text = "ELEGIR"
+
+[node name="TarjetaZaun" type="PanelContainer" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas" unique_id=1730482709]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_tarjeta_zaun")
+
+[node name="ImgZaun" type="TextureRect" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaZaun" unique_id=586955191]
+layout_mode = 2
+texture = ExtResource("3_5wqsp")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="SombraZaun" type="TextureRect" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaZaun" unique_id=1730482710]
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_sombra")
+expand_mode = 1
+
+[node name="MargenZaun" type="MarginContainer" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaZaun" unique_id=1730482711]
+layout_mode = 2
+theme_override_constants/margin_bottom = 24
+
+[node name="ColumnaZaun" type="VBoxContainer" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaZaun/MargenZaun" unique_id=1730482712]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="LabelZaun" type="Label" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaZaun/MargenZaun/ColumnaZaun" unique_id=720611576]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_shadow_color = Color(0.03137255, 0.043137256, 0.0627451, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("4_5wqsp")
+theme_override_font_sizes/font_size = 44
+text = "ZAUN"
+horizontal_alignment = 1
+
+[node name="BotonZaun" type="Button" parent="MargenPrincipal/ContenedorPrincipal/Tarjetas/TarjetaZaun/MargenZaun/ColumnaZaun" unique_id=11373452]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_5wqsp")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_zaun_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_zaun_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_zaun_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_zaun_normal")
+text = "ELEGIR"
+
+[node name="Pie" type="HBoxContainer" parent="MargenPrincipal/ContenedorPrincipal" unique_id=1730482713]
+layout_mode = 2
+
+[node name="BotonVolver" type="Button" parent="MargenPrincipal/ContenedorPrincipal/Pie" unique_id=107954715]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_focus_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_pressed_color = Color(0.9137255, 0.8745098, 0.7882353, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_5wqsp")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_volver_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_volver_pulsado")
+theme_override_styles/hover = SubResource("StyleBoxFlat_volver_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_volver_normal")
+text = "VOLVER"
