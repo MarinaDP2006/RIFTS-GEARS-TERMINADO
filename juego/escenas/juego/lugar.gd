@@ -1,18 +1,18 @@
 extends Control
 
-# Pantalla de un lugar: fondo del sitio, personaje a la izquierda y chat a la derecha.
-# Muestra las líneas del capítulo, lanza el minijuego si lo hay y termina con una decisión.
+# Pantalla de un lugar: recorre un capítulo de la historia de Nina (datos/historia.json).
+# Cada nodo tiene fondo, líneas (con condiciones) y, al final, respuestas, un salto o el fin.
 
 signal terminado
 
-const Minijuegos := preload("res://escenas/juego/minijuegos/catalogo.gd")
-
 var capitulo: Dictionary = {}
-var lineas: Array = []
-var indice := 0
+var nodo: Dictionary = {}
+var cola: Array = []
 var esperando_decision := false
-var en_minijuego := false
+var final_grupo := ""
+var acabado := false
 
+var fondo: TextureRect
 var lista_chat: VBoxContainer
 var scroll_chat: ScrollContainer
 var boton_seguir: Button
@@ -22,26 +22,17 @@ var imagen_personaje: TextureRect
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
-	_preparar_lineas()
 	_montar()
-	_siguiente()
+	if str(capitulo.get("intro", "")) != "":
+		_burbuja("narrador", Historia.formatear(capitulo["intro"]))
+	_ir(str(capitulo.get("inicio", "a")))
 	if not "lugar" in Progreso.tutoriales_vistos:
 		Progreso.tutoriales_vistos.append("lugar")
 		_tutorial()
 
-func _preparar_lineas() -> void:
-	lineas = []
-	var personaje: String = capitulo.get("personaje", "")
-	var saludo: Dictionary = capitulo.get("saludo", {})
-	var ciudad := DatosPartida.ciudad_elegida if DatosPartida.ciudad_elegida != "" else "Zaun"
-	# El primer mensaje depende de la ciudad del jugador.
-	if saludo.has(ciudad):
-		lineas.append([personaje, saludo[ciudad]])
-	for l in capitulo.get("lineas", []):
-		lineas.append(l)
-
 func _montar() -> void:
-	add_child(Estilo.fondo_imagen(Historia.fondo(capitulo.get("lugar", "Puente"), Progreso.parte)))
+	fondo = Estilo.fondo_imagen(Historia.fondo(capitulo.get("lugar", "Puente"), Progreso.parte))
+	add_child(fondo)
 	var sombra := ColorRect.new()
 	sombra.color = Color(0, 0.01, 0.03, 0.45)
 	sombra.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -113,8 +104,6 @@ func _poner_personaje(id: String) -> void:
 	imagen_personaje.texture = load(ruta) if ruta != "" else null
 
 func _unhandled_input(evento: InputEvent) -> void:
-	if en_minijuego:
-		return
 	if evento.is_action_pressed("ui_accept") and not esperando_decision:
 		_siguiente()
 		get_viewport().set_input_as_handled()
@@ -122,24 +111,110 @@ func _unhandled_input(evento: InputEvent) -> void:
 		# No se puede salir a mitad de capítulo, pero ESC no debe abrir la pausa del mapa.
 		get_viewport().set_input_as_handled()
 
-# Muestra la siguiente línea; al acabar, minijuego (si hay) y decisión.
+# Entra en un nodo del capítulo.
+func _ir(id: String) -> void:
+	nodo = capitulo.get("nodos", {}).get(id, {})
+	if nodo.is_empty():
+		_terminar()
+		return
+	_cambiar_fondo(str(nodo.get("bg", "")))
+	cola = (nodo.get("lines", []) as Array).duplicate()
+	_siguiente()
+
+func _cambiar_fondo(bg: String) -> void:
+	if bg == "" or fondo == null:
+		return
+	var ruta := Historia.imagen(bg, Progreso.parte)
+	if ResourceLoader.exists(ruta):
+		fondo.texture = load(ruta)
+
+# Muestra la siguiente línea que se cumpla; al acabar, respuestas, salto o fin.
 func _siguiente() -> void:
-	if esperando_decision or en_minijuego:
+	if esperando_decision or acabado:
 		return
-	if indice < lineas.size():
-		var l: Array = lineas[indice]
-		indice += 1
-		_burbuja(l[0], Historia.formatear(l[1]))
+	while not cola.is_empty():
+		var l: Dictionary = cola.pop_front()
+		if Historia.cumple(l.get("cond", {})):
+			_burbuja(str(l["s"]), Historia.formatear(str(l["t"])))
+			return
+	if final_grupo != "":
+		_terminar()
+	elif nodo.has("choices"):
+		_mostrar_decision()
+	elif nodo.has("next"):
+		_ir(str(nodo["next"]))
+	elif nodo.get("ending", false):
+		_final(str(nodo.get("endingSet", "endings")))
+	else:
+		_terminar()
+
+func _mostrar_decision() -> void:
+	esperando_decision = true
+	boton_seguir.visible = false
+	var opciones: Array = (nodo["choices"] as Array).filter(func(o): return Historia.cumple(o.get("req", {})))
+	if opciones.is_empty():
+		opciones = nodo["choices"]
+	for i in opciones.size():
+		var o: Dictionary = opciones[i]
+		var b := Estilo.boton(Historia.formatear(str(o["t"])), 0)
+		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		b.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		b.pressed.connect(_elegir.bind(o))
+		caja_opciones.add_child(b)
+		if i == 0:
+			b.grab_focus.call_deferred()
+
+func _elegir(o: Dictionary) -> void:
+	for hijo in caja_opciones.get_children():
+		hijo.queue_free()
+	esperando_decision = false
+	boton_seguir.visible = true
+	Progreso.decisiones["%s/%s" % [capitulo.get("id", ""), o.get("next", "")]] = str(o["t"])
+	var fx: Dictionary = o.get("fx", {})
+	Historia.aplicar(fx)
+	_burbuja("tu", Historia.formatear(str(o["t"])))
+	var cambios := _texto_cambios(fx)
+	if cambios != "":
+		_burbuja("narrador", cambios)
+	_ir(str(o.get("next", "")))
+
+func _texto_cambios(fx: Dictionary) -> String:
+	var partes: Array[String] = []
+	for p in fx.get("aff", {}):
+		var n := int(fx["aff"][p])
+		partes.append("%s %s%d" % [Historia.nombre(p), "+" if n > 0 else "", n])
+	for s in fx.get("stats", {}):
+		partes.append("%s +%d" % [str(s).capitalize(), int(fx["stats"][s])])
+	return "" if partes.is_empty() else "Afinidad: " + ", ".join(partes)
+
+# Final de la Parte 1 (endings) o del juego (endings2).
+func _final(grupo: String) -> void:
+	final_grupo = "finales2" if grupo == "endings2" else "finales"
+	var f := Historia.elegir_final(final_grupo)
+	Progreso.flags["final_" + str(f.get("id", ""))] = true
+	_cambiar_fondo(str(f.get("fondo", "")))
+	_burbuja("narrador", str(f.get("titulo", "")).to_upper())
+	cola = (f.get("lineas", []) as Array).duplicate()
+	_siguiente()
+
+func _terminar() -> void:
+	if acabado:
 		return
-	if capitulo.has("minijuego") and not capitulo.get("_minijuego_hecho", false):
-		capitulo["_minijuego_hecho"] = true
-		_lanzar_minijuego(capitulo["minijuego"])
-		return
-	_mostrar_decision()
+	acabado = true
+	for p in capitulo.get("conoce", []):
+		if not p in Progreso.conocidos:
+			Progreso.conocidos.append(p)
+	boton_seguir.visible = false
+	var fin := Estilo.boton("Terminar capítulo  ▸", 280, true)
+	fin.size_flags_horizontal = Control.SIZE_SHRINK_END
+	fin.pressed.connect(func(): terminado.emit())
+	caja_opciones.add_child(fin)
+	fin.grab_focus.call_deferred()
 
 func _burbuja(quien: String, texto: String) -> void:
 	var es_narrador := quien == "narrador"
-	var es_jugador := quien == "tu"
+	var es_jugador := quien == "tu" or quien == "yo"
 	var p := PanelContainer.new()
 	var estilo := StyleBoxFlat.new()
 	estilo.set_corner_radius_all(12)
@@ -183,69 +258,6 @@ func _burbuja(quien: String, texto: String) -> void:
 	create_tween().tween_property(p, "modulate:a", 1.0, 0.25)
 	await get_tree().process_frame
 	scroll_chat.scroll_vertical = int(scroll_chat.get_v_scroll_bar().max_value)
-
-func _mostrar_decision() -> void:
-	esperando_decision = true
-	boton_seguir.visible = false
-	var d: Dictionary = capitulo.get("decision", {})
-	caja_opciones.add_child(Estilo.etiqueta(Historia.formatear(d.get("pregunta", "")), 18, Estilo.MARFIL, true, true))
-	var opciones: Array = d.get("opciones", [])
-	for i in opciones.size():
-		var o: Dictionary = opciones[i]
-		var b := Estilo.boton(Historia.formatear(o["texto"]), 0)
-		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		b.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		b.pressed.connect(_elegir.bind(i))
-		caja_opciones.add_child(b)
-		if i == 0:
-			b.grab_focus.call_deferred()
-
-func _elegir(i: int) -> void:
-	var d: Dictionary = capitulo.get("decision", {})
-	var o: Dictionary = d["opciones"][i]
-	Progreso.decisiones["c%d" % Progreso.capitulo_global()] = i
-	for personaje in o.get("afinidad", {}):
-		Progreso.cambiar_afinidad(personaje, int(o["afinidad"][personaje]))
-	for stat in o.get("stat", {}):
-		DatosPartida.estadisticas[stat] = int(DatosPartida.estadisticas.get(stat, 0)) + int(o["stat"][stat])
-	for hijo in caja_opciones.get_children():
-		hijo.queue_free()
-	_burbuja("tu", Historia.formatear(o["texto"]))
-	_burbuja(capitulo.get("personaje", "narrador"), Historia.formatear(o.get("respuesta", "")))
-	var cambios := _texto_cambios(o)
-	if cambios != "":
-		_burbuja("narrador", cambios)
-	var fin := Estilo.boton("Terminar capítulo  ▸", 280, true)
-	fin.size_flags_horizontal = Control.SIZE_SHRINK_END
-	fin.pressed.connect(func(): terminado.emit())
-	caja_opciones.add_child(fin)
-	fin.grab_focus.call_deferred()
-
-func _texto_cambios(o: Dictionary) -> String:
-	var partes: Array[String] = []
-	for personaje in o.get("afinidad", {}):
-		var n := int(o["afinidad"][personaje])
-		partes.append("%s %s%d" % [Historia.nombre(personaje), "+" if n > 0 else "", n])
-	for stat in o.get("stat", {}):
-		partes.append("%s +%d" % [str(stat).capitalize(), int(o["stat"][stat])])
-	return "" if partes.is_empty() else "Afinidad: " + ", ".join(partes)
-
-func _lanzar_minijuego(id: String) -> void:
-	en_minijuego = true
-	var juego: Control = Minijuegos.crear(id)
-	if juego == null:
-		en_minijuego = false
-		_mostrar_decision()
-		return
-	add_child(juego)
-	juego.terminado.connect(func(puntos: int, ganado: bool):
-		juego.queue_free()
-		en_minijuego = false
-		_burbuja("narrador", ("Lo has conseguido. " if ganado else "No ha salido como esperabas, pero sigues adelante. ") + "Puntuación: %d." % puntos)
-		if ganado:
-			Progreso.cambiar_afinidad(capitulo.get("personaje", ""), 4)
-		_mostrar_decision())
 
 func _tutorial() -> void:
 	var capa := Control.new()

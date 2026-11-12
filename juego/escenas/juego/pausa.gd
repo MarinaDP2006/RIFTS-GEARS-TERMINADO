@@ -37,8 +37,8 @@ func _menu_principal() -> void:
 	contenido.add_child(Estilo.titulo("PAUSA", 46))
 	contenido.add_child(Estilo.titulo("Parte %d · Capítulo %d" % [Progreso.parte, Progreso.capitulo], 20))
 	var botones := [
-		["Continuar", _cerrar], ["Guardar partida", _guardar], ["Mapa", _menu_mapa], ["Minijuegos", _menu_minijuegos],
-		["Mi personaje", _menu_personaje], ["Códice", _abrir_codice], ["Salir al menú", _salir],
+		["CONTINUAR", _cerrar], ["GUARDAR PARTIDA", _guardar], ["CÓDICE", _abrir_codice],
+		["MAPA", _menu_mapa], ["MINIJUEGOS", _menu_minijuegos], ["AJUSTES", _abrir_ajustes], ["SALIR AL MENÚ", _salir],
 	]
 	for i in botones.size():
 		var b := Estilo.boton(botones[i][0], 320, i == 0)
@@ -81,10 +81,39 @@ func _menu_mapa() -> void:
 	contenido.add_child(v)
 	v.grab_focus.call_deferred()
 
+# SALIR AL MENÚ pregunta si quieres guardar antes.
 func _salir() -> void:
-	Guardado.guardar()
+	var d := ConfirmationDialog.new()
+	d.process_mode = Node.PROCESS_MODE_ALWAYS
+	d.title = "Salir al menú"
+	d.dialog_text = "¿Quieres guardar la partida antes de salir?"
+	d.ok_button_text = "Guardar y salir"
+	d.cancel_button_text = "Cancelar"
+	var sin := d.add_button("Salir sin guardar", true, "sin")
+	add_child(d)
+	d.confirmed.connect(func():
+		Guardado.guardar()
+		_ir_al_menu())
+	d.custom_action.connect(func(_a): _ir_al_menu())
+	d.popup_centered()
+
+func _ir_al_menu() -> void:
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://escenas/inicio.scn")
+
+# Abre los Ajustes de Nina encima del juego; su VOLVER cierra y vuelve a la pausa.
+func _abrir_ajustes() -> void:
+	var ajustes: Control = (load("res://escenas/ajustes.tscn") as PackedScene).instantiate()
+	ajustes.process_mode = Node.PROCESS_MODE_ALWAYS
+	panel_central.visible = false
+	raiz.add_child(ajustes)
+	var volver := ajustes.find_child("BotonVolver", true, false) as Button
+	if volver:
+		for c in volver.pressed.get_connections():
+			volver.pressed.disconnect(c.callable)
+		volver.pressed.connect(func():
+			ajustes.queue_free()
+			panel_central.visible = true)
 
 func _menu_minijuegos() -> void:
 	_limpiar()
@@ -148,15 +177,13 @@ func _abrir_codice() -> void:
 		aviso.text = "No se encontró el Códice."
 		return
 	var codice: Control = escena.instantiate()
+	# La escena es de Nina y no lleva script: se le pone aquí el que la hace funcionar.
+	codice.set_script(preload("res://escenas/juego/codice.gd"))
 	codice.process_mode = Node.PROCESS_MODE_ALWAYS
 	panel_central.visible = false
 	raiz.add_child(codice)
-	var cerrar := Estilo.boton("Cerrar Códice", 220, true)
-	cerrar.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
-	cerrar.offset_left = -250
-	cerrar.offset_top = 20
-	cerrar.offset_right = -30
-	codice.add_child(cerrar)
-	cerrar.pressed.connect(func():
+	codice.cerrado.connect(func(): panel_central.visible = true)
+	codice.mapa_pedido.connect(func():
 		codice.queue_free()
-		panel_central.visible = true)
+		panel_central.visible = true
+		_menu_mapa())

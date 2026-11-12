@@ -47,13 +47,13 @@ func _rellenar(i: int) -> void:
 	_texto("ChipGuardado%d" % i, "Ranura %d" % i)
 	var parte := int(g.get("parte", 1))
 	var cap := int(g.get("capitulo", 1))
-	var titulo: String = Historia.capitulo((parte - 1) * 15 + cap).get("titulo", "")
+	var titulo: String = _titulo(p, parte, cap)
 	_texto("Progreso%d" % i, "Parte %d · Capítulo %d — %s" % [parte, cap, titulo])
 	_texto("Ciudad%d" % i, "%s · %s años" % [str(p.get("ocupacion", "")).capitalize(), str(p.get("edad", ""))])
-	_texto("Capitulos%d" % i, "Capítulo %d / 15" % cap)
+	_texto("Capitulos%d" % i, "Capítulo %d / %d" % [cap, _total(p, parte)])
 	var barra := _n("BarraParte%d" % i) as ProgressBar
 	if barra:
-		barra.max_value = 15
+		barra.max_value = _total(p, parte)
 		barra.value = cap
 	var stats: Dictionary = p.get("estadisticas", {})
 	for s in ["Ingenio", "Carisma", "Valor", "Sigilo"]:
@@ -159,3 +159,18 @@ func _archivo_elegido(ruta: String) -> void:
 
 func _volver_al_menu() -> void:
 	get_tree().change_scene_to_file("res://escenas/inicio.scn")
+
+# La ruta depende de la ciudad de esa partida, no de la que esté cargada ahora.
+func _titulo(p: Dictionary, parte: int, cap: int) -> String:
+	var antes := DatosPartida.ciudad_elegida
+	DatosPartida.ciudad_elegida = str(p.get("ciudad_elegida", ""))
+	var t: String = Historia.capitulo_de(parte, cap).get("titulo", "")
+	DatosPartida.ciudad_elegida = antes
+	return t
+
+func _total(p: Dictionary, parte: int) -> int:
+	var antes := DatosPartida.ciudad_elegida
+	DatosPartida.ciudad_elegida = str(p.get("ciudad_elegida", ""))
+	var n := Historia.capitulos_en_parte(parte)
+	DatosPartida.ciudad_elegida = antes
+	return n

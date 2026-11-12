@@ -2,7 +2,6 @@ extends Node
 
 # Lleva por dónde va la partida: parte, capítulo, decisiones y récords.
 
-const CAPITULOS_POR_PARTE := 15
 
 var parte: int = 1
 var capitulo: int = 1
@@ -12,6 +11,10 @@ var lugar_actual: String = "Puente"
 var decisiones: Dictionary = {}
 # Mejor puntuación de cada minijuego.
 var records: Dictionary = {}
+# Marcas de la historia (flags de story.js), reputación en cada ciudad y personajes ya conocidos.
+var flags: Dictionary = {}
+var rep: Dictionary = {"zaun": 0, "piltover": 0}
+var conocidos: Array = []
 # Segundos jugados.
 var tiempo_jugado: float = 0.0
 # Pantallas de ayuda que ya se han visto.
@@ -25,13 +28,13 @@ func _process(delta: float) -> void:
 	if not get_tree().paused:
 		tiempo_jugado += delta
 
-# Número de capítulo contando las dos partes (1 a 30).
+# Número de capítulo contando las dos partes.
 func capitulo_global() -> int:
-	return (parte - 1) * CAPITULOS_POR_PARTE + capitulo
+	return (Historia.capitulos_en_parte(1) if parte == 2 else 0) + capitulo
 
 # Pasa al capítulo siguiente. Devuelve false si ya no quedan.
 func avanzar_capitulo() -> bool:
-	if capitulo < CAPITULOS_POR_PARTE:
+	if capitulo < Historia.capitulos_en_parte(parte):
 		capitulo += 1
 		return true
 	if parte == 1:
@@ -55,6 +58,9 @@ func reiniciar() -> void:
 	lugar_actual = "Puente"
 	decisiones = {}
 	records = {}
+	flags = {}
+	rep = {"zaun": 0, "piltover": 0}
+	conocidos = []
 	tiempo_jugado = 0.0
 	tutoriales_vistos = []
 	prologo_visto = false
@@ -64,7 +70,7 @@ func reiniciar() -> void:
 func a_diccionario() -> Dictionary:
 	return {
 		"parte": parte, "capitulo": capitulo, "lugar_actual": lugar_actual,
-		"decisiones": decisiones, "records": records, "tiempo_jugado": tiempo_jugado,
+		"decisiones": decisiones, "records": records, "flags": flags, "rep": rep, "conocidos": conocidos, "tiempo_jugado": tiempo_jugado,
 		"tutoriales_vistos": tutoriales_vistos, "prologo_visto": prologo_visto,
 		"juego_terminado": juego_terminado,
 	}
@@ -75,6 +81,9 @@ func desde_diccionario(d: Dictionary) -> void:
 	lugar_actual = str(d.get("lugar_actual", "Puente"))
 	decisiones = d.get("decisiones", {})
 	records = d.get("records", {})
+	flags = d.get("flags", {})
+	rep = d.get("rep", {"zaun": 0, "piltover": 0})
+	conocidos = d.get("conocidos", [])
 	tiempo_jugado = float(d.get("tiempo_jugado", 0.0))
 	tutoriales_vistos = d.get("tutoriales_vistos", [])
 	prologo_visto = bool(d.get("prologo_visto", false))

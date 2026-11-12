@@ -40,7 +40,7 @@ func _draw() -> void:
 	for i in Mapa.ASCENSOR.size() - 1:
 		draw_dashed_line(_pos(Mapa.ASCENSOR[i]), _pos(Mapa.ASCENSOR[i + 1]), Estilo.MARFIL, 3, 8)
 	# Paradas.
-	var objetivo: String = Historia.capitulo(Progreso.capitulo_global())["lugar"]
+	var objetivo: String = Historia.capitulo_actual()["lugar"]
 	for parada in Mapa.NODOS:
 		var p := _pos(str(parada))
 		var es_actual: bool = parada == Progreso.lugar_actual

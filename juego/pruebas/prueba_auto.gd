@@ -20,22 +20,31 @@ func _correr() -> void:
 	root.add_child(juego)
 	await _frames(10)
 	print("JUEGO OK, lugar=", pr.lugar_actual)
-	# Recorre los 30 capítulos abriendo el lugar y eligiendo la primera opción.
+	# Recorre toda la historia (las dos partes) eligiendo siempre la primera respuesta posible.
 	var Lugar = load("res://escenas/juego/lugar.gd")
 	var Hist = load("res://escenas/juego/historia.gd")
-	for c in range(1, 31):
-		var l = Lugar.new()
-		var cap = Hist.capitulo(c).duplicate(true)
-		cap.erase("minijuego")
-		l.capitulo = cap
-		root.add_child(l)
-		await _frames(2)
-		for k in 12:
-			l._siguiente()
-		await _frames(2)
-		l._elegir(0)
-		await _frames(2)
-		l.queue_free()
+	for ciudad in ["Piltover", "Zaun"]:
+		dp.ciudad_elegida = ciudad
+		pr.flags = {}
+		for parte in [1, 2]:
+			for c in range(1, Hist.capitulos_en_parte(parte) + 1):
+				pr.parte = parte
+				var l = Lugar.new()
+				l.capitulo = Hist.capitulo_de(parte, c)
+				root.add_child(l)
+				await _frames(1)
+				var pasos := 0
+				while not l.acabado and pasos < 400:
+					pasos += 1
+					if l.esperando_decision:
+						var ops: Array = (l.nodo["choices"] as Array).filter(func(o): return Hist.cumple(o.get("req", {})))
+						l._elegir(ops[0] if not ops.is_empty() else l.nodo["choices"][0])
+					else:
+						l._siguiente()
+				print(ciudad, " P", parte, " C", c, " ", l.capitulo["titulo"], " @", l.capitulo["lugar"], " pasos=", pasos, " fin=", l.acabado)
+				l.queue_free()
+				await _frames(1)
+		print("FLAGS ", ciudad, ": ", pr.flags.keys().filter(func(k): return k.begins_with("final_")))
 	print("CAPITULOS OK, afinidades=", dp.afinidades)
 	# Movimiento por el mapa.
 	var Mapa = load("res://escenas/juego/mapa.gd")

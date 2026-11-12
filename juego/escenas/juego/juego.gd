@@ -173,7 +173,7 @@ func _montar_hud() -> void:
 		"← →  moverse   ·   ↑ ↓  ascensor   ·   INTRO  entrar   ·   ESC  pausa"))
 
 func _capitulo() -> Dictionary:
-	return Historia.capitulo(Progreso.capitulo_global())
+	return Historia.capitulo_actual()
 
 func _actualizar_hud() -> void:
 	if etiqueta_capitulo == null:
