@@ -1,89 +1,140 @@
 # Rifts & Gears
-**Rifts & Gears** es un proyecto narrativo e interactivo inspirado en el universo de *Arcane* y *League of Legends*. Reúne un portal web informativo y un videojuego narrativo 2D ambientado en las ciudades de **Piltover** y **Zaun**.
-El proyecto busca trasladar la atmósfera, los conflictos y la identidad visual de ambas ciudades a una experiencia centrada en los personajes, la exploración y las decisiones del jugador.
 
-Página web: 
+**Rifts & Gears** es un fangame narrativo para un jugador ambientado en el universo de *Arcane*. Creas a tu propio personaje, eliges si naces en **Piltover** o en **Zaun** y vives la historia de la serie desde dentro: hablas con Vi, Jinx, Jayce, Caitlyn o Silco, tomas decisiones que cambian cómo te tratan y llegas a uno de sus ocho finales.
+
+El proyecto tiene dos partes: el **videojuego**, hecho en Godot 4, y una **web** que presenta el universo, los personajes, los lugares y el propio juego.
+
+> **Estado: completo.** El juego se puede jugar de principio a fin.
+
+- **Web:** https://rifts-gears-terminado.onrender.com
+- **Descarga para Windows:** [última versión en Releases](https://github.com/MarinaDP2006/RIFTS-GEARS-TERMINADO/releases/latest)
+
+---
 
 ## Índice
-- [Concepto y objetivos](#concepto-y-objetivos)
-- [Componentes del proyecto](#componentes-del-proyecto)
-- [El videojuego](#el-videojuego)
-- [Las ciudades](#las-ciudades)
-- [Tecnologías](#tecnologías)
-- [Estado del desarrollo](#estado-del-desarrollo)
 - [Descargar y jugar](#descargar-y-jugar)
-- [Organización del proyecto](#organización-del-proyecto)
+- [El juego](#el-juego)
+- [Los minijuegos](#los-minijuegos)
+- [La web](#la-web)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Abrir el proyecto](#abrir-el-proyecto)
+- [Tecnologías](#tecnologías)
+- [Aviso](#aviso)
 
-## Concepto y objetivos
-Rifts & Gears quiere ofrecer una experiencia narrativa para un jugador en la que el mundo, sus personajes y las decisiones tengan un papel central. La ambientación toma como referencia principalmente la serie *Arcane*, prestando especial atención a la personalidad y los contrastes entre Piltover y Zaun.
-
-Los objetivos del proyecto son:
-- Crear una experiencia narrativa interactiva con identidad visual propia.
-- Permitir que el jugador comience su historia desde Piltover o Zaun.
-- Desarrollar personajes, relaciones, misiones y contenidos que amplíen el mundo.
-- Mantener una presentación visual e interfaces coherentes con la ambientación.
-- Construir y probar los sistemas de forma progresiva.
-
-## Componentes del proyecto
-
-### Portal web informativo
-Un espacio web para presentar el universo y ofrecer información de referencia sobre el proyecto, sus ciudades y sus contenidos. La web y el videojuego son partes diferenciadas y se mantienen separadas durante el desarrollo.
-
-### Videojuego narrativo 2D
-Una experiencia para un jugador desarrollada con **Godot Engine 4**. El jugador crea su propio personaje y vive una aventura interactiva desde la perspectiva de Piltover o Zaun.
-
-## El videojuego
-Entre los sistemas y contenidos previstos se encuentran:
-
-- **Nueva partida:** elección de Piltover o Zaun como punto de partida.
-- **Creación de personaje:** elección de procedencia, familia y datos del protagonista.
-- **Historia interactiva:** diálogos, respuestas y decisiones que dan forma al recorrido narrativo.
-- **Personajes y relaciones:** encuentros y vínculos con los habitantes del mundo.
-- **Misiones:** historia principal, misiones secundarias e historias jugables.
-- **Códice:** información sobre personajes, lugares, criaturas y razas, tecnologías, mundo y facciones.
-- **Atlas:** consulta y exploración del mapa del mundo.
-- **Ficha de personaje y comunicador:** información del protagonista y herramientas relacionadas con la aventura.
-- **Sistema de guardado:** dos espacios independientes, uno para Piltover y otro para Zaun, con opciones previstas para cargar, borrar y exportar partidas.
-
-## Las ciudades
-
-### Piltover
-La Ciudad del Progreso. Una metrópolis de arquitectura elegante, innovación, comercio y tecnología Hextech. Su identidad visual se inspira en tonos dorados y azules, edificios refinados y contrastes sociales.
-
-### Zaun
-La ciudad subterránea. Un entorno industrial y desigual, marcado por la supervivencia, la inventiva y el poder del shimmer. Su identidad visual se inspira en tonos verdes y azules oscuros, estructuras industriales y una atmósfera más cruda.
-
-## Tecnologías
-- **Motor del videojuego:** Godot Engine 4 (desarrollo realizado con Godot 4.7.2).
-- **Lenguaje del videojuego:** GDScript.
-- **Portal web:** tecnologías web como HTML, CSS y JavaScript.
-- **Formato previsto para intercambio de partidas:** JSON.
-- **Tipo de juego:** aventura narrativa 2D para un jugador.
-- **Idioma inicial:** español.
-
-## Estado del desarrollo
-**Completo.** El juego se puede jugar de principio a fin.
-
-| Área | Estado |
-|---|---|
-| Pantalla de inicio | Completada |
-| Nueva partida y selección de ciudad | Completada |
-| Creación de personaje | Completada |
-| Ajustes | Completados |
-| Cargar partida y gestión de guardados | Completada |
-| Códice y sus entradas | Completado |
-| Mapa 3D de Piltover y Zaun | Completado |
-| Prólogo y pantalla de cada lugar | Completados |
-| Historia, diálogos y decisiones (Parte 1 y Parte 2, 8 finales) | Completados |
-| Chats y relaciones con los personajes | Completados |
-| Menú de pausa y guardado | Completado |
-| Los 10 minijuegos | Completados |
-| Música de Piltover y Zaun | Completada |
+---
 
 ## Descargar y jugar
-La versión para Windows está en la sección **Releases** de este repositorio: un único `RiftsAndGears.exe` que se abre sin instalar nada. Si Windows avisa de que la aplicación no está firmada, pulsa *Más información → Ejecutar de todas formas*.
+1. Entra en [Releases](https://github.com/MarinaDP2006/RIFTS-GEARS-TERMINADO/releases/latest) y descarga `RiftsAndGears.exe`.
+2. Ábrelo con doble clic. No hace falta instalar nada: todo el juego va dentro de ese archivo.
+3. Si Windows muestra «Windows protegió su PC», pulsa **Más información → Ejecutar de todas formas**. Sale porque el .exe no tiene firma digital.
 
-El proyecto de Godot está en la carpeta `juego/` y la web en `Web/`.
+**Requisitos:** Windows 10 u 11 de 64 bits y una tarjeta gráfica compatible con OpenGL 3.3.
 
-## Organización del proyecto
-Rifts & Gears se construye de forma gradual. Las interfaces se desarrollan y revisan antes de integrar los sistemas que dependen de ellas. Se priorizan la coherencia visual, la claridad de navegación, la estabilidad y la posibilidad de ampliar el juego sin rehacer lo que ya funciona. La web informativa y el videojuego se mantienen como partes diferenciadas del proyecto.
+Las partidas se guardan en `%APPDATA%\Godot\app_userdata\RiftsAndGears`.
+
+---
+
+## El juego
+
+### Empezar
+- **Nueva partida:** eliges Piltover o Zaun. La ciudad decide en qué historia empiezas y cómo te recibe cada personaje.
+- **Creación de personaje:** siete apartados (ciudad, familia, barrio, oficio, rasgos, aficiones y estadísticas) y cuatro atributos: **Ingenio, Carisma, Valor y Sigilo**. Puedes ser prima de Vi, hermano de Jayce o hija de Silco.
+- **Prólogo:** la historia arranca después de la explosión y de la muerte de Vander.
+
+### Jugar
+- **Mapa 3D:** Piltover se recorre en línea, de parada en parada. Desde el Puente se baja a Zaun, que se recorre por niveles en ascensor.
+- **Lugares:** cada sitio tiene su propia pantalla, con la gente que hay allí.
+- **Chats:** cada personaje escribe a su manera, y tú eliges entre varias respuestas.
+- **Relaciones:** confianza, amistad, afecto y rivalidad. Puedes pasar de desconocido a confidente, a pareja… o a enemigo.
+
+### La historia
+- **Parte 1:** nueve capítulos, distintos según tu ciudad.
+- **Parte 2:** nueve capítulos comunes a las dos ciudades.
+- **8 finales:** cuatro por parte. El que te toca depende de lo que hayas hecho y de con quién te lleves bien.
+- Algunos personajes pueden morir o salvarse según tus decisiones.
+
+### Menús
+- **Pausa:** continuar, guardar partida, Códice, mapa, minijuegos, ajustes y salir al menú.
+- **Códice:** un libro con tu propia historia, los personajes, Piltover, Zaun, la tecnología, la cultura y la cronología. Está completo desde el principio: no hay que desbloquear nada.
+- **Cargar partida:** dos ranuras. Puedes continuar, borrar o importar una partida.
+- **Ajustes:** general, audio, juego, pantalla y controles. La música tiene su propio volumen.
+- **Música:** un tema para los menús y otro para cada ciudad.
+
+---
+
+## Los minijuegos
+Cinco por ciudad. Se pueden jugar desde la pausa, y algunos entran en la historia cuando una misión los pide. Cada uno explica abajo cómo se juega y qué teclas usa.
+
+| Piltover | Zaun |
+|---|---|
+| Calibrar el cristal | El foso |
+| Tiro de precisión | Carrera de aerotabla |
+| Debate del Consejo | Grafiti |
+| El Archivo | Mezclas de quimtec |
+| Baile de gala | Cartas en La Última Gota |
+
+---
+
+## La web
+Una web de fan sobre el universo de Arcane y sobre el juego:
+- **Universo:** Piltover, Zaun y lo que separa a las dos ciudades.
+- **Personajes:** fichas de los protagonistas, con su papel en la Parte 1 y en la Parte 2.
+- **Lugares y Atlas:** los sitios de cada ciudad y el mapa.
+- **Videojuego:** qué incluye, capturas, los minijuegos y el enlace de descarga.
+- **Contacto:** para avisar de errores.
+
+Está hecha con React y se publica en Render a partir de la carpeta `Web/` (configuración en `render.yaml`).
+
+---
+
+## Estructura del repositorio
+```
+juego/                  Proyecto de Godot (abrir juego/project.godot)
+  escenas/              Pantallas y scripts del juego
+    juego/datos/        Historia, capítulos y finales (historia.json)
+    juego/minijuegos/   Los 10 minijuegos
+  assets/               Imágenes, fuentes y música
+  pruebas/              Pruebas automáticas (no van en el .exe)
+Web/                    Código de la web
+DATOS/                  Textos de partida: historia, chats, mundo, relaciones…
+DOCUMENTOS/             Propuesta del TFG y guías del proyecto
+interfaces_diseño/      Diseños de las pantallas
+minijuegos_capturas/    Diseños de los minijuegos
+render.yaml             Despliegue de la web en Render
+```
+
+---
+
+## Abrir el proyecto
+
+### Juego
+1. Instala **Godot 4.7.2**.
+2. Abre `juego/project.godot`.
+3. Para crear el .exe: *Proyecto → Exportar → Windows*, o ejecuta `juego/exportar_windows.bat`. Antes hay que instalar las plantillas de exportación de Godot 4.7.2.
+
+Prueba automática del juego completo. Recorre las dos ciudades y las dos partes, y abre los 10 minijuegos, la pausa, el final, *Cargar partida* y el prólogo:
+```bash
+godot --headless --path juego -s res://pruebas/prueba_auto.gd
+```
+
+### Web
+```bash
+cd Web
+npm ci
+npm run dev
+```
+`npm run build` genera la versión final en `Web/dist`.
+
+---
+
+## Tecnologías
+- **Juego:** Godot Engine 4.7.2 y GDScript, con el renderizador *Compatibility* (OpenGL 3.3).
+- **Web:** React 19, React Router, Vite, TypeScript y Tailwind CSS.
+- **Datos:** la historia y las partidas guardadas van en JSON.
+- **Despliegue:** Render (web) y GitHub Releases (juego).
+- **Idioma:** español.
+
+---
+
+## Aviso
+Rifts & Gears es un proyecto de fan sin ánimo de lucro hecho como Trabajo de Fin de Grado. *Arcane* y *League of Legends* pertenecen a Riot Games. Este proyecto no está afiliado a Riot Games ni respaldado por ellos.
