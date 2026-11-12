@@ -3,15 +3,16 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c35isdpkig4w1"
-valid=false
+path="res://.godot/imported/zaun-theme.mp3-797ab71f3a3dc2ac9e202eff85c400bb.mp3str"
 
 [deps]
 
 source_file="res://assets/music/zaun-theme.mp3"
+dest_files=["res://.godot/imported/zaun-theme.mp3-797ab71f3a3dc2ac9e202eff85c400bb.mp3str"]
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

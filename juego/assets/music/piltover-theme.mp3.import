@@ -3,15 +3,16 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cbb2vy1dfm7ew"
-valid=false
+path="res://.godot/imported/piltover-theme.mp3-c18c412534492bb1d073643567909513.mp3str"
 
 [deps]
 
-source_file="res://assets/music/piltover.theme.mp3"
+source_file="res://assets/music/piltover-theme.mp3"
+dest_files=["res://.godot/imported/piltover-theme.mp3-c18c412534492bb1d073643567909513.mp3str"]
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
