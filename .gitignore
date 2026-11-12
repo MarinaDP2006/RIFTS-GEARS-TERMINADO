@@ -1,5 +1,5 @@
-# Rifts & Gears: por ahora solo se sube la web.
-# El juego de Godot se añadirá más adelante (quitando su línea de abajo).
+# Rifts & Gears: se suben la web (Web/) y el juego de Godot (juego/).
+# Los .exe no van al repositorio: se publican en Releases.
 
 # Carpetas locales que no van al repositorio
 DescargasFinales/

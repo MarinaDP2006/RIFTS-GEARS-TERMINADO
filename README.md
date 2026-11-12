@@ -11,6 +11,7 @@ Página web:
 - [Las ciudades](#las-ciudades)
 - [Tecnologías](#tecnologías)
 - [Estado del desarrollo](#estado-del-desarrollo)
+- [Descargar y jugar](#descargar-y-jugar)
 - [Organización del proyecto](#organización-del-proyecto)
 
 ## Concepto y objetivos
@@ -44,8 +45,6 @@ Entre los sistemas y contenidos previstos se encuentran:
 - **Ficha de personaje y comunicador:** información del protagonista y herramientas relacionadas con la aventura.
 - **Sistema de guardado:** dos espacios independientes, uno para Piltover y otro para Zaun, con opciones previstas para cargar, borrar y exportar partidas.
 
-Estas características forman parte de la dirección de diseño del juego; su disponibilidad dependerá del avance del desarrollo.
-
 ## Las ciudades
 
 ### Piltover
@@ -63,21 +62,28 @@ La ciudad subterránea. Un entorno industrial y desigual, marcado por la supervi
 - **Idioma inicial:** español.
 
 ## Estado del desarrollo
-El desarrollo se realiza por etapas, separando el diseño de las interfaces, la programación de sus funciones, las pruebas y la integración.
+**Completo.** El juego se puede jugar de principio a fin.
 
 | Área | Estado |
 |---|---|
 | Pantalla de inicio | Completada |
-| Nueva partida y selección de ciudad | Completada y funcional |
-| Creación de personaje | Completada y funcional |
-| Ajustes | Completados y funcionales |
-| Cargar partida y gestión de guardados | En desarrollo |
-| Códice y sus entradas | Estructura inicial creada; programación y contenido pendientes |
-| Atlas / mapa 3D | Escena creada; integración pendiente |
-| Historia, diálogos y decisiones | Desarrollo futuro |
-| Misiones, personajes y comunicador | Planificados |
+| Nueva partida y selección de ciudad | Completada |
+| Creación de personaje | Completada |
+| Ajustes | Completados |
+| Cargar partida y gestión de guardados | Completada |
+| Códice y sus entradas | Completado |
+| Mapa 3D de Piltover y Zaun | Completado |
+| Prólogo y pantalla de cada lugar | Completados |
+| Historia, diálogos y decisiones (Parte 1 y Parte 2, 8 finales) | Completados |
+| Chats y relaciones con los personajes | Completados |
+| Menú de pausa y guardado | Completado |
+| Los 10 minijuegos | Completados |
+| Música de Piltover y Zaun | Completada |
 
-El estado puede cambiar conforme avance el proyecto. Una pantalla diseñada no se considera necesariamente terminada hasta que sus funciones estén implementadas y probadas.
+## Descargar y jugar
+La versión para Windows está en la sección **Releases** de este repositorio: un único `RiftsAndGears.exe` que se abre sin instalar nada. Si Windows avisa de que la aplicación no está firmada, pulsa *Más información → Ejecutar de todas formas*.
+
+El proyecto de Godot está en la carpeta `juego/` y la web en `Web/`.
 
 ## Organización del proyecto
 Rifts & Gears se construye de forma gradual. Las interfaces se desarrollan y revisan antes de integrar los sistemas que dependen de ellas. Se priorizan la coherencia visual, la claridad de navegación, la estabilidad y la posibilidad de ampliar el juego sin rehacer lo que ya funciona. La web informativa y el videojuego se mantienen como partes diferenciadas del proyecto.
