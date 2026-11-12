@@ -8,7 +8,8 @@ const VIDEO := "res://assets/video/prologo.ogv"
 const DIAPOSITIVAS := [
 	["res://assets/lugares/s1/piltover.webp", "Piltover", "La Ciudad del Progreso. Torres doradas, vidrieras y engranajes de latón. Aquí arriba, el futuro se fabrica."],
 	["res://assets/lugares/s1/zaun.webp", "Zaun", "Debajo del Puente, una ciudad de humo, tuberías y gente que no se rinde. Aquí abajo, el futuro se sobrevive."],
-	["res://assets/lugares/s1/puente.webp", "El Puente del Progreso", "Lo único que las une. Y lo primero que se rompe cuando algo sale mal."],
+	["res://assets/lugares/s1/puente.webp", "El Puente del Progreso", "Lo único que las une. Aquí, hace siete años, una explosión se llevó a Vander, el hombre que mantenía la paz en Zaun."],
+	["res://assets/lugares/s1/ultima-gota.webp", "Siete años después", "Silco manda en las calles, el brillo corre por el mercado y Piltover mira hacia otro lado."],
 	["", "", "Y en medio de todo, alguien más del barrio: tú."],
 ]
 
