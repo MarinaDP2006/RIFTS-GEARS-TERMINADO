@@ -191,13 +191,13 @@ export const characters: Character[] = [
   },
   {
     name: "Mel Medarda",
-    city: "Piltover",
+    city: "Noxus",
     role: "Consejera",
     seasons: "Parte 1 · Parte 2",
     where: "La Sala del Consejo",
     ties: "Hija de Ambessa. Jayce.",
     bio: [
-      "La consejera más lista de Piltover. Llegó de Noxus de niña, apartada por su propia madre, y aprendió a ganar sin levantar la voz.",
+      "Noxiana, como su madre. Llegó a Piltover de niña, apartada por la propia Ambessa, se convirtió en la consejera más lista de la ciudad y aprendió a ganar sin levantar la voz.",
       "Ve en la hextech la oportunidad de Piltover y en Jayce a la persona que puede ponerle cara. En la Parte 2 descubre que su familia le había ocultado algo de sí misma.",
     ],
     image: P + "mel.webp",
