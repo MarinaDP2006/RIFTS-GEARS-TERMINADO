@@ -1696,6 +1696,13 @@ textarea:focus-visible {
   gap: 4rem;
 }
 
+.game-status-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
 .game-status > div {
   max-width: 760px;
 }

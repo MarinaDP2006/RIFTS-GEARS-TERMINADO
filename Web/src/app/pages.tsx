@@ -3,6 +3,7 @@ import { Search, ZoomIn, ZoomOut } from "lucide-react";
 import { Link } from "react-router";
 import { Dialog, Eyebrow, FeatureLink, Media, PageHero, portalLinks } from "./components";
 import {
+  DESCARGA,
   GITHUB,
   characters,
   places,
@@ -152,12 +153,12 @@ export function HomePage() {
         <div className="game-teaser-copy">
           <h2>El videojuego</h2>
           <p>
-            Rifts & Gears es también el juego que estoy haciendo en Godot para mi TFG. Eliges
+            Rifts & Gears es también el juego que he hecho en Godot para mi TFG. Eliges
             Piltover o Zaun, creas a tu personaje con su familia y su barrio, y vives toda
             la historia desde dentro, en dos partes, hablando con Vi, Jinx, Jayce o Silco.
           </p>
           <Link to="/videojuego" className="text-link">
-            Ver cómo va
+            Ver el juego
           </Link>
         </div>
         <Media src="/assets/img/capturas/inicio.webp" alt="Menú de inicio del videojuego Rifts & Gears" />
@@ -840,7 +841,7 @@ export function GamePage() {
     ],
     [
       "Una historia larga",
-      "30 capítulos en dos partes, la Parte 1 y la Parte 2, y 8 finales distintos según lo que hagas y con quién te lleves bien.",
+      "Dos partes de nueve capítulos cada una (la Parte 1 cambia según tu ciudad) y 8 finales distintos según lo que hagas y con quién te lleves bien.",
     ],
     [
       "Un Códice siempre abierto",
@@ -856,17 +857,18 @@ export function GamePage() {
     "Nueva partida y elegir ciudad",
     "Creación de personaje",
     "Ajustes",
-    "Cargar partida (diseño)",
+    "Cargar partida",
     "Códice",
     "Mapa 3D de las dos ciudades",
   ];
-  const pending = [
-    "Prólogo en vídeo",
+  const done2 = [
+    "Prólogo",
     "Pantalla de cada lugar",
     "Chats y relaciones",
-    "Misiones y capítulos",
+    "Parte 1 y Parte 2, con sus finales",
     "Menú de pausa y guardado",
     "Los 10 minijuegos",
+    "Música de Piltover y Zaun",
   ];
   return (
     <>
@@ -874,12 +876,12 @@ export function GamePage() {
         <div className="game-hero-copy">
           <h1>Rifts & Gears, el videojuego</h1>
           <p>
-            Un fangame narrativo para un jugador que estoy haciendo en Godot 4 como TFG. Creas a tu
+            Un fangame narrativo para un jugador que he hecho en Godot 4 como TFG. Creas a tu
             personaje, eliges Piltover o Zaun y vives la historia de Arcane, en dos partes,
             desde dentro. Lo que eliges al crearlo decide cómo te habla y cómo te trata cada
             personaje.
           </p>
-          <span className="development-badge">En desarrollo</span>
+          <span className="development-badge">Completo</span>
         </div>
         <Media src="/assets/img/capturas/inicio.webp" alt="Menú de inicio del videojuego Rifts & Gears" />
       </section>
@@ -913,11 +915,11 @@ export function GamePage() {
           </div>
         </div>
         <div>
-          <h2>Cómo va</h2>
-          <p>Lo que ya funciona en Godot y lo que me queda por hacer.</p>
+          <h2>Qué incluye</h2>
+          <p>Todo funciona en Godot: el juego se puede jugar de principio a fin.</p>
           <div className="list-columns">
             <div>
-              <h3>Hecho</h3>
+              <h3>Menús y mundo</h3>
               <ul>
                 {done.map((item) => (
                   <li key={item}>{item}</li>
@@ -925,9 +927,9 @@ export function GamePage() {
               </ul>
             </div>
             <div>
-              <h3>Falta</h3>
+              <h3>Historia y juego</h3>
               <ul>
-                {pending.map((item) => (
+                {done2.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -950,15 +952,15 @@ export function GamePage() {
       </section>
       <section className="game-shots section-pad">
         <div className="section-heading">
-          <h2>Bocetos de los minijuegos</h2>
+          <h2>Los minijuegos</h2>
           <p>
-            Así quiero que se vean. Cada uno lleva abajo una barra con cómo se juega y sus teclas.
+            Así se ven en el juego. Cada uno lleva abajo una barra con cómo se juega y sus teclas.
           </p>
         </div>
         <div className="shots-grid">
           {minigameShots.map((shot) => (
             <figure key={shot.src}>
-              <Media src={shot.src} alt={`Boceto del minijuego ${shot.label}`} />
+              <Media src={shot.src} alt={`Minijuego ${shot.label}`} />
               <figcaption>{shot.label}</figcaption>
             </figure>
           ))}
@@ -966,15 +968,20 @@ export function GamePage() {
       </section>
       <section className="game-status section-pad">
         <div>
-          <h2>Todavía no se puede descargar.</h2>
+          <h2>Ya se puede descargar.</h2>
           <p>
-            Cuando haya una versión jugable la subiré a GitHub para ordenador: un .exe para
-            Windows y otra versión para macOS. Mientras tanto, el código está allí.
+            La versión completa para Windows es un solo .exe: lo descargas, lo abres y a
+            jugar, sin instalar nada. El código del juego también está en GitHub.
           </p>
         </div>
-        <a href={GITHUB} className="button secondary">
-          Ver en GitHub
-        </a>
+        <div className="game-status-actions">
+          <a href={DESCARGA} className="button primary">
+            Descargar para Windows
+          </a>
+          <a href={GITHUB} className="button secondary">
+            Ver en GitHub
+          </a>
+        </div>
       </section>
     </>
   );

@@ -88,7 +88,7 @@ export function Layout() {
         <div>
           <Brand />
           <p>
-            Una web de fan sobre Piltover y Zaun, y el juego que estoy haciendo en Godot.
+            Una web de fan sobre Piltover y Zaun, y el juego que he hecho en Godot.
           </p>
         </div>
         <div className="footer-links">
@@ -237,7 +237,7 @@ export const portalLinks = [
   {
     to: "/videojuego",
     kicker: "Videojuego",
-    title: "El juego que estoy haciendo",
+    title: "El juego, ya terminado",
     text: "Un fangame narrativo en Godot: creas a tu personaje y vives la historia desde dentro, en dos partes.",
   },
   {
