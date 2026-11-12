@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Arcane Nine";
+  src: url("/assets/fonts/arcane-nine.otf") format("opentype");
+  font-display: swap;
+}
+
 /* Estilos del diseño de Figma Make "Crear portal Rifts & Gears".
    Al final hay un bloque con los añadidos para las imágenes reales del proyecto. */
 
@@ -18,8 +24,8 @@
   --acid: #9cc57d;
   --violet: #775a8b;
   --line: rgba(238, 227, 204, 0.13);
-  --heading: "Cinzel", Georgia, serif;
-  --body: "Inter", system-ui, sans-serif;
+  --heading: "Arcane Nine", "Cinzel", Georgia, serif;
+  --body: "Arcane Nine", "Inter", system-ui, sans-serif;
 }
 
 @layer base {
@@ -285,7 +291,7 @@ textarea:focus-visible {
   max-width: 650px;
   margin-top: 1.4rem;
   color: #ded9ce;
-  font-family: Georgia, serif;
+  font-family: var(--body);
   font-size: clamp(1rem, 1.45vw, 1.26rem);
 }
 

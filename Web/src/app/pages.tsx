@@ -50,10 +50,6 @@ export function HomePage() {
           <h1>
             Rifts <span>&</span> Gears
           </h1>
-          <p className="hero-lead">
-            Elige una ciudad, crea a quien vas a ser y entra en la historia de Vi, Jinx, Jayce y
-            Silco como alguien más del barrio.
-          </p>
           <div className="hero-actions">
             <Link to="/universo" className="button primary">
               Entrar

@@ -118,7 +118,7 @@ export function PageHero({
 }: {
   eyebrow?: string;
   title: string;
-  text: string;
+  text?: string;
   tone?: "neutral" | "piltover" | "zaun";
 }) {
   return (
@@ -127,7 +127,6 @@ export function PageHero({
       <div className="page-hero-inner">
         {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
         <h1>{title}</h1>
-        <p>{text}</p>
       </div>
     </section>
   );
